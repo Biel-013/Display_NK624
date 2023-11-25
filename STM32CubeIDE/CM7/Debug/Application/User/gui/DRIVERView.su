@@ -1,0 +1,9 @@
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
+../../CM7/../../CM7/TouchGFX/gui/include/gui/driver_screen/DRIVERView.hpp:11:13:DRIVERView::~DRIVERView()	16	static
+../../CM7/../../CM7/TouchGFX/gui/include/gui/driver_screen/DRIVERView.hpp:11:13:virtual DRIVERView::~DRIVERView()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:3:1:DRIVERView::DRIVERView()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:8:6:virtual void DRIVERView::setupScreen()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:13:6:virtual void DRIVERView::tearDownScreen()	16	static

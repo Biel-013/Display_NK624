@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.22.1">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1">
+      <Text Id="ResourceId2" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB" Alignment="Center">63</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_0Q1P" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_SSGG" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_VZEE" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_7KCM" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_6M8U" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_6WXP" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_1DGI" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_51T7" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_PS94" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_WXO2" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_J7BQ" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_GBJ5" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_U3SN" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_1PMW" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_D47R" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_506P" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_CB71" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_E2A4" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_6YQ8" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_OTFQ" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_VYSC" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_4GM4" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_BC1Q" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_HB1E" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_CXEM" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y9SF" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_IJL5" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_ECJY" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_MOHI" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_3SXH" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">67.4 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_8ZPX" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">1893&#10;Kbps</Translation>
+      </Text>
+      <Text Id="__SingleUse_AMAG" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">2543&#10;Kbps</Translation>
+      </Text>
+      <Text Id="__SingleUse_T2YW" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">12&#10;Kbps</Translation>
+      </Text>
+      <Text Id="__SingleUse_228G" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">46277</Translation>
+      </Text>
+      <Text Id="__SingleUse_KANZ" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">657</Translation>
+      </Text>
+      <Text Id="__SingleUse_YXOY" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">5235</Translation>
+      </Text>
+      <Text Id="__SingleUse_UAN7" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">---------</Translation>
+      </Text>
+      <Text Id="__SingleUse_L63Y" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">---------</Translation>
+      </Text>
+      <Text Id="__SingleUse_ASDO" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">13513</Translation>
+      </Text>
+      <Text Id="__SingleUse_PKT0" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">---------</Translation>
+      </Text>
+      <Text Id="__SingleUse_CQEM" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">---------</Translation>
+      </Text>
+      <Text Id="__SingleUse_XQF6" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">1244</Translation>
+      </Text>
+      <Text Id="__SingleUse_BLM9" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">3,04 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_CQUD" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">82,3 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZCMW" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">82,3 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_BVMV" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">82,3 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_6AAQ" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">82,3 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_A1MF" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">82,3 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_EP5M" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">239 A</Translation>
+      </Text>
+      <Text Id="__SingleUse_IWRT" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">232 A</Translation>
+      </Text>
+      <Text Id="__SingleUse_XKB0" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">228 A</Translation>
+      </Text>
+      <Text Id="__SingleUse_M8NZ" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">230 A</Translation>
+      </Text>
+      <Text Id="__SingleUse_TUNC" Alignment="Center" TypographyId="Typography_01">
+        <Translation Language="GB">&lt;&gt;%</Translation>
+      </Text>
+      <Text Id="__SingleUse_MZQS" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">2,97 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_EYDG" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">36,7 C°</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z5XJ" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">82.6 C°</Translation>
+      </Text>
+      <Text Id="__SingleUse_OGBX" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">110 %</Translation>
+      </Text>
+      <Text Id="__SingleUse_B63V" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">1229</Translation>
+      </Text>
+      <Text Id="__SingleUse_73T9" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">11.5 kW</Translation>
+      </Text>
+      <Text Id="__SingleUse_VOXZ" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">110 %</Translation>
+      </Text>
+      <Text Id="__SingleUse_2G9Q" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">82.3 C°</Translation>
+      </Text>
+      <Text Id="__SingleUse_VEMN" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">1230</Translation>
+      </Text>
+      <Text Id="__SingleUse_05D5" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">11.5 kW</Translation>
+      </Text>
+      <Text Id="__SingleUse_MUJP" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">3/7</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y52B" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">2,97 V</Translation>
+      </Text>
+      <Text Id="__SingleUse_P6H6" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">36,7 C°</Translation>
+      </Text>
+      <Text Id="__SingleUse_1RT6" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">150 %</Translation>
+      </Text>
+      <Text Id="__SingleUse_UYYY" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">12 °</Translation>
+      </Text>
+      <Text Id="__SingleUse_WNF9" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">0.87 G</Translation>
+      </Text>
+      <Text Id="__SingleUse_CFOO" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_JCHU" Alignment="Center" TypographyId="Typography_01">
+        <Translation Language="GB">2.45 KM</Translation>
+      </Text>
+      <Text Id="__SingleUse_82UY" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">150%</Translation>
+      </Text>
+      <Text Id="__SingleUse_G2QD" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_8YO4" Alignment="Center" TypographyId="Typography_01">
+        <Translation Language="GB">&lt;&gt;%</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="leelauib.ttf" Size="67" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789." />
+    <Typography Id="Typography_01" Font="swisski.ttf" Size="17" Bpp="4" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789." />
+    <Typography Id="Typography_02" Font="swisski.ttf" Size="12" Bpp="4" Direction="LTR" WildcardCharacters="0123456789." />
+    <Typography Id="MOTOR_font" Font="swissb.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+  </Typographies>
+</TextDatabase>
