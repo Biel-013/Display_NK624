@@ -11,8 +11,19 @@ public:
     virtual ~SAFETYView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
-     virtual void TransitionBegin_Safety();
+    virtual void TransitionBegin_Safety();
     virtual void TransitionEnd_Safety();
+    virtual void STACK_1_Begin();
+    virtual void STACK_1_End();
+    virtual void STACK_2_Begin();
+    virtual void STACK_2_End();
+    virtual void STACK_3_Begin();
+    virtual void STACK_3_End();
+    virtual void STACK_4_Begin();
+    virtual void STACK_4_End();
+    virtual void STACK_5_Begin();
+    virtual void STACK_5_End();
+
 protected:
 };
 

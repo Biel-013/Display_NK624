@@ -129,10 +129,17 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  gui/include/gui/safety_screen/SAFETYPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/VideoWidget.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VideoController.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp \
+ gui/include/gui/containers/STACK_5_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/STACK_5_PopUpBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
+ gui/include/gui/containers/STACK_4_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/STACK_4_PopUpBase.hpp \
+ gui/include/gui/containers/STACK_3_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/STACK_3_PopUpBase.hpp \
+ gui/include/gui/containers/STACK_2_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/STACK_2_PopUpBase.hpp \
  gui/include/gui/containers/STACK_1_PopUp.hpp \
  generated/gui_generated/include/gui_generated/containers/STACK_1_PopUpBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  gui/include/gui/debug_screen/DEBUGView.hpp \
  generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp \
  gui/include/gui/debug_screen/DEBUGPresenter.hpp \
@@ -400,13 +407,27 @@ gui/include/gui/safety_screen/SAFETYPresenter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VideoController.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp:
+gui/include/gui/containers/STACK_5_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/STACK_5_PopUpBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
+
+gui/include/gui/containers/STACK_4_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/STACK_4_PopUpBase.hpp:
+
+gui/include/gui/containers/STACK_3_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/STACK_3_PopUpBase.hpp:
+
+gui/include/gui/containers/STACK_2_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/STACK_2_PopUpBase.hpp:
 
 gui/include/gui/containers/STACK_1_PopUp.hpp:
 
 generated/gui_generated/include/gui_generated/containers/STACK_1_PopUpBase.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
 gui/include/gui/debug_screen/DEBUGView.hpp:
 

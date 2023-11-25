@@ -147,21 +147,25 @@ SAFETYViewBase::SAFETYViewBase() :
 
     STACK_5_widget.setBitmaps(Bitmap(BITMAP_STACK_5_ICON_ID), Bitmap(BITMAP_STACK_5_ICON_ID));
     STACK_5_widget.setBitmapXY(0, 0);
+    STACK_5_widget.setAction(flexButtonCallback);
     STACK_5_widget.setPosition(170, 127, 73, 58);
     add(STACK_5_widget);
 
     STACK_4_widget.setBitmaps(Bitmap(BITMAP_STACK_4_ICON_ID), Bitmap(BITMAP_STACK_4_ICON_ID));
     STACK_4_widget.setBitmapXY(0, 0);
+    STACK_4_widget.setAction(flexButtonCallback);
     STACK_4_widget.setPosition(170, 48, 73, 58);
     add(STACK_4_widget);
 
     STACK_3_widget.setBitmaps(Bitmap(BITMAP_STACK_3_ICON_ID), Bitmap(BITMAP_STACK_3_ICON_ID));
     STACK_3_widget.setBitmapXY(0, 0);
+    STACK_3_widget.setAction(flexButtonCallback);
     STACK_3_widget.setPosition(82, 156, 73, 58);
     add(STACK_3_widget);
 
     STACK_2_widget.setBitmaps(Bitmap(BITMAP_STACK_2_ICON_ID), Bitmap(BITMAP_STACK_2_ICON_ID));
     STACK_2_widget.setBitmapXY(0, 0);
+    STACK_2_widget.setAction(flexButtonCallback);
     STACK_2_widget.setPosition(92, 86, 73, 58);
     add(STACK_2_widget);
 
@@ -245,21 +249,73 @@ SAFETYViewBase::SAFETYViewBase() :
 
     FRONTGROUND.setPosition(80, 0, 400, 272);
     FRONTGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    FRONTGROUND.setVisible(false);
+    FRONTGROUND.setAlpha(0);
     add(FRONTGROUND);
+
+    BOTTON_stack_5.setBoxWithBorderPosition(0, 0, 408, 272);
+    BOTTON_stack_5.setBorderSize(5);
+    BOTTON_stack_5.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_stack_5.setAlpha(0);
+    BOTTON_stack_5.setVisible(false);
+    BOTTON_stack_5.setAction(flexButtonCallback);
+    BOTTON_stack_5.setPosition(72, 0, 408, 272);
+    add(BOTTON_stack_5);
+
+    STACK_5.setXY(327, 0);
+    STACK_5.setVisible(false);
+    add(STACK_5);
+
+    BOTTON_stack_4.setBoxWithBorderPosition(0, 0, 408, 272);
+    BOTTON_stack_4.setBorderSize(5);
+    BOTTON_stack_4.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_stack_4.setAlpha(0);
+    BOTTON_stack_4.setVisible(false);
+    BOTTON_stack_4.setAction(flexButtonCallback);
+    BOTTON_stack_4.setPosition(72, 0, 408, 272);
+    add(BOTTON_stack_4);
+
+    STACK_4.setXY(327, 0);
+    STACK_4.setVisible(false);
+    add(STACK_4);
+
+    BOTTON_stack_3.setBoxWithBorderPosition(0, 0, 408, 272);
+    BOTTON_stack_3.setBorderSize(5);
+    BOTTON_stack_3.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_stack_3.setAlpha(0);
+    BOTTON_stack_3.setVisible(false);
+    BOTTON_stack_3.setAction(flexButtonCallback);
+    BOTTON_stack_3.setPosition(72, 0, 408, 272);
+    add(BOTTON_stack_3);
+
+    STACK_3.setXY(327, 0);
+    STACK_3.setVisible(false);
+    add(STACK_3);
+
+    BOTTON_stack_2.setBoxWithBorderPosition(0, 0, 408, 272);
+    BOTTON_stack_2.setBorderSize(5);
+    BOTTON_stack_2.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_stack_2.setAlpha(0);
+    BOTTON_stack_2.setVisible(false);
+    BOTTON_stack_2.setAction(flexButtonCallback);
+    BOTTON_stack_2.setPosition(72, 0, 408, 272);
+    add(BOTTON_stack_2);
+
+    STACK_2.setXY(327, 0);
+    STACK_2.setVisible(false);
+    add(STACK_2);
+
+    BOTTON_stack_1.setBoxWithBorderPosition(0, 0, 408, 272);
+    BOTTON_stack_1.setBorderSize(5);
+    BOTTON_stack_1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_stack_1.setAlpha(0);
+    BOTTON_stack_1.setVisible(false);
+    BOTTON_stack_1.setAction(flexButtonCallback);
+    BOTTON_stack_1.setPosition(72, 0, 408, 272);
+    add(BOTTON_stack_1);
 
     STACK_1.setXY(327, 0);
     STACK_1.setVisible(false);
     add(STACK_1);
-
-    BOTOM_stack_1.setBoxWithBorderPosition(0, 0, 480, 272);
-    BOTOM_stack_1.setBorderSize(5);
-    BOTOM_stack_1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    BOTOM_stack_1.setAlpha(0);
-    BOTOM_stack_1.setVisible(false);
-    BOTOM_stack_1.setAction(flexButtonCallback);
-    BOTOM_stack_1.setPosition(0, 0, 480, 272);
-    add(BOTOM_stack_1);
 }
 
 SAFETYViewBase::~SAFETYViewBase()
@@ -269,6 +325,10 @@ SAFETYViewBase::~SAFETYViewBase()
 
 void SAFETYViewBase::setupScreen()
 {
+    STACK_5.initialize();
+    STACK_4.initialize();
+    STACK_3.initialize();
+    STACK_2.initialize();
     STACK_1.initialize();
     transitionBegins();
 }
@@ -317,34 +377,73 @@ void SAFETYViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonCon
 {
     if (&src == &STACK_1_widget)
     {
-        //Interaction_STACK_1_show
-        //When STACK_1_widget clicked show STACK_1
-        //Show STACK_1
-        STACK_1.setVisible(true);
-        STACK_1.invalidate();
-        //Interaction_Botom_STACK_1_show
-        //When STACK_1_widget clicked show BOTOM_stack_1
-        //Show BOTOM_stack_1
-        BOTOM_stack_1.setVisible(true);
-        BOTOM_stack_1.invalidate();
-        //Interaction2
-        //When STACK_1_widget clicked move STACK_1
-        //Move STACK_1 to x:0, y:0 with LinearIn easing in 250 ms (15 Ticks)
-        STACK_1.clearMoveAnimationEndedAction();
-        STACK_1.startMoveAnimation(0, 0, 15, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //Interaction_STACK_1_Begin
+        //When STACK_1_widget clicked call virtual function
+        //Call STACK_1_Begin
+        STACK_1_Begin();
     }
-    if (&src == &BOTOM_stack_1)
+    if (&src == &BOTTON_stack_1)
     {
-        //Interaction_Botom_STACK_1_hide
-        //When BOTOM_stack_1 clicked hide BOTOM_stack_1
-        //Hide BOTOM_stack_1
-        BOTOM_stack_1.setVisible(false);
-        BOTOM_stack_1.invalidate();
-        //Interaction1
-        //When BOTOM_stack_1 clicked move STACK_1
-        //Move STACK_1 to x:327, y:0 with LinearIn easing in 250 ms (15 Ticks)
-        STACK_1.clearMoveAnimationEndedAction();
-        STACK_1.startMoveAnimation(327, 0, 15, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+        //Interaction_STACK_1_End
+        //When BOTTON_stack_1 clicked call virtual function
+        //Call STACK_1_End
+        STACK_1_End();
+    }
+    if (&src == &STACK_2_widget)
+    {
+        //Interaction_STACK_2_Begin
+        //When STACK_2_widget clicked call virtual function
+        //Call STACK_2_Begin
+        STACK_2_Begin();
+    }
+    if (&src == &BOTTON_stack_2)
+    {
+        //Interaction_STACK_2_End
+        //When BOTTON_stack_2 clicked call virtual function
+        //Call STACK_2_End
+        STACK_2_End();
+    }
+    if (&src == &STACK_3_widget)
+    {
+        //Interaction_STACK_3_Begin
+        //When STACK_3_widget clicked call virtual function
+        //Call STACK_3_Begin
+        STACK_3_Begin();
+    }
+    if (&src == &BOTTON_stack_3)
+    {
+        //Interaction_STACK_3_End
+        //When BOTTON_stack_3 clicked call virtual function
+        //Call STACK_3_End
+        STACK_3_End();
+    }
+    if (&src == &STACK_4_widget)
+    {
+        //Interaction_STACK_4_begin
+        //When STACK_4_widget clicked call virtual function
+        //Call STACK_4_Begin
+        STACK_4_Begin();
+    }
+    if (&src == &BOTTON_stack_4)
+    {
+        //Interaction_STACK_4_End
+        //When BOTTON_stack_4 clicked call virtual function
+        //Call STACK_4_End
+        STACK_4_End();
+    }
+    if (&src == &STACK_5_widget)
+    {
+        //Interaction_STACK_5_Begin
+        //When STACK_5_widget clicked call virtual function
+        //Call STACK_5_Begin
+        STACK_5_Begin();
+    }
+    if (&src == &BOTTON_stack_5)
+    {
+        //Interaction_STACK_5_End
+        //When BOTTON_stack_5 clicked call virtual function
+        //Call STACK_5_End
+        STACK_5_End();
     }
 }
 

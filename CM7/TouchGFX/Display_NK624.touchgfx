@@ -1846,24 +1846,15 @@
             "X": 80,
             "Width": 400,
             "Height": 272,
-            "Visible": false,
             "LockPosition": true,
+            "Alpha": 0,
             "Fadeable": true
           },
           {
-            "Type": "CustomContainerInstance",
-            "Name": "STACK_1",
-            "X": 327,
-            "Width": 480,
-            "Height": 272,
-            "Visible": false,
-            "CustomContainerDefinitionName": "STACK_1_PopUp",
-            "Moveable": true
-          },
-          {
             "Type": "FlexButton",
-            "Name": "BOTOM_stack_1",
-            "Width": 480,
+            "Name": "BOTTON_stack_5",
+            "X": 72,
+            "Width": 408,
             "Height": 272,
             "Visible": false,
             "Alpha": 0,
@@ -1873,7 +1864,7 @@
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "Width": 480,
+                "Width": 408,
                 "Height": 272,
                 "LockToFlexButtonSize": true,
                 "BorderSize": 5,
@@ -1896,6 +1887,208 @@
                 }
               }
             ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_5",
+            "X": 327,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_5_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_stack_4",
+            "X": 72,
+            "Width": 408,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 408,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_4",
+            "X": 327,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_4_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_stack_3",
+            "X": 72,
+            "Width": 408,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 408,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_3",
+            "X": 327,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_3_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_stack_2",
+            "X": 72,
+            "Width": 408,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 408,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_2",
+            "X": 327,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_2_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_stack_1",
+            "X": 72,
+            "Width": 408,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 408,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_1",
+            "X": 327,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_1_PopUp",
+            "Moveable": true
           }
         ],
         "Interactions": [
@@ -2018,156 +2211,113 @@
             }
           },
           {
-            "InteractionName": "Interaction_STACK_2_PopUp_show",
+            "InteractionName": "Interaction_STACK_1_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "STACK_1_widget"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_1_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_1_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_stack_1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_1_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_2_Begin",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "STACK_2_widget"
             },
             "Action": {
-              "Type": "ActionShow"
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_2_Begin"
             }
           },
           {
-            "InteractionName": "Interaction_STACK_2_PopUp_hide",
+            "InteractionName": "Interaction_STACK_2_End",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "BOTTON_stack_2"
             },
             "Action": {
-              "Type": "ActionHide"
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_2_End"
             }
           },
           {
-            "InteractionName": "Interaction_STACK_3_PopUp_show",
+            "InteractionName": "Interaction_STACK_3_Begin",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "STACK_3_widget"
             },
             "Action": {
-              "Type": "ActionShow"
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_3_Begin"
             }
           },
           {
-            "InteractionName": "Interaction_STACK_3_PopUp_hide",
+            "InteractionName": "Interaction_STACK_3_End",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "BOTTON_stack_3"
             },
             "Action": {
-              "Type": "ActionHide"
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_3_End"
             }
           },
           {
-            "InteractionName": "Interaction_STACK_4_PopUp_show",
+            "InteractionName": "Interaction_STACK_4_begin",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "STACK_4_widget"
             },
             "Action": {
-              "Type": "ActionShow"
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_4_Begin"
             }
           },
           {
-            "InteractionName": "Interaction_STACK_4_PopUp_hide",
+            "InteractionName": "Interaction_STACK_4_End",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "BOTTON_stack_4"
             },
             "Action": {
-              "Type": "ActionHide"
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_4_End"
             }
           },
           {
-            "InteractionName": "Interaction_STACK_5_PopUp_show",
+            "InteractionName": "Interaction_STACK_5_Begin",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "STACK_5_widget"
             },
             "Action": {
-              "Type": "ActionShow"
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_5_Begin"
             }
           },
           {
-            "InteractionName": "Interaction_STACK_5_PopUp_hide",
+            "InteractionName": "Interaction_STACK_5_End",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "BOTTON_stack_5"
             },
             "Action": {
-              "Type": "ActionHide"
-            }
-          },
-          {
-            "InteractionName": "Interaction_STACK_1_show",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STACK_1_widget"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "STACK_1"
-            }
-          },
-          {
-            "InteractionName": "Interaction_Botom_STACK_1_show",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STACK_1_widget"
-            },
-            "Action": {
-              "Type": "ActionShow",
-              "ActionComponent": "BOTOM_stack_1"
-            }
-          },
-          {
-            "InteractionName": "Interaction_Botom_STACK_1_hide",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "BOTOM_stack_1"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "BOTOM_stack_1"
-            }
-          },
-          {
-            "InteractionName": "Interaction_STACK_1_hide",
-            "Trigger": {
-              "Type": "TriggerInteractionCompleted"
-            },
-            "Action": {
-              "Type": "ActionHide",
-              "ActionComponent": "STACK_1"
-            }
-          },
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": true,
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "BOTOM_stack_1"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "X": 327,
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 250,
-              "ActionComponent": "STACK_1"
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "STACK_1_widget"
-            },
-            "Action": {
-              "Type": "ActionMove",
-              "Easing": "Linear",
-              "EasingOption": "In",
-              "Duration": 250,
-              "ActionComponent": "STACK_1"
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_5_End"
             }
           }
         ]

@@ -19,8 +19,12 @@
 #include <touchgfx/widgets/VideoWidget.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <gui/containers/STACK_1_PopUp.hpp>
+#include <gui/containers/STACK_5_PopUp.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
+#include <gui/containers/STACK_4_PopUp.hpp>
+#include <gui/containers/STACK_3_PopUp.hpp>
+#include <gui/containers/STACK_2_PopUp.hpp>
+#include <gui/containers/STACK_1_PopUp.hpp>
 
 class SAFETYViewBase : public touchgfx::View<SAFETYPresenter>
 {
@@ -39,6 +43,46 @@ public:
         // Override and implement this function in SAFETY
     }
     virtual void TransitionBegin_Safety()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void STACK_1_Begin()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void STACK_1_End()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void STACK_2_Begin()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void STACK_2_End()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void STACK_3_Begin()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void STACK_3_End()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void STACK_4_Begin()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void STACK_4_End()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void STACK_5_Begin()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void STACK_5_End()
     {
         // Override and implement this function in SAFETY
     }
@@ -94,8 +138,16 @@ protected:
     touchgfx::FadeAnimator< touchgfx::TextArea > SENSOR_2_text;
     touchgfx::FadeAnimator< touchgfx::TextArea > SENSOR_1_text;
     touchgfx::FadeAnimator< touchgfx::Box > FRONTGROUND;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_stack_5;
+    touchgfx::MoveAnimator< STACK_5_PopUp > STACK_5;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_stack_4;
+    touchgfx::MoveAnimator< STACK_4_PopUp > STACK_4;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_stack_3;
+    touchgfx::MoveAnimator< STACK_3_PopUp > STACK_3;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_stack_2;
+    touchgfx::MoveAnimator< STACK_2_PopUp > STACK_2;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_stack_1;
     touchgfx::MoveAnimator< STACK_1_PopUp > STACK_1;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTOM_stack_1;
 
 private:
 
