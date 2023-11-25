@@ -16,6 +16,8 @@
 #include <touchgfx/widgets/Gauge.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/Button.hpp>
+#include <gui/containers/LoRA_PopUp.hpp>
+#include <touchgfx/mixins/MoveAnimator.hpp>
 
 class CONTROLViewBase : public touchgfx::View<CONTROLPresenter>
 {
@@ -34,6 +36,14 @@ public:
         // Override and implement this function in CONTROL
     }
     virtual void TransitionBegin_Control()
+    {
+        // Override and implement this function in CONTROL
+    }
+    virtual void LORA_Begin()
+    {
+        // Override and implement this function in CONTROL
+    }
+    virtual void LORA_End()
     {
         // Override and implement this function in CONTROL
     }
@@ -84,6 +94,8 @@ protected:
     touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > CONTROL_page;
     touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > DRIVE_page;
     touchgfx::FadeAnimator< touchgfx::Box > FRONTGROUND;
+    touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_lora;
 
 private:
 
@@ -91,11 +103,13 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<CONTROLViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<CONTROLViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
     /*
      * Delay Variable Declarations

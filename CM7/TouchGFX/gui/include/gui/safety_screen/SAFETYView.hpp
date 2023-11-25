@@ -23,6 +23,8 @@ public:
     virtual void STACK_4_End();
     virtual void STACK_5_Begin();
     virtual void STACK_5_End();
+    virtual void LORA_Begin();
+    virtual void LORA_End();
 
 protected:
 };

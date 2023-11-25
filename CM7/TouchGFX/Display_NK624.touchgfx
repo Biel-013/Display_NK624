@@ -238,9 +238,9 @@
             "X": 415,
             "Width": 65,
             "Height": 40,
-            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_OFF.png",
+            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_ON.png",
             "Released": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_OFF.png",
-            "IconPressed": "DRIVE_page\\INFO_widget\\ICONS\\LORA_OFF.png",
+            "IconPressed": "DRIVE_page\\INFO_widget\\ICONS\\LORA_ON.png",
             "IconReleased": "DRIVE_page\\INFO_widget\\ICONS\\LORA_ON.png",
             "IconX": 18,
             "IconY": 1,
@@ -254,7 +254,7 @@
             "X": 439,
             "Y": 130,
             "Width": 20,
-            "Height": 14,
+            "Height": 15,
             "TextId": "__SingleUse_MUJP",
             "TextRotation": "0",
             "Color": {
@@ -271,7 +271,7 @@
             "X": 429,
             "Y": 168,
             "Width": 40,
-            "Height": 14,
+            "Height": 15,
             "TextId": "__SingleUse_Y52B",
             "TextRotation": "0",
             "Color": {
@@ -288,7 +288,7 @@
             "X": 430,
             "Y": 206,
             "Width": 45,
-            "Height": 14,
+            "Height": 15,
             "TextId": "__SingleUse_P6H6",
             "TextRotation": "0",
             "Color": {
@@ -326,7 +326,7 @@
             "X": 429,
             "Y": 92,
             "Width": 36,
-            "Height": 14,
+            "Height": 15,
             "TextId": "__SingleUse_82UY",
             "TextRotation": "0",
             "Color": {
@@ -362,6 +362,55 @@
             "LockPosition": true,
             "Alpha": 0,
             "Fadeable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_lora",
+            "X": 72,
+            "Y": 1,
+            "Width": 409,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 409,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "LORA_PopUp",
+            "X": 230,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "LoRA_PopUp",
+            "Moveable": true
           }
         ],
         "Interactions": [
@@ -516,6 +565,28 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "DEBUG"
             }
+          },
+          {
+            "InteractionName": "Interaction_LORA_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "INFO_LoRa"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_lora"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_End"
+            }
           }
         ]
       },
@@ -598,9 +669,9 @@
             "X": 415,
             "Width": 65,
             "Height": 40,
-            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_OFF.png",
+            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_ON.png",
             "Released": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_OFF.png",
-            "IconPressed": "DRIVE_page\\INFO_widget\\ICONS\\LORA_OFF.png",
+            "IconPressed": "DRIVE_page\\INFO_widget\\ICONS\\LORA_ON.png",
             "IconReleased": "DRIVE_page\\INFO_widget\\ICONS\\LORA_ON.png",
             "IconX": 14,
             "IconY": 1,
@@ -1131,6 +1202,55 @@
             "LockPosition": true,
             "Alpha": 0,
             "Fadeable": true
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "LORA_PopUp",
+            "X": 230,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "LoRA_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_lora",
+            "X": 72,
+            "Y": 1,
+            "Width": 409,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 409,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -1250,6 +1370,28 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "TransitionBegin_Control"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "INFO_LoRa"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_lora"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_End"
             }
           }
         ]
@@ -1387,9 +1529,9 @@
             "X": 415,
             "Width": 65,
             "Height": 40,
-            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_OFF.png",
+            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_ON.png",
             "Released": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_OFF.png",
-            "IconPressed": "DRIVE_page\\INFO_widget\\ICONS\\LORA_OFF.png",
+            "IconPressed": "DRIVE_page\\INFO_widget\\ICONS\\LORA_ON.png",
             "IconReleased": "DRIVE_page\\INFO_widget\\ICONS\\LORA_ON.png",
             "IconX": 14,
             "IconY": 1,
@@ -2089,6 +2231,55 @@
             "Visible": false,
             "CustomContainerDefinitionName": "STACK_1_PopUp",
             "Moveable": true
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "LORA_PopUp",
+            "X": 230,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "LoRA_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_lora",
+            "X": 72,
+            "Y": 1,
+            "Width": 409,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 409,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -2319,6 +2510,28 @@
               "Type": "ActionCustom",
               "FunctionName": "STACK_5_End"
             }
+          },
+          {
+            "InteractionName": "Interaction_LORA_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "INFO_LoRa"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_lora"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_End"
+            }
           }
         ]
       },
@@ -2347,9 +2560,9 @@
             "X": 415,
             "Width": 65,
             "Height": 40,
-            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_OFF.png",
+            "Pressed": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_ON.png",
             "Released": "DRIVE_page\\INFO_widget\\BACKGROUND\\LORA_TAB_OFF.png",
-            "IconPressed": "DRIVE_page\\INFO_widget\\ICONS\\LORA_OFF.png",
+            "IconPressed": "DRIVE_page\\INFO_widget\\ICONS\\LORA_ON.png",
             "IconReleased": "DRIVE_page\\INFO_widget\\ICONS\\LORA_ON.png",
             "IconX": 14,
             "IconY": 1,
@@ -2720,6 +2933,55 @@
             "LockPosition": true,
             "Alpha": 0,
             "Fadeable": true
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "LORA_PopUp",
+            "X": 230,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "LoRA_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_lora",
+            "X": 72,
+            "Y": 1,
+            "Width": 409,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 409,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -2840,6 +3102,28 @@
               "Type": "ActionCustom",
               "FunctionName": "TransitionBegin_Debug"
             }
+          },
+          {
+            "InteractionName": "Interaction_LORA_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "INFO_LoRa"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_LORA_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_lora"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LORA_End"
+            }
           }
         ]
       }
@@ -2865,7 +3149,7 @@
             "X": 174,
             "Y": 86,
             "Width": 40,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_6WXP",
             "TextRotation": "0",
             "Color": {
@@ -2881,7 +3165,7 @@
             "X": 262,
             "Y": 85,
             "Width": 40,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_6M8U",
             "TextRotation": "0",
             "Color": {
@@ -2897,7 +3181,7 @@
             "X": 174,
             "Y": 138,
             "Width": 40,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_7KCM",
             "TextRotation": "0",
             "Color": {
@@ -2913,7 +3197,7 @@
             "X": 262,
             "Y": 137,
             "Width": 40,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_VZEE",
             "TextRotation": "0",
             "Color": {
@@ -2929,7 +3213,7 @@
             "X": 174,
             "Y": 185,
             "Width": 40,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_SSGG",
             "TextRotation": "0",
             "Color": {
@@ -2945,7 +3229,7 @@
             "X": 262,
             "Y": 184,
             "Width": 40,
-            "Height": 15,
+            "Height": 14,
             "TextId": "__SingleUse_0Q1P",
             "TextRotation": "0",
             "Color": {
@@ -3399,6 +3683,111 @@
             "Width": 40,
             "Height": 15,
             "TextId": "__SingleUse_3SXH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "LoRA_PopUp",
+        "Width": 480,
+        "Height": 272,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "LoRa_background",
+            "X": 258,
+            "Width": 168,
+            "Height": 220,
+            "RelativeFilename": "DRIVE_page\\LORA_PopUp\\LoRa_PopUp_background.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "CONFIGURATION",
+            "X": 274,
+            "Y": 181,
+            "Width": 121,
+            "Height": 17,
+            "TextId": "__SingleUse_ARNW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "STATE",
+            "X": 348,
+            "Y": 122,
+            "Width": 45,
+            "Height": 45,
+            "RelativeFilename": "DRIVE_page\\INFO_widget\\ICONS\\LORA_ON.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "RSSI",
+            "X": 284,
+            "Y": 136,
+            "Width": 32,
+            "Height": 17,
+            "TextId": "__SingleUse_LIL6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "VERSION",
+            "X": 357,
+            "Y": 90,
+            "Width": 32,
+            "Height": 17,
+            "TextId": "__SingleUse_HRQE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DATA_Rate",
+            "X": 272,
+            "Y": 90,
+            "Width": 56,
+            "Height": 17,
+            "TextId": "__SingleUse_LXFC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "USER_ID",
+            "X": 292,
+            "Y": 47,
+            "Width": 81,
+            "Height": 17,
+            "TextId": "__SingleUse_QL18",
             "TextRotation": "0",
             "Color": {
               "Red": 255,

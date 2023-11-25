@@ -22,6 +22,9 @@
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <gui/containers/LoRA_PopUp.hpp>
+#include <touchgfx/mixins/MoveAnimator.hpp>
 
 class DRIVERViewBase : public touchgfx::View<DRIVERPresenter>
 {
@@ -40,6 +43,14 @@ public:
         // Override and implement this function in DRIVER
     }
     virtual void TransitionEnd_Driver()
+    {
+        // Override and implement this function in DRIVER
+    }
+    virtual void LORA_Begin()
+    {
+        // Override and implement this function in DRIVER
+    }
+    virtual void LORA_End()
     {
         // Override and implement this function in DRIVER
     }
@@ -78,6 +89,8 @@ protected:
     touchgfx::FadeAnimator< touchgfx::TextArea > torque;
     touchgfx::FadeAnimator< touchgfx::TextArea > hodometro;
     touchgfx::FadeAnimator< touchgfx::Box > FRONTGROUND;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_lora;
+    touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
 
     /*
      * Wildcard Buffers
@@ -99,6 +112,7 @@ private:
     touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractProgressIndicator&> gaugeValueSetCallback;
     touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractProgressIndicator&> gaugeValueUpdatedCallback;
     touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
@@ -106,6 +120,7 @@ private:
     void gaugeValueSetCallbackHandler(const touchgfx::AbstractProgressIndicator& src);
     void gaugeValueUpdatedCallbackHandler(const touchgfx::AbstractProgressIndicator& src);
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
     /*
      * Delay Variable Declarations

@@ -25,6 +25,7 @@
 #include <gui/containers/STACK_3_PopUp.hpp>
 #include <gui/containers/STACK_2_PopUp.hpp>
 #include <gui/containers/STACK_1_PopUp.hpp>
+#include <gui/containers/LoRA_PopUp.hpp>
 
 class SAFETYViewBase : public touchgfx::View<SAFETYPresenter>
 {
@@ -83,6 +84,14 @@ public:
         // Override and implement this function in SAFETY
     }
     virtual void STACK_5_End()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void LORA_Begin()
+    {
+        // Override and implement this function in SAFETY
+    }
+    virtual void LORA_End()
     {
         // Override and implement this function in SAFETY
     }
@@ -148,6 +157,8 @@ protected:
     touchgfx::MoveAnimator< STACK_2_PopUp > STACK_2;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_stack_1;
     touchgfx::MoveAnimator< STACK_1_PopUp > STACK_1;
+    touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_lora;
 
 private:
 

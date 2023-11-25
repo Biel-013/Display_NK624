@@ -97,7 +97,9 @@ build/MINGW32_NT-6.2/gui/src/safety_screen/SAFETYView.o: \
  gui/include/gui/containers/STACK_2_PopUp.hpp \
  generated/gui_generated/include/gui_generated/containers/STACK_2_PopUpBase.hpp \
  gui/include/gui/containers/STACK_1_PopUp.hpp \
- generated/gui_generated/include/gui_generated/containers/STACK_1_PopUpBase.hpp
+ generated/gui_generated/include/gui_generated/containers/STACK_1_PopUpBase.hpp \
+ gui/include/gui/containers/LoRA_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp
 
 gui/include/gui/safety_screen/SAFETYView.hpp:
 
@@ -294,3 +296,7 @@ generated/gui_generated/include/gui_generated/containers/STACK_2_PopUpBase.hpp:
 gui/include/gui/containers/STACK_1_PopUp.hpp:
 
 generated/gui_generated/include/gui_generated/containers/STACK_1_PopUpBase.hpp:
+
+gui/include/gui/containers/LoRA_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp:

@@ -11,6 +11,7 @@ DRIVERViewBase::DRIVERViewBase() :
     gaugeValueSetCallback(this, &DRIVERViewBase::gaugeValueSetCallbackHandler),
     gaugeValueUpdatedCallback(this, &DRIVERViewBase::gaugeValueUpdatedCallbackHandler),
     buttonCallback(this, &DRIVERViewBase::buttonCallbackHandler),
+    flexButtonCallback(this, &DRIVERViewBase::flexButtonCallbackHandler),
     interaction_Delay_CONTROL_pageCounter(0),
     interaction_Delay_SAFETY_pageCounter(0),
     interaction_Delay_DEBUG_pageCounter(0)
@@ -120,8 +121,9 @@ DRIVERViewBase::DRIVERViewBase() :
     add(INFO_Modo);
 
     INFO_LoRa.setXY(415, 0);
-    INFO_LoRa.setBitmaps(touchgfx::Bitmap(BITMAP_LORA_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_LORA_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_LORA_ON_ID), touchgfx::Bitmap(BITMAP_LORA_OFF_ID));
+    INFO_LoRa.setBitmaps(touchgfx::Bitmap(BITMAP_LORA_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_LORA_TAB_ON_ID), touchgfx::Bitmap(BITMAP_LORA_ON_ID), touchgfx::Bitmap(BITMAP_LORA_ON_ID));
     INFO_LoRa.setIconXY(18, 1);
+    INFO_LoRa.setAction(buttonCallback);
     add(INFO_LoRa);
 
     brake_bias.setXY(439, 130);
@@ -166,6 +168,19 @@ DRIVERViewBase::DRIVERViewBase() :
     FRONTGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     FRONTGROUND.setAlpha(0);
     add(FRONTGROUND);
+
+    BOTTON_lora.setBoxWithBorderPosition(0, 0, 409, 272);
+    BOTTON_lora.setBorderSize(5);
+    BOTTON_lora.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_lora.setAlpha(0);
+    BOTTON_lora.setVisible(false);
+    BOTTON_lora.setAction(flexButtonCallback);
+    BOTTON_lora.setPosition(72, 1, 409, 272);
+    add(BOTTON_lora);
+
+    LORA_PopUp.setXY(230, 0);
+    LORA_PopUp.setVisible(false);
+    add(LORA_PopUp);
 }
 
 DRIVERViewBase::~DRIVERViewBase()
@@ -175,6 +190,7 @@ DRIVERViewBase::~DRIVERViewBase()
 
 void DRIVERViewBase::setupScreen()
 {
+    LORA_PopUp.initialize();
     transitionBegins();
 }
 
@@ -244,6 +260,24 @@ void DRIVERViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When Interaction_DEBUG_page_press completed delay
         //Delay for 251 ms (15 Ticks)
         interaction_Delay_DEBUG_pageCounter = INTERACTION_DELAY_DEBUG_PAGE_DURATION;
+    }
+    if (&src == &INFO_LoRa)
+    {
+        //Interaction_LORA_Begin
+        //When INFO_LoRa clicked call virtual function
+        //Call LORA_Begin
+        LORA_Begin();
+    }
+}
+
+void DRIVERViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &BOTTON_lora)
+    {
+        //Interaction_LORA_End
+        //When BOTTON_lora clicked call virtual function
+        //Call LORA_End
+        LORA_End();
     }
 }
 

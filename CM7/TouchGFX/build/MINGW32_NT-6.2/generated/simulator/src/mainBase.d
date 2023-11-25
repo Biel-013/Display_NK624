@@ -105,9 +105,6 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/TextProgress.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
- gui/include/gui/control_screen/CONTROLView.hpp \
- generated/gui_generated/include/gui_generated/control_screen/CONTROLViewBase.hpp \
- gui/include/gui/control_screen/CONTROLPresenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
@@ -125,6 +122,12 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ gui/include/gui/containers/LoRA_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
+ gui/include/gui/control_screen/CONTROLView.hpp \
+ generated/gui_generated/include/gui_generated/control_screen/CONTROLViewBase.hpp \
+ gui/include/gui/control_screen/CONTROLPresenter.hpp \
  gui/include/gui/safety_screen/SAFETYView.hpp \
  generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp \
  gui/include/gui/safety_screen/SAFETYPresenter.hpp \
@@ -132,7 +135,6 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VideoController.hpp \
  gui/include/gui/containers/STACK_5_PopUp.hpp \
  generated/gui_generated/include/gui_generated/containers/STACK_5_PopUpBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  gui/include/gui/containers/STACK_4_PopUp.hpp \
  generated/gui_generated/include/gui_generated/containers/STACK_4_PopUpBase.hpp \
  gui/include/gui/containers/STACK_3_PopUp.hpp \
@@ -370,12 +372,6 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 
-gui/include/gui/control_screen/CONTROLView.hpp:
-
-generated/gui_generated/include/gui_generated/control_screen/CONTROLViewBase.hpp:
-
-gui/include/gui/control_screen/CONTROLPresenter.hpp:
-
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
@@ -410,6 +406,18 @@ gui/include/gui/control_screen/CONTROLPresenter.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 
+gui/include/gui/containers/LoRA_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
+
+gui/include/gui/control_screen/CONTROLView.hpp:
+
+generated/gui_generated/include/gui_generated/control_screen/CONTROLViewBase.hpp:
+
+gui/include/gui/control_screen/CONTROLPresenter.hpp:
+
 gui/include/gui/safety_screen/SAFETYView.hpp:
 
 generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:
@@ -423,8 +431,6 @@ gui/include/gui/safety_screen/SAFETYPresenter.hpp:
 gui/include/gui/containers/STACK_5_PopUp.hpp:
 
 generated/gui_generated/include/gui_generated/containers/STACK_5_PopUpBase.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
 gui/include/gui/containers/STACK_4_PopUp.hpp:
 

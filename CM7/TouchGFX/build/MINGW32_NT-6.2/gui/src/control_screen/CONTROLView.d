@@ -82,7 +82,10 @@ build/MINGW32_NT-6.2/gui/src/control_screen/CONTROLView.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp \
+ gui/include/gui/containers/LoRA_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp
 
 gui/include/gui/control_screen/CONTROLView.hpp:
 
@@ -249,3 +252,9 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:
+
+gui/include/gui/containers/LoRA_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:

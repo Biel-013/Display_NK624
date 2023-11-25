@@ -97,6 +97,8 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/safety_screen/SAFETYViewBase.o:
  generated/gui_generated/include/gui_generated/containers/STACK_2_PopUpBase.hpp \
  gui/include/gui/containers/STACK_1_PopUp.hpp \
  generated/gui_generated/include/gui_generated/containers/STACK_1_PopUpBase.hpp \
+ gui/include/gui/containers/LoRA_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  generated/images/include/images/BitmapDatabase.hpp \
@@ -296,6 +298,10 @@ generated/gui_generated/include/gui_generated/containers/STACK_2_PopUpBase.hpp:
 gui/include/gui/containers/STACK_1_PopUp.hpp:
 
 generated/gui_generated/include/gui_generated/containers/STACK_1_PopUpBase.hpp:
+
+gui/include/gui/containers/LoRA_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp:
 

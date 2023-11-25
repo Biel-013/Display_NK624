@@ -10,6 +10,21 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_ARNW" Alignment="Left" TypographyId="MOTOR_font">
+        <Translation Language="GB">915 | 7 | 125 | 1/4</Translation>
+      </Text>
+      <Text Id="__SingleUse_LIL6" Alignment="Left" TypographyId="MOTOR_font">
+        <Translation Language="GB">76 %</Translation>
+      </Text>
+      <Text Id="__SingleUse_HRQE" Alignment="Left" TypographyId="MOTOR_font">
+        <Translation Language="GB">1.0.2</Translation>
+      </Text>
+      <Text Id="__SingleUse_LXFC" Alignment="Left" TypographyId="MOTOR_font">
+        <Translation Language="GB">18 Kbps</Translation>
+      </Text>
+      <Text Id="__SingleUse_QL18" Alignment="Left" TypographyId="MOTOR_font">
+        <Translation Language="GB">0x000024D3</Translation>
+      </Text>
       <Text Id="__SingleUse_0Q1P" Alignment="Center" TypographyId="Typography_02">
         <Translation Language="GB">67.4 V</Translation>
       </Text>

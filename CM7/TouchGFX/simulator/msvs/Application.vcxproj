@@ -43,6 +43,8 @@
     <ClCompile Include="..\..\generated\gui_generated\src\containers\STACK_4_PopUpBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\STACK_5_PopUp.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\STACK_5_PopUpBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\LoRA_PopUp.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\LoRA_PopUpBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -215,6 +217,8 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\STACK_4_PopUpBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\STACK_5_PopUp.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\STACK_5_PopUpBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\LoRA_PopUp.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\LoRA_PopUpBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

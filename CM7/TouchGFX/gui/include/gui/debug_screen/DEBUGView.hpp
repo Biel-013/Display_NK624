@@ -13,6 +13,8 @@ public:
     virtual void tearDownScreen();
     virtual void TransitionBegin_Debug();
     virtual void TransitionEnd_Debug();
+    virtual void LORA_Begin();
+    virtual void LORA_End();
 protected:
 };
 

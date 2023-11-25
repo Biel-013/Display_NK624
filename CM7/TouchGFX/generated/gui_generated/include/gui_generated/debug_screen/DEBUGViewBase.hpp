@@ -14,6 +14,9 @@
 #include <touchgfx/mixins/FadeAnimator.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <gui/containers/LoRA_PopUp.hpp>
+#include <touchgfx/mixins/MoveAnimator.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 
 class DEBUGViewBase : public touchgfx::View<DEBUGPresenter>
 {
@@ -32,6 +35,14 @@ public:
         // Override and implement this function in DEBUG
     }
     virtual void TransitionBegin_Debug()
+    {
+        // Override and implement this function in DEBUG
+    }
+    virtual void LORA_Begin()
+    {
+        // Override and implement this function in DEBUG
+    }
+    virtual void LORA_End()
     {
         // Override and implement this function in DEBUG
     }
@@ -73,6 +84,8 @@ protected:
     touchgfx::TextArea tensao_max_1_2;
     touchgfx::TextArea tensao_max_4;
     touchgfx::FadeAnimator< touchgfx::Box > FRONTGROUND;
+    touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_lora;
 
 private:
 
@@ -80,11 +93,13 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<DEBUGViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<DEBUGViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
     /*
      * Delay Variable Declarations

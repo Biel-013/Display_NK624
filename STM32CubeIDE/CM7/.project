@@ -367,6 +367,11 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/common/FrontendApplication.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/LoRA_PopUp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/containers/LoRA_PopUp.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/STACK_1_PopUp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/containers/STACK_1_PopUp.cpp</locationURI>
@@ -570,6 +575,11 @@
 			<name>Application/User/generated/FrontendApplicationBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/LoRA_PopUpBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/containers/LoRA_PopUpBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/STACK_1_PopUpBase.cpp</name>
@@ -905,6 +915,11 @@
 			<name>Application/User/generated/image_SKIDPAD_SIMBOL.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/DRIVE_page/INFO_widget/ICONS/image_SKIDPAD_SIMBOL.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_LoRa_PopUp_background.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/DRIVE_page/LORA_PopUp/image_LoRa_PopUp_background.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_BOTTOM_OFF_SELECT.cpp</name>

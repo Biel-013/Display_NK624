@@ -74,8 +74,9 @@ SAFETYViewBase::SAFETYViewBase() :
     add(INFO_Modo);
 
     INFO_LoRa.setXY(415, 0);
-    INFO_LoRa.setBitmaps(touchgfx::Bitmap(BITMAP_LORA_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_LORA_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_LORA_ON_ID), touchgfx::Bitmap(BITMAP_LORA_OFF_ID));
+    INFO_LoRa.setBitmaps(touchgfx::Bitmap(BITMAP_LORA_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_LORA_TAB_ON_ID), touchgfx::Bitmap(BITMAP_LORA_ON_ID), touchgfx::Bitmap(BITMAP_LORA_ON_ID));
     INFO_LoRa.setIconXY(14, 1);
+    INFO_LoRa.setAction(buttonCallback);
     add(INFO_LoRa);
 
     DEBUG_page.setXY(0, 203);
@@ -316,6 +317,19 @@ SAFETYViewBase::SAFETYViewBase() :
     STACK_1.setXY(327, 0);
     STACK_1.setVisible(false);
     add(STACK_1);
+
+    LORA_PopUp.setXY(230, 0);
+    LORA_PopUp.setVisible(false);
+    add(LORA_PopUp);
+
+    BOTTON_lora.setBoxWithBorderPosition(0, 0, 409, 272);
+    BOTTON_lora.setBorderSize(5);
+    BOTTON_lora.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_lora.setAlpha(0);
+    BOTTON_lora.setVisible(false);
+    BOTTON_lora.setAction(flexButtonCallback);
+    BOTTON_lora.setPosition(72, 1, 409, 272);
+    add(BOTTON_lora);
 }
 
 SAFETYViewBase::~SAFETYViewBase()
@@ -330,6 +344,7 @@ void SAFETYViewBase::setupScreen()
     STACK_3.initialize();
     STACK_2.initialize();
     STACK_1.initialize();
+    LORA_PopUp.initialize();
     transitionBegins();
 }
 
@@ -370,6 +385,13 @@ void SAFETYViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When Interaction_DEBUG_page_press completed delay
         //Delay for 251 ms (15 Ticks)
         interaction_Delay_DEBUG_pageCounter = INTERACTION_DELAY_DEBUG_PAGE_DURATION;
+    }
+    if (&src == &INFO_LoRa)
+    {
+        //Interaction_LORA_Begin
+        //When INFO_LoRa clicked call virtual function
+        //Call LORA_Begin
+        LORA_Begin();
     }
 }
 
@@ -444,6 +466,13 @@ void SAFETYViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonCon
         //When BOTTON_stack_5 clicked call virtual function
         //Call STACK_5_End
         STACK_5_End();
+    }
+    if (&src == &BOTTON_lora)
+    {
+        //Interaction_LORA_End
+        //When BOTTON_lora clicked call virtual function
+        //Call LORA_End
+        LORA_End();
     }
 }
 
