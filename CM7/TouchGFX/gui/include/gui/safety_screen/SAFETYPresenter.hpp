@@ -11,7 +11,7 @@ class SAFETYView;
 class SAFETYPresenter : public touchgfx::Presenter, public ModelListener
 {
 public:
-    SAFETYPresenter(SAFETYView& v);
+    SAFETYPresenter(SAFETYView &v);
 
     /**
      * The activate function is called automatically when this screen is "switched in"
@@ -27,10 +27,12 @@ public:
 
     virtual ~SAFETYPresenter() {}
 
+    virtual void updateTick(void);
+
 private:
     SAFETYPresenter();
 
-    SAFETYView& view;
+    SAFETYView &view;
 };
 
 #endif // SAFETYPRESENTER_HPP

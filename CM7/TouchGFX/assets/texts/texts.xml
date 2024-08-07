@@ -10,20 +10,188 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_ARNW" Alignment="Left" TypographyId="MOTOR_font">
-        <Translation Language="GB">915 | 7 | 125 | 1/4</Translation>
+      <Text Id="__SingleUse_B2MD" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">000</Translation>
       </Text>
-      <Text Id="__SingleUse_LIL6" Alignment="Left" TypographyId="MOTOR_font">
-        <Translation Language="GB">76 %</Translation>
+      <Text Id="__SingleUse_YH8M" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_HRQE" Alignment="Left" TypographyId="MOTOR_font">
-        <Translation Language="GB">1.0.2</Translation>
+      <Text Id="__SingleUse_3GDV" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
       </Text>
-      <Text Id="__SingleUse_LXFC" Alignment="Left" TypographyId="MOTOR_font">
-        <Translation Language="GB">18 Kbps</Translation>
+      <Text Id="__SingleUse_JFP0" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">1/&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_QL18" Alignment="Left" TypographyId="MOTOR_font">
-        <Translation Language="GB">0x000024D3</Translation>
+      <Text Id="__SingleUse_WDH4" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_15SS" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_K7BY" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_9JOW" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3H50" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_W6KE" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_5HQT" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q58Q" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_F4PV" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_HPHN" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_14QM" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_1JCY" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0.0.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_VP9N" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_FP6W" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">00000000</Translation>
+      </Text>
+      <Text Id="__SingleUse_LLL4" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_T60R" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_UZMT" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_AKYW" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_6DP2" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_LG9N" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_OJ2V" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">00.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_BQ00" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZEKC" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_GW1J" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_AMIJ" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_B351" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_IRWO" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_W5DZ" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_5CES" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_RUTU" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_EYPO" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_RIPS" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q65U" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_E0PP" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_UHXO" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_3SYR" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_U5Z4" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_2EH6" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZTD4" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZZ4Z" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_OSBO" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_1RGB" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_8M3D" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_8PEH" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_9RBT" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_NBZU" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_VBXZ" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_SGXO" Alignment="Left" TypographyId="Charge_percent">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_PEFS" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_QUF4" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_VZZG" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt; Kbps</Translation>
+      </Text>
+      <Text Id="__SingleUse_PCOB" Alignment="Center" TypographyId="Typography_01">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
+      </Text>
+      <Text Id="__SingleUse_W9BV" Alignment="Center" TypographyId="Charge_percent">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
+      </Text>
+      <Text Id="__SingleUse_LIL6" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">&lt;value&gt; %</Translation>
+      </Text>
+      <Text Id="__SingleUse_HRQE" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_LXFC" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">&lt;value&gt; Kbps</Translation>
+      </Text>
+      <Text Id="__SingleUse_QL18" Alignment="Center" TypographyId="MOTOR_font">
+        <Translation Language="GB">0x&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_0Q1P" Alignment="Center" TypographyId="Typography_02">
         <Translation Language="GB">67.4 V</Translation>
@@ -98,154 +266,121 @@
         <Translation Language="GB">67.4 V</Translation>
       </Text>
       <Text Id="__SingleUse_CXEM" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">67.4 V</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_Y9SF" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">67.4 V</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_IJL5" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">67.4 V</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_ECJY" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">67.4 V</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_MOHI" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">67.4 V</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_3SXH" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">67.4 V</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_8ZPX" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">1893&#10;Kbps</Translation>
+        <Translation Language="GB">&lt;value&gt; Kbps</Translation>
       </Text>
       <Text Id="__SingleUse_AMAG" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">2543&#10;Kbps</Translation>
+        <Translation Language="GB">&lt;value&gt; Kbps</Translation>
       </Text>
       <Text Id="__SingleUse_T2YW" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">12&#10;Kbps</Translation>
+        <Translation Language="GB">&lt;value&gt; Kbps</Translation>
       </Text>
-      <Text Id="__SingleUse_228G" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">46277</Translation>
-      </Text>
-      <Text Id="__SingleUse_KANZ" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">657</Translation>
-      </Text>
-      <Text Id="__SingleUse_YXOY" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">5235</Translation>
-      </Text>
-      <Text Id="__SingleUse_UAN7" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">---------</Translation>
-      </Text>
-      <Text Id="__SingleUse_L63Y" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">---------</Translation>
-      </Text>
-      <Text Id="__SingleUse_ASDO" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">13513</Translation>
-      </Text>
-      <Text Id="__SingleUse_PKT0" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">---------</Translation>
-      </Text>
-      <Text Id="__SingleUse_CQEM" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">---------</Translation>
-      </Text>
-      <Text Id="__SingleUse_XQF6" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">1244</Translation>
-      </Text>
-      <Text Id="__SingleUse_BLM9" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">3,04 V</Translation>
+      <Text Id="__SingleUse_BLM9" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_CQUD" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">82,3 V</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_ZCMW" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">82,3 V</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_BVMV" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">82,3 V</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_6AAQ" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">82,3 V</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_A1MF" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">82,3 V</Translation>
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_EP5M" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">239 A</Translation>
+        <Translation Language="GB">&lt;value&gt; A</Translation>
       </Text>
       <Text Id="__SingleUse_IWRT" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">232 A</Translation>
+        <Translation Language="GB">&lt;value&gt; A</Translation>
       </Text>
       <Text Id="__SingleUse_XKB0" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">228 A</Translation>
+        <Translation Language="GB">&lt;value&gt; A</Translation>
       </Text>
       <Text Id="__SingleUse_M8NZ" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">230 A</Translation>
+        <Translation Language="GB">&lt;value&gt; A</Translation>
       </Text>
-      <Text Id="__SingleUse_TUNC" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">&lt;&gt;%</Translation>
-      </Text>
-      <Text Id="__SingleUse_MZQS" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">2,97 V</Translation>
+      <Text Id="__SingleUse_MZQS" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
       <Text Id="__SingleUse_EYDG" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">36,7 C°</Translation>
+        <Translation Language="GB">&lt;value&gt; C°</Translation>
       </Text>
       <Text Id="__SingleUse_Z5XJ" Alignment="Center" TypographyId="MOTOR_font">
-        <Translation Language="GB">82.6 C°</Translation>
+        <Translation Language="GB">&lt;value&gt; C°</Translation>
       </Text>
       <Text Id="__SingleUse_OGBX" Alignment="Center" TypographyId="MOTOR_font">
-        <Translation Language="GB">110 %</Translation>
+        <Translation Language="GB">&lt;value&gt; %</Translation>
       </Text>
       <Text Id="__SingleUse_B63V" Alignment="Center" TypographyId="MOTOR_font">
-        <Translation Language="GB">1229</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_73T9" Alignment="Center" TypographyId="MOTOR_font">
-        <Translation Language="GB">11.5 kW</Translation>
+        <Translation Language="GB">&lt;value&gt; kW</Translation>
       </Text>
       <Text Id="__SingleUse_VOXZ" Alignment="Center" TypographyId="MOTOR_font">
-        <Translation Language="GB">110 %</Translation>
+        <Translation Language="GB">&lt;value&gt; %</Translation>
       </Text>
       <Text Id="__SingleUse_2G9Q" Alignment="Center" TypographyId="MOTOR_font">
-        <Translation Language="GB">82.3 C°</Translation>
+        <Translation Language="GB">&lt;value&gt; C°</Translation>
       </Text>
       <Text Id="__SingleUse_VEMN" Alignment="Center" TypographyId="MOTOR_font">
-        <Translation Language="GB">1230</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_05D5" Alignment="Center" TypographyId="MOTOR_font">
-        <Translation Language="GB">11.5 kW</Translation>
+        <Translation Language="GB">&lt;value&gt; kW</Translation>
       </Text>
-      <Text Id="__SingleUse_MUJP" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">3/7</Translation>
+      <Text Id="__SingleUse_MUJP" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_Y52B" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">2,97 V</Translation>
+      <Text Id="__SingleUse_Y52B" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
-      <Text Id="__SingleUse_P6H6" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">36,7 C°</Translation>
+      <Text Id="__SingleUse_P6H6" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt; C°</Translation>
       </Text>
-      <Text Id="__SingleUse_1RT6" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">150 %</Translation>
+      <Text Id="__SingleUse_1RT6" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
       </Text>
       <Text Id="__SingleUse_UYYY" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">12 °</Translation>
+        <Translation Language="GB">&lt;value&gt; °</Translation>
       </Text>
       <Text Id="__SingleUse_WNF9" Alignment="Center" TypographyId="Typography_02">
-        <Translation Language="GB">0.87 G</Translation>
+        <Translation Language="GB">&lt;value&gt; G</Translation>
       </Text>
       <Text Id="__SingleUse_CFOO" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">00</Translation>
       </Text>
       <Text Id="__SingleUse_JCHU" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">2.45 KM</Translation>
+        <Translation Language="GB">&lt;value&gt; Km</Translation>
       </Text>
-      <Text Id="__SingleUse_82UY" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">150%</Translation>
+      <Text Id="__SingleUse_82UY" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
       </Text>
       <Text Id="__SingleUse_G2QD" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_8YO4" Alignment="Center" TypographyId="Typography_01">
-        <Translation Language="GB">&lt;&gt;%</Translation>
       </Text>
     </TextGroup>
   </Texts>
@@ -254,8 +389,9 @@
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_00" Font="leelauib.ttf" Size="67" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789." />
-    <Typography Id="Typography_01" Font="swisski.ttf" Size="17" Bpp="4" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789." />
+    <Typography Id="Typography_01" Font="swisski.ttf" Size="17" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789." />
     <Typography Id="Typography_02" Font="swisski.ttf" Size="12" Bpp="4" Direction="LTR" WildcardCharacters="0123456789." />
-    <Typography Id="MOTOR_font" Font="swissb.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="MOTOR_font" Font="swissb.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789./" />
+    <Typography Id="Charge_percent" Font="swisski.ttf" Size="17" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

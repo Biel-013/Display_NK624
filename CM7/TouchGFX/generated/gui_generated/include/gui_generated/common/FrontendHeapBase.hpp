@@ -12,6 +12,8 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
+#include <gui/animation_screen/ANIMATIONView.hpp>
+#include <gui/animation_screen/ANIMATIONPresenter.hpp>
 #include <gui/driver_screen/DRIVERView.hpp>
 #include <gui/driver_screen/DRIVERPresenter.hpp>
 #include <gui/control_screen/CONTROLView.hpp>
@@ -42,11 +44,12 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< DRIVERView,
+    typedef touchgfx::meta::TypeList< ANIMATIONView,
+            touchgfx::meta::TypeList< DRIVERView,
             touchgfx::meta::TypeList< CONTROLView,
             touchgfx::meta::TypeList< SAFETYView,
             touchgfx::meta::TypeList< DEBUGView,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::Nil > > > >
             > GeneratedViewTypes;
 
     /**
@@ -58,11 +61,12 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< DRIVERPresenter,
+    typedef touchgfx::meta::TypeList< ANIMATIONPresenter,
+            touchgfx::meta::TypeList< DRIVERPresenter,
             touchgfx::meta::TypeList< CONTROLPresenter,
             touchgfx::meta::TypeList< SAFETYPresenter,
             touchgfx::meta::TypeList< DEBUGPresenter,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::Nil > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -85,7 +89,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoDRIVERScreenNoTransition();
+        app.gotoANIMATIONScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

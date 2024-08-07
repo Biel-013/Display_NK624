@@ -16,3 +16,7 @@ void SAFETYPresenter::deactivate()
 {
 
 }
+
+void SAFETYPresenter::updateTick(void) {
+	view.updateTick();
+}

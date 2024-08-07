@@ -9,13 +9,13 @@
 #include <gui/control_screen/CONTROLPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/Gauge.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/FadeAnimator.hpp>
-#include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/Gauge.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/Button.hpp>
 #include <gui/containers/LoRA_PopUp.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
 
@@ -57,47 +57,63 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Box BACKGROUND;
-    touchgfx::FadeAnimator< touchgfx::Image > INFO_Torque;
-    touchgfx::FadeAnimator< touchgfx::Image > INFO_Giros_xz;
-    touchgfx::FadeAnimator< touchgfx::Image > INFO_Acel_xy;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_Frenagem;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_Modo;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_LoRa;
-    touchgfx::FadeAnimator< touchgfx::Image > MOTOR_background;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > MOTOR_L_icon;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > MOTOR_L_giros;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > MOTOR_L_potencia;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > MOTOR_L_torque;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > MOTOR_L_temperatura;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > MOTOR_R_icon;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > MOTOR_R_giros;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > MOTOR_R_potencia;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > MOTOR_R_torque;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > MOTOR_R_temperatura;
+    touchgfx::Image BACKGROUND;
+    touchgfx::Button PAGE_Drive;
+    touchgfx::Button PAGE_Control;
+    touchgfx::Button PAGE_Safety;
+    touchgfx::Button PAGE_Debug;
     touchgfx::FadeAnimator< touchgfx::Gauge > INCLINACAO_VOL_gauge;
     touchgfx::FadeAnimator< touchgfx::Gauge > INCLINACAO_CAR_gauge;
-    touchgfx::FadeAnimator< touchgfx::TextArea > torque;
-    touchgfx::FadeAnimator< touchgfx::TextArea > giroscopio_xz;
-    touchgfx::FadeAnimator< touchgfx::TextArea > acelerometro_xy;
-    touchgfx::FadeAnimator< touchgfx::TextArea > motor_L_Giros;
-    touchgfx::FadeAnimator< touchgfx::TextArea > motor_R_Giros;
-    touchgfx::FadeAnimator< touchgfx::TextArea > motor_L_Potencia;
-    touchgfx::FadeAnimator< touchgfx::TextArea > motor_R_Potencia;
-    touchgfx::FadeAnimator< touchgfx::TextArea > motor_L_Torque;
-    touchgfx::FadeAnimator< touchgfx::TextArea > motor_R_Torque;
-    touchgfx::FadeAnimator< touchgfx::TextArea > motor_L_Temperature;
-    touchgfx::FadeAnimator< touchgfx::TextArea > motor_R_Temperature;
+    touchgfx::PainterRGB565 INCLINACAO_CAR_gaugePainter;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > torque;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > giroscopio_xz;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > acelerometro_xy;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > motor_L_Giros;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > motor_R_Giros;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > motor_L_Potencia;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > motor_R_Potencia;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > motor_L_Torque;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > motor_R_Torque;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > motor_L_Temperature;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > motor_R_Temperature;
     touchgfx::FadeAnimator< touchgfx::Button > POP_Up;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > DEBUG_page;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > SAFETY_page;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > CONTROL_page;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > DRIVE_page;
+    touchgfx::Image ICON_Frenagem;
+    touchgfx::Image ICON_Modo;
+    touchgfx::Button BOTTOM_Info_LoRa;
+    touchgfx::Image ICON_LoRa;
     touchgfx::FadeAnimator< touchgfx::Box > FRONTGROUND;
-    touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_lora;
+    touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TORQUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar torqueBuffer[TORQUE_SIZE];
+    static const uint16_t GIROSCOPIO_XZ_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar giroscopio_xzBuffer[GIROSCOPIO_XZ_SIZE];
+    static const uint16_t ACELEROMETRO_XY_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar acelerometro_xyBuffer[ACELEROMETRO_XY_SIZE];
+    static const uint16_t MOTOR_L_GIROS_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar motor_L_GirosBuffer[MOTOR_L_GIROS_SIZE];
+    static const uint16_t MOTOR_R_GIROS_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar motor_R_GirosBuffer[MOTOR_R_GIROS_SIZE];
+    static const uint16_t MOTOR_R_POTENCIA_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar motor_R_PotenciaBuffer[MOTOR_R_POTENCIA_SIZE];
+    static const uint16_t MOTOR_L_TORQUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar motor_L_TorqueBuffer[MOTOR_L_TORQUE_SIZE];
+    static const uint16_t MOTOR_L_TEMPERATURE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar motor_L_TemperatureBuffer[MOTOR_L_TEMPERATURE_SIZE];
+    static const uint16_t MOTOR_R_TEMPERATURE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar motor_R_TemperatureBuffer[MOTOR_R_TEMPERATURE_SIZE];
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

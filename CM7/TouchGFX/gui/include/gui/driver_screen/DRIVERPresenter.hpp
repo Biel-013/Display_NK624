@@ -27,6 +27,7 @@ public:
 
     virtual ~DRIVERPresenter() {}
 
+    virtual void updateTick(void);
 private:
     DRIVERPresenter();
 

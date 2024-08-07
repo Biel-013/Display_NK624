@@ -20,17 +20,19 @@ struct Typography
     static const touchgfx::FontId TYPOGRAPHY_01 = 4;
     static const touchgfx::FontId TYPOGRAPHY_02 = 5;
     static const touchgfx::FontId MOTOR_FONT = 6;
+    static const touchgfx::FontId CHARGE_PERCENT = 7;
 };
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId DEFAULT = 0;       // verdana_20_4bpp
-    static const touchgfx::FontId LARGE = 1;         // verdana_40_4bpp
-    static const touchgfx::FontId SMALL = 2;         // verdana_10_4bpp
-    static const touchgfx::FontId TYPOGRAPHY_00 = 3; // leelauib_67_4bpp
-    static const touchgfx::FontId TYPOGRAPHY_01 = 4; // swisski_17_4bpp
-    static const touchgfx::FontId TYPOGRAPHY_02 = 5; // swisski_12_4bpp
-    static const touchgfx::FontId MOTOR_FONT = 6;    // swissb_14_4bpp
+    static const touchgfx::FontId DEFAULT = 0;        // verdana_20_4bpp
+    static const touchgfx::FontId LARGE = 1;          // verdana_40_4bpp
+    static const touchgfx::FontId SMALL = 2;          // verdana_10_4bpp
+    static const touchgfx::FontId TYPOGRAPHY_00 = 3;  // leelauib_67_4bpp
+    static const touchgfx::FontId TYPOGRAPHY_01 = 4;  // swisski_17_4bpp
+    static const touchgfx::FontId TYPOGRAPHY_02 = 5;  // swisski_12_4bpp
+    static const touchgfx::FontId MOTOR_FONT = 6;     // swissb_14_4bpp
+    static const touchgfx::FontId CHARGE_PERCENT = 4; // swisski_17_4bpp
     static const uint16_t NUMBER_OF_FONTS = 7;
 };
 

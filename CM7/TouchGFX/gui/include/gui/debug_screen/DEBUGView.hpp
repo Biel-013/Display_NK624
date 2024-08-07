@@ -15,6 +15,8 @@ public:
     virtual void TransitionEnd_Debug();
     virtual void LORA_Begin();
     virtual void LORA_End();
+    virtual void updateTick(void);
+    
 protected:
 };
 

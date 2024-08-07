@@ -62,6 +62,8 @@ void Error_Handler(void);
 #define VSYNC_FREQ_GPIO_Port GPIOB
 #define RENDER_TIME_Pin GPIO_PIN_7
 #define RENDER_TIME_GPIO_Port GPIOB
+#define botao_Pin GPIO_PIN_13
+#define botao_GPIO_Port GPIOC
 #define FRAME_RATE_Pin GPIO_PIN_3
 #define FRAME_RATE_GPIO_Port GPIOG
 #define MCU_ACTIVE_Pin GPIO_PIN_6

@@ -27,6 +27,8 @@ public:
 
     virtual ~DEBUGPresenter() {}
 
+    virtual void updateTick(void);
+
 private:
     DEBUGPresenter();
 

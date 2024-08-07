@@ -14,39 +14,51 @@ STACK_1_PopUpBase::STACK_1_PopUpBase()
     CELL_background.setBitmap(touchgfx::Bitmap(BITMAP_STACK_1_BACKGROUND_ID));
     add(CELL_background);
 
-    Tensao_pack_1.setXY(174, 86);
+    Tensao_pack_1.setPosition(168, 86, 46, 15);
     Tensao_pack_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Tensao_pack_1.setLinespacing(0);
+    Unicode::snprintf(Tensao_pack_1Buffer, TENSAO_PACK_1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_5HQT).getText());
+    Tensao_pack_1.setWildcard(Tensao_pack_1Buffer);
     Tensao_pack_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CXEM));
     add(Tensao_pack_1);
 
-    Tensao_pack_2.setXY(262, 85);
+    Tensao_pack_2.setPosition(257, 86, 46, 15);
     Tensao_pack_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Tensao_pack_2.setLinespacing(0);
+    Unicode::snprintf(Tensao_pack_2Buffer, TENSAO_PACK_2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_Q58Q).getText());
+    Tensao_pack_2.setWildcard(Tensao_pack_2Buffer);
     Tensao_pack_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Y9SF));
     add(Tensao_pack_2);
 
-    Tensao_pack_3.setXY(174, 138);
+    Tensao_pack_3.setPosition(168, 137, 46, 15);
     Tensao_pack_3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Tensao_pack_3.setLinespacing(0);
+    Unicode::snprintf(Tensao_pack_3Buffer, TENSAO_PACK_3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_W6KE).getText());
+    Tensao_pack_3.setWildcard(Tensao_pack_3Buffer);
     Tensao_pack_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_IJL5));
     add(Tensao_pack_3);
 
-    Tensao_pack_4.setXY(262, 137);
+    Tensao_pack_4.setPosition(257, 137, 46, 15);
     Tensao_pack_4.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Tensao_pack_4.setLinespacing(0);
+    Unicode::snprintf(Tensao_pack_4Buffer, TENSAO_PACK_4_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_F4PV).getText());
+    Tensao_pack_4.setWildcard(Tensao_pack_4Buffer);
     Tensao_pack_4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ECJY));
     add(Tensao_pack_4);
 
-    Tensao_pack_5.setXY(174, 185);
+    Tensao_pack_5.setPosition(168, 185, 46, 15);
     Tensao_pack_5.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Tensao_pack_5.setLinespacing(0);
+    Unicode::snprintf(Tensao_pack_5Buffer, TENSAO_PACK_5_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_3H50).getText());
+    Tensao_pack_5.setWildcard(Tensao_pack_5Buffer);
     Tensao_pack_5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MOHI));
     add(Tensao_pack_5);
 
-    Tensao_pack_6.setXY(262, 184);
+    Tensao_pack_6.setPosition(257, 185, 46, 15);
     Tensao_pack_6.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Tensao_pack_6.setLinespacing(0);
+    Unicode::snprintf(Tensao_pack_6Buffer, TENSAO_PACK_6_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_HPHN).getText());
+    Tensao_pack_6.setWildcard(Tensao_pack_6Buffer);
     Tensao_pack_6.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3SXH));
     add(Tensao_pack_6);
 }

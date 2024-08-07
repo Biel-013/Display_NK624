@@ -1,9 +1,29 @@
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:273:13:int16_t touchgfx::Drawable::getX() const	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:283:13:int16_t touchgfx::Drawable::getY() const	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:515:10:void touchgfx::Drawable::setVisible(bool)	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Application.hpp:187:10:void touchgfx::Application::registerTimerWidget(touchgfx::Drawable*)	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Application.hpp:208:10:void touchgfx::Application::unregisterTimerWidget(const touchgfx::Drawable*)	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:82:10:void touchgfx::Box::setAlpha(uint8_t)	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:97:18:virtual void touchgfx::Box::invalidateContent() const	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:50:26:FrontendApplication& DEBUGViewBase::application()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/debug_screen/DEBUGView.hpp:11:13:DEBUGView::~DEBUGView()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/debug_screen/DEBUGView.hpp:11:13:virtual DEBUGView::~DEBUGView()	16	static
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:3:1:DEBUGView::DEBUGView()	16	static
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:8:6:virtual void DEBUGView::setupScreen()	16	static
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:13:6:virtual void DEBUGView::tearDownScreen()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:7:1:DEBUGView::DEBUGView()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:11:6:virtual void DEBUGView::setupScreen()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:16:6:virtual void DEBUGView::tearDownScreen()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:21:6:virtual void DEBUGView::TransitionBegin_Debug()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:30:6:virtual void DEBUGView::TransitionEnd_Debug()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:36:6:virtual void DEBUGView::LORA_Begin()	24	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:50:6:virtual void DEBUGView::LORA_End()	24	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/debug_screen/DEBUGView.cpp:61:6:virtual void DEBUGView::updateTick()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:71:10:void touchgfx::FadeAnimator<T>::clearFadeAnimationEndedAction() [with T = touchgfx::Box]	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:122:10:void touchgfx::FadeAnimator<T>::startFadeAnimation(uint8_t, uint16_t, touchgfx::EasingEquation) [with T = touchgfx::Box]	32	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:76:10:void touchgfx::MoveAnimator<T>::clearMoveAnimationEndedAction() [with T = LoRA_PopUp]	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:131:10:void touchgfx::MoveAnimator<T>::startMoveAnimation(int16_t, int16_t, uint16_t, touchgfx::EasingEquation, touchgfx::EasingEquation) [with T = LoRA_PopUp]	24	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Box]	40	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = LoRA_PopUp]	32	static

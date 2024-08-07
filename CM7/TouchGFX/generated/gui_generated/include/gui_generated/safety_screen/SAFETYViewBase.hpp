@@ -8,17 +8,14 @@
 #include <mvp/View.hpp>
 #include <gui/safety_screen/SAFETYPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/containers/progress_indicators/LineProgress.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/FadeAnimator.hpp>
-#include <touchgfx/containers/progress_indicators/TextProgress.hpp>
-#include <touchgfx/containers/progress_indicators/LineProgress.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp>
-#include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/ButtonWithIcon.hpp>
-#include <touchgfx/widgets/VideoWidget.hpp>
+#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <gui/containers/STACK_5_PopUp.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
 #include <gui/containers/STACK_4_PopUp.hpp>
@@ -105,47 +102,40 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Box BACKGROUND;
-    touchgfx::FadeAnimator< touchgfx::Button > POP_Up;
-    touchgfx::FadeAnimator< touchgfx::TextProgress > CHARGE_Percent;
+    touchgfx::Image BACKGROUND;
     touchgfx::FadeAnimator< touchgfx::LineProgress > CHARGE_Progress;
-    touchgfx::PainterRGB565Bitmap CHARGE_ProgressPainter;
-    touchgfx::FadeAnimator< touchgfx::Image > INFO_TempMax;
-    touchgfx::FadeAnimator< touchgfx::Image > INFO_TensaoMin;
-    touchgfx::FadeAnimator< touchgfx::Image > INFO_BrakeBias;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_Frenagem;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_Modo;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_LoRa;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > DEBUG_page;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > SAFETY_page;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > CONTROL_page;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > DRIVE_page;
-    touchgfx::VideoWidget SENSOR_4_animated;
-    touchgfx::VideoWidget SENSOR_3_animated;
-    touchgfx::VideoWidget SENSOR_2_animated;
-    touchgfx::VideoWidget SENSOR_1_animated;
+    touchgfx::PainterRGB565 CHARGE_ProgressPainter;
+    touchgfx::Button PAGE_Debug;
+    touchgfx::Button PAGE_Safety;
+    touchgfx::Button PAGE_Control;
+    touchgfx::Button PAGE_Drive;
+    touchgfx::Button BOTTON_Stack_5;
+    touchgfx::Button BOTTON_Stack_4;
+    touchgfx::Button BOTTON_Stack_3;
+    touchgfx::Button BOTTON_Stack_2;
+    touchgfx::Button BOTTON_Stack_1;
     touchgfx::FadeAnimator< touchgfx::Image > SENSOR_4_icon;
-    touchgfx::FadeAnimator< touchgfx::Image > SENSOR_3_icon;
-    touchgfx::FadeAnimator< touchgfx::Image > SENSOR_2_icon;
     touchgfx::FadeAnimator< touchgfx::Image > SENSOR_1_icon;
-    touchgfx::FadeAnimator< touchgfx::Image > ACUMULATOR_background;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > STACK_5_widget;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > STACK_4_widget;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > STACK_3_widget;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > STACK_2_widget;
-    touchgfx::FadeAnimator< touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  > STACK_1_widget;
-    touchgfx::FadeAnimator< touchgfx::TextArea > temp_max;
-    touchgfx::FadeAnimator< touchgfx::TextArea > tensao_max;
-    touchgfx::FadeAnimator< touchgfx::TextArea > tensao_min;
-    touchgfx::FadeAnimator< touchgfx::TextArea > STACK_5_text;
-    touchgfx::FadeAnimator< touchgfx::TextArea > STACK_4_text;
-    touchgfx::FadeAnimator< touchgfx::TextArea > STACK_3_text;
-    touchgfx::FadeAnimator< touchgfx::TextArea > STACK_2_text;
-    touchgfx::FadeAnimator< touchgfx::TextArea > STACK_1_text;
-    touchgfx::FadeAnimator< touchgfx::TextArea > SENSOR_4_text;
-    touchgfx::FadeAnimator< touchgfx::TextArea > SENSOR_3_text;
-    touchgfx::FadeAnimator< touchgfx::TextArea > SENSOR_2_text;
-    touchgfx::FadeAnimator< touchgfx::TextArea > SENSOR_1_text;
+    touchgfx::FadeAnimator< touchgfx::Image > SENSOR_2_icon;
+    touchgfx::FadeAnimator< touchgfx::Image > SENSOR_3_icon;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > temp_max;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > tensao_max;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > tensao_min;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > charge_percent;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > STACK_5_text;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > STACK_4_text;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > STACK_3_text;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > STACK_2_text;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > STACK_1_text;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > SENSOR_4_text;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > SENSOR_3_text;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > SENSOR_2_text;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > SENSOR_1_text;
+    touchgfx::FadeAnimator< touchgfx::Button > POP_Up;
+    touchgfx::Image ICON_Air;
+    touchgfx::Image ICON_Modo;
+    touchgfx::Button BOTTOM_Info_LoRa;
+    touchgfx::Image ICON_LoRa;
     touchgfx::FadeAnimator< touchgfx::Box > FRONTGROUND;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_stack_5;
     touchgfx::MoveAnimator< STACK_5_PopUp > STACK_5;
@@ -157,8 +147,36 @@ protected:
     touchgfx::MoveAnimator< STACK_2_PopUp > STACK_2;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_stack_1;
     touchgfx::MoveAnimator< STACK_1_PopUp > STACK_1;
-    touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_lora;
+    touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEMP_MAX_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar temp_maxBuffer[TEMP_MAX_SIZE];
+    static const uint16_t TENSAO_MAX_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar tensao_maxBuffer[TENSAO_MAX_SIZE];
+    static const uint16_t TENSAO_MIN_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar tensao_minBuffer[TENSAO_MIN_SIZE];
+    static const uint16_t STACK_5_TEXT_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar STACK_5_textBuffer[STACK_5_TEXT_SIZE];
+    static const uint16_t STACK_4_TEXT_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar STACK_4_textBuffer[STACK_4_TEXT_SIZE];
+    static const uint16_t STACK_3_TEXT_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar STACK_3_textBuffer[STACK_3_TEXT_SIZE];
+    static const uint16_t STACK_2_TEXT_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar STACK_2_textBuffer[STACK_2_TEXT_SIZE];
+    static const uint16_t STACK_1_TEXT_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar STACK_1_textBuffer[STACK_1_TEXT_SIZE];
+    static const uint16_t SENSOR_4_TEXT_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar SENSOR_4_textBuffer[SENSOR_4_TEXT_SIZE];
+    static const uint16_t SENSOR_3_TEXT_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar SENSOR_3_textBuffer[SENSOR_3_TEXT_SIZE];
+    static const uint16_t SENSOR_2_TEXT_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar SENSOR_2_textBuffer[SENSOR_2_TEXT_SIZE];
+    static const uint16_t SENSOR_1_TEXT_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar SENSOR_1_textBuffer[SENSOR_1_TEXT_SIZE];
 
 private:
 

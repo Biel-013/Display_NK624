@@ -27,6 +27,8 @@ public:
 
     virtual ~CONTROLPresenter() {}
 
+    virtual void updateTick(void);
+
 private:
     CONTROLPresenter();
 

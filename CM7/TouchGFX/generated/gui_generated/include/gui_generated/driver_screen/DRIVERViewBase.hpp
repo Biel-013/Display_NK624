@@ -8,19 +8,14 @@
 #include <mvp/View.hpp>
 #include <gui/driver_screen/DRIVERPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/Gauge.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp>
+#include <touchgfx/containers/progress_indicators/LineProgress.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/FadeAnimator.hpp>
-#include <touchgfx/mixins/ClickListener.hpp>
-#include <touchgfx/widgets/canvas/Circle.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
-#include <touchgfx/widgets/Gauge.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/containers/progress_indicators/LineProgress.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp>
-#include <touchgfx/containers/progress_indicators/TextProgress.hpp>
-#include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <gui/containers/LoRA_PopUp.hpp>
@@ -64,30 +59,26 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Box BACKGROUND;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > DEBUG_page;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > SAFETY_page;
-    touchgfx::ClickListener< touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > > CONTROL_page;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > DRIVE_page;
-    touchgfx::FadeAnimator< touchgfx::Circle > POTENCIMETRO_gauge;
-    touchgfx::PainterRGB565 POTENCIMETRO_gaugePainter;
-    touchgfx::FadeAnimator< touchgfx::Gauge > VELOCIMETRO_gauge;
-    touchgfx::FadeAnimator< touchgfx::Button > POP_Up;
+    touchgfx::Image BACKGROUND;
+    touchgfx::Gauge POTENCIMETRO_gauge;
+    touchgfx::PainterRGB565Bitmap POTENCIMETRO_gaugePainter;
     touchgfx::FadeAnimator< touchgfx::LineProgress > CHARGE_Progress;
-    touchgfx::PainterRGB565Bitmap CHARGE_ProgressPainter;
-    touchgfx::FadeAnimator< touchgfx::TextProgress > CHARGE_Percent;
-    touchgfx::FadeAnimator< touchgfx::Image > INFO_TempMax;
-    touchgfx::FadeAnimator< touchgfx::Image > INFO_TensaoMin;
-    touchgfx::FadeAnimator< touchgfx::Image > INFO_BrakeBias;
-    touchgfx::FadeAnimator< touchgfx::Image > INFO_Torque;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_Modo;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_LoRa;
-    touchgfx::FadeAnimator< touchgfx::TextArea > brake_bias;
-    touchgfx::FadeAnimator< touchgfx::TextArea > tensao_min;
-    touchgfx::FadeAnimator< touchgfx::TextArea > temp_max;
+    touchgfx::PainterRGB565 CHARGE_ProgressPainter;
+    touchgfx::Image PopUp;
+    touchgfx::Button PAGE_Debug;
+    touchgfx::Button PAGE_Safety;
+    touchgfx::Button PAGE_Control;
+    touchgfx::Button PAGE_Drive;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > brake_bias;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > tensao_min;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > temp_max;
     touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > VELOCIMETRO_digital;
-    touchgfx::FadeAnimator< touchgfx::TextArea > torque;
-    touchgfx::FadeAnimator< touchgfx::TextArea > hodometro;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > torque;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > charge_percent;
+    touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > hodometro;
+    touchgfx::Image ICON_Modo;
+    touchgfx::Button BOTTOM_Info_LoRa;
+    touchgfx::Image ICON_LoRa;
     touchgfx::FadeAnimator< touchgfx::Box > FRONTGROUND;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_lora;
     touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
@@ -95,8 +86,20 @@ protected:
     /*
      * Wildcard Buffers
      */
+    static const uint16_t BRAKE_BIAS_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar brake_biasBuffer[BRAKE_BIAS_SIZE];
+    static const uint16_t TENSAO_MIN_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar tensao_minBuffer[TENSAO_MIN_SIZE];
+    static const uint16_t TEMP_MAX_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar temp_maxBuffer[TEMP_MAX_SIZE];
     static const uint16_t VELOCIMETRO_DIGITAL_SIZE = 5;
     touchgfx::Unicode::UnicodeChar VELOCIMETRO_digitalBuffer[VELOCIMETRO_DIGITAL_SIZE];
+    static const uint16_t TORQUE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar torqueBuffer[TORQUE_SIZE];
+    static const uint16_t CHARGE_PERCENT_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar charge_percentBuffer[CHARGE_PERCENT_SIZE];
+    static const uint16_t HODOMETRO_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar hodometroBuffer[HODOMETRO_SIZE];
 
 private:
 
@@ -109,16 +112,12 @@ private:
     /*
      * Callback Declarations
      */
-    touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractProgressIndicator&> gaugeValueSetCallback;
-    touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractProgressIndicator&> gaugeValueUpdatedCallback;
     touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractButton&> buttonCallback;
     touchgfx::Callback<DRIVERViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
-    void gaugeValueSetCallbackHandler(const touchgfx::AbstractProgressIndicator& src);
-    void gaugeValueUpdatedCallbackHandler(const touchgfx::AbstractProgressIndicator& src);
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
     void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 

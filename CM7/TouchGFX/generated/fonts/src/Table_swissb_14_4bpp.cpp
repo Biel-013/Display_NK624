@@ -20,16 +20,14 @@ KEEP extern const touchgfx::GlyphNode glyphs_swissb_14_4bpp[] FONT_TABLE_LOCATIO
     {   452, 0x0039,   8,  10,  10,   0,   8,   0,   0, 0x00 }, // nine
     {   492, 0x003F,   8,  10,  10,   0,   8,   0,   0, 0x00 }, // question
     {   532, 0x0043,  10,  10,  10,   0,  10,   0,   0, 0x00 }, // C
-    {   582, 0x0044,   9,  10,  10,   1,  10,   0,   0, 0x00 }, // D
-    {   632, 0x004B,   9,  10,  10,   1,  10,   0,   0, 0x00 }, // K
-    {   682, 0x0057,  13,  10,  10,   0,  13,   0,   0, 0x00 }, // W
-    {   752, 0x0062,   9,  10,  10,   0,   9,   0,   0, 0x00 }, // b
-    {   802, 0x006B,   8,  10,  10,   0,   8,   0,   0, 0x00 }, // k
-    {   842, 0x0070,   9,  11,   8,   0,   9,   0,   0, 0x00 }, // p
-    {   897, 0x0073,   8,   8,   8,   0,   8,   0,   0, 0x00 }, // s
-    {   929, 0x0078,   8,   8,   8,   0,   7,   0,   0, 0x00 }, // x
-    {   961, 0x007C,   3,  15,  12,   2,   7,   0,   0, 0x00 }, // bar
-    {   991, 0x00B0,   5,   4,  10,   0,   5,   0,   0, 0x00 }  // degree
+    {   582, 0x004B,   9,  10,  10,   1,  10,   0,   0, 0x00 }, // K
+    {   632, 0x0057,  13,  10,  10,   0,  13,   0,   0, 0x00 }, // W
+    {   702, 0x0062,   9,  10,  10,   0,   9,   0,   0, 0x00 }, // b
+    {   752, 0x006B,   8,  10,  10,   0,   8,   0,   0, 0x00 }, // k
+    {   792, 0x0070,   9,  11,   8,   0,   9,   0,   0, 0x00 }, // p
+    {   847, 0x0073,   8,   8,   8,   0,   8,   0,   0, 0x00 }, // s
+    {   879, 0x0078,   8,   8,   8,   0,   7,   0,   0, 0x00 }, // x
+    {   911, 0x00B0,   5,   4,  10,   0,   5,   0,   0, 0x00 }  // degree
 };
 
 // swissb_14_4bpp
@@ -47,6 +45,6 @@ touchgfx::GeneratedFont& getFont_swissb_14_4bpp();
 
 touchgfx::GeneratedFont& getFont_swissb_14_4bpp()
 {
-    static touchgfx::GeneratedFont swissb_14_4bpp(glyphs_swissb_14_4bpp, 26, 17, 14, 0, 0, 4, 1, 0, 1, unicodes_swissb_14_4bpp, kerning_swissb_14_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont swissb_14_4bpp(glyphs_swissb_14_4bpp, 24, 17, 14, 0, 0, 4, 1, 0, 1, unicodes_swissb_14_4bpp, kerning_swissb_14_4bpp, 63, 0, 0, 0);
     return swissb_14_4bpp;
 }

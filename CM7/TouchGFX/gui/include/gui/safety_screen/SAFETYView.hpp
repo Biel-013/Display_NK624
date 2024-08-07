@@ -25,6 +25,7 @@ public:
     virtual void STACK_5_End();
     virtual void LORA_Begin();
     virtual void LORA_End();
+    virtual void updateTick(void);
 
 protected:
 };

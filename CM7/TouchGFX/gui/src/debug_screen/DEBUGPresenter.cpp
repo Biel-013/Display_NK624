@@ -16,3 +16,7 @@ void DEBUGPresenter::deactivate()
 {
 
 }
+
+void DEBUGPresenter::updateTick(void) {
+	view.updateTick();
+}

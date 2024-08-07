@@ -5,6 +5,13 @@
 
 #include <touchgfx/hal/Types.hpp>
 
+const uint32_t video_AnimacaoNK624_bin_length = 2382126;
+#ifdef SIMULATOR
+extern const uint8_t* video_AnimacaoNK624_bin_start;
+#else
+extern const uint8_t video_AnimacaoNK624_bin_start[];
+#endif
+
 const uint32_t video_CURRENT_left_bin_length = 124674;
 #ifdef SIMULATOR
 extern const uint8_t* video_CURRENT_left_bin_start;

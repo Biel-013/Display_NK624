@@ -19,7 +19,7 @@ KEEP extern const touchgfx::GlyphNode glyphs_swisski_17_4bpp[] FONT_TABLE_LOCATI
     {   732, 0x0039,  11,  12,  12,   0,  11,   0,   0, 0x00 }, // nine
     {   804, 0x003F,  10,  13,  13,   1,  11,   0,   0, 0x00 }, // question
     {   869, 0x004B,  14,  12,  12,   0,  13,   0,   0, 0x00 }, // K
-    {   953, 0x004D,  16,  12,  12,   0,  16,   0,   0, 0x00 }  // M
+    {   953, 0x006D,  16,   9,   9,   0,  17,   0,   0, 0x00 }  // m
 };
 
 // swisski_17_4bpp

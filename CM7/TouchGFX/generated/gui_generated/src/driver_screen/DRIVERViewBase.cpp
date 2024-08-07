@@ -8,8 +8,6 @@
 #include <texts/TextKeysAndLanguages.hpp>
 
 DRIVERViewBase::DRIVERViewBase() :
-    gaugeValueSetCallback(this, &DRIVERViewBase::gaugeValueSetCallbackHandler),
-    gaugeValueUpdatedCallback(this, &DRIVERViewBase::gaugeValueUpdatedCallbackHandler),
     buttonCallback(this, &DRIVERViewBase::buttonCallbackHandler),
     flexButtonCallback(this, &DRIVERViewBase::flexButtonCallbackHandler),
     interaction_Delay_CONTROL_pageCounter(0),
@@ -22,129 +20,92 @@ DRIVERViewBase::DRIVERViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    BACKGROUND.setPosition(0, 1, 480, 272);
-    BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    BACKGROUND.setXY(1, 0);
+    BACKGROUND.setBitmap(touchgfx::Bitmap(BITMAP_PAGE_DRIVE_ID));
     add(BACKGROUND);
 
-    DEBUG_page.setXY(0, 203);
-    DEBUG_page.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_OFF_UNSELECT_ID), touchgfx::Bitmap(BITMAP_BOTTOM_ON_UNSELECT_ID), touchgfx::Bitmap(BITMAP_DEBUG_OFF_ID), touchgfx::Bitmap(BITMAP_DEBUG_ON_ID));
-    DEBUG_page.setIconXY(0, 13);
-    DEBUG_page.setAction(buttonCallback);
-    add(DEBUG_page);
-
-    SAFETY_page.setXY(0, 134);
-    SAFETY_page.setBitmaps(touchgfx::Bitmap(BITMAP_MID_BOTTOM_OFF_UNSELECT_ID), touchgfx::Bitmap(BITMAP_MID_BOTTOM_ON_UNSELECT_ID), touchgfx::Bitmap(BITMAP_SAFETY_OFF_ID), touchgfx::Bitmap(BITMAP_SAFETY_ON_ID));
-    SAFETY_page.setIconXY(0, 13);
-    SAFETY_page.setAction(buttonCallback);
-    add(SAFETY_page);
-
-    CONTROL_page.setXY(0, 67);
-    CONTROL_page.setBitmaps(touchgfx::Bitmap(BITMAP_MID_TOP_OFF_UNSELECT_ID), touchgfx::Bitmap(BITMAP_MID_TOP_ON_UNSELECT_ID), touchgfx::Bitmap(BITMAP_CONTROL_OFF_ID), touchgfx::Bitmap(BITMAP_CONTROL_ON_ID));
-    CONTROL_page.setIconXY(0, 13);
-    CONTROL_page.setAction(buttonCallback);
-    add(CONTROL_page);
-
-    DRIVE_page.setXY(0, 0);
-    DRIVE_page.setBitmaps(touchgfx::Bitmap(BITMAP_TOP_ON_SELECT_ID), touchgfx::Bitmap(BITMAP_TOP_OFF_SELECT_ID), touchgfx::Bitmap(BITMAP_DRIVE_ON_ID), touchgfx::Bitmap(BITMAP_DRIVE_OFF_ID));
-    DRIVE_page.setIconXY(0, 13);
-    add(DRIVE_page);
-
-    POTENCIMETRO_gauge.setPosition(119, 30, 200, 200);
-    POTENCIMETRO_gauge.setCenter(100, 100);
-    POTENCIMETRO_gauge.setRadius(70.2f);
-    POTENCIMETRO_gauge.setLineWidth(27.2f);
-    POTENCIMETRO_gauge.setArc(178.8f, 178.8f);
-    POTENCIMETRO_gauge.setCapPrecision(180);
-    POTENCIMETRO_gaugePainter.setColor(touchgfx::Color::getColorFromRGB(18, 184, 0));
-    POTENCIMETRO_gauge.setPainter(POTENCIMETRO_gaugePainter);
+    POTENCIMETRO_gauge.setBackground(touchgfx::Bitmap(BITMAP_VELOCIMETRO_BASE_ID));
+    POTENCIMETRO_gauge.setPosition(73, 6, 285, 263);
+    POTENCIMETRO_gauge.setCenter(128.8f, 131.5f);
+    POTENCIMETRO_gauge.setStartEndAngle(-180, 80);
+    POTENCIMETRO_gauge.setRange(0, 130);
+    POTENCIMETRO_gauge.setValue(130);
+    POTENCIMETRO_gauge.setEasingEquation(touchgfx::EasingEquations::sineEaseInOut);
+    POTENCIMETRO_gauge.setNeedle(BITMAP_VELOCIMETRO_INDICATOR_ID, 66.5f, 111.5f);
+    POTENCIMETRO_gauge.setMovingNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
+    POTENCIMETRO_gauge.setSteadyNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
+    POTENCIMETRO_gauge.setArcVisible();
+    POTENCIMETRO_gaugePainter.setBitmap(touchgfx::Bitmap(BITMAP_VELOCIMETRO_PROGRESS_ID));
+    POTENCIMETRO_gauge.getArc().setPainter(POTENCIMETRO_gaugePainter);
+    POTENCIMETRO_gauge.getArc().setRadius(78);
+    POTENCIMETRO_gauge.getArc().setLineWidth(50);
+    POTENCIMETRO_gauge.getArc().setCapPrecision(180);
+    POTENCIMETRO_gauge.setArcPosition(23.4f, 25.0f, 270, 270);
+    POTENCIMETRO_gauge.putArcOnTop();
     add(POTENCIMETRO_gauge);
 
-    VELOCIMETRO_gauge.setBackground(touchgfx::Bitmap(BITMAP_BACKKGROUND_GAUGE_ID));
-    VELOCIMETRO_gauge.setPosition(84, -5, 270, 270);
-    VELOCIMETRO_gauge.setCenter(135, 135);
-    VELOCIMETRO_gauge.setStartEndAngle(-123.1f, 92.3f);
-    VELOCIMETRO_gauge.setRange(0, 110);
-    VELOCIMETRO_gauge.setValue(0);
-    VELOCIMETRO_gauge.setEasingEquation(touchgfx::EasingEquations::sineEaseInOut);
-    VELOCIMETRO_gauge.setNeedle(BITMAP_PONTEIRO_GAUGE_ID, 85, 85);
-    VELOCIMETRO_gauge.setMovingNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
-    VELOCIMETRO_gauge.setSteadyNeedleRenderingAlgorithm(touchgfx::TextureMapper::BILINEAR_INTERPOLATION);
-    VELOCIMETRO_gauge.setValueSetAction(gaugeValueSetCallback);
-    VELOCIMETRO_gauge.setValueUpdatedAction(gaugeValueUpdatedCallback);
-    add(VELOCIMETRO_gauge);
-
-    POP_Up.setXY(274, 232);
-    POP_Up.setBitmaps(touchgfx::Bitmap(BITMAP_POP_TESLA_ID), touchgfx::Bitmap(BITMAP_CAN_OFF_ID));
-    add(POP_Up);
-
-    CHARGE_Progress.setXY(369, -3);
-    CHARGE_Progress.setProgressIndicatorPosition(0, 0, 51, 233);
+    CHARGE_Progress.setXY(367, -1);
+    CHARGE_Progress.setProgressIndicatorPosition(0, 0, 47, 236);
     CHARGE_Progress.setRange(0, 100);
     CHARGE_Progress.setBackground(touchgfx::Bitmap(BITMAP_CHARGE_PROGRESS_ID));
-    CHARGE_ProgressPainter.setBitmap(touchgfx::Bitmap(BITMAP_CHARGE_BACKGROUND_BLACK_ID));
+    CHARGE_ProgressPainter.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     CHARGE_Progress.setPainter(CHARGE_ProgressPainter);
-    CHARGE_Progress.setStart(25.5f, 0.0f);
-    CHARGE_Progress.setEnd(25.5f, 233.0f);
-    CHARGE_Progress.setLineWidth(51);
+    CHARGE_Progress.setStart(25, 0);
+    CHARGE_Progress.setEnd(25, 237);
+    CHARGE_Progress.setLineWidth(50);
     CHARGE_Progress.setLineEndingStyle(touchgfx::Line::BUTT_CAP_ENDING);
     CHARGE_Progress.setValue(0);
     add(CHARGE_Progress);
 
-    CHARGE_Percent.setXY(308, 0);
-    CHARGE_Percent.setProgressIndicatorPosition(0, 10, 68, 40);
-    CHARGE_Percent.setRange(0, 100);
-    CHARGE_Percent.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    CHARGE_Percent.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8YO4));
-    CHARGE_Percent.setBackground(touchgfx::Bitmap(BITMAP_PERCENTAGE_BACKGROUND_ID));
-    CHARGE_Percent.setValue(30);
-    add(CHARGE_Percent);
+    PopUp.setXY(279, 236);
+    PopUp.setBitmap(touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID));
+    PopUp.setVisible(false);
+    add(PopUp);
 
-    INFO_TempMax.setXY(416, 190);
-    INFO_TempMax.setBitmap(touchgfx::Bitmap(BITMAP_TEMP_MAX_TAB_OFF_ID));
-    add(INFO_TempMax);
+    PAGE_Debug.setXY(0, 204);
+    PAGE_Debug.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_DOWN_OFF_ID), touchgfx::Bitmap(BITMAP_BOTTOM_DOWN_ON_ID));
+    PAGE_Debug.setAction(buttonCallback);
+    add(PAGE_Debug);
 
-    INFO_TensaoMin.setXY(415, 153);
-    INFO_TensaoMin.setBitmap(touchgfx::Bitmap(BITMAP_TENSAO_MIN_TAB_OFF_ID));
-    add(INFO_TensaoMin);
+    PAGE_Safety.setXY(0, 137);
+    PAGE_Safety.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_MID_DOWN_OFF_ID), touchgfx::Bitmap(BITMAP_BOTTOM_MID_DOWN_ON_ID));
+    PAGE_Safety.setAction(buttonCallback);
+    add(PAGE_Safety);
 
-    INFO_BrakeBias.setXY(415, 114);
-    INFO_BrakeBias.setBitmap(touchgfx::Bitmap(BITMAP_BRAKE_TAB_OFF_ID));
-    add(INFO_BrakeBias);
+    PAGE_Control.setXY(0, 69);
+    PAGE_Control.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_MID_UP_OFF_ID), touchgfx::Bitmap(BITMAP_BOTTOM_MID_UP_ON_ID));
+    PAGE_Control.setAction(buttonCallback);
+    add(PAGE_Control);
 
-    INFO_Torque.setXY(415, 75);
-    INFO_Torque.setBitmap(touchgfx::Bitmap(BITMAP_TORQUE_TAB_OFF_ID));
-    add(INFO_Torque);
+    PAGE_Drive.setXY(0, 0);
+    PAGE_Drive.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_UP_ON_SELECT_ID), touchgfx::Bitmap(BITMAP_BOTTOM_UP_OFF_ID));
+    add(PAGE_Drive);
 
-    INFO_Modo.setXY(415, 37);
-    INFO_Modo.setBitmaps(touchgfx::Bitmap(BITMAP_MODO_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_MODO_TAB_ON_ID), touchgfx::Bitmap(BITMAP_SKIDPAD_SIMBOL_ID), touchgfx::Bitmap(BITMAP_ENDURO_SIMBOL_ID));
-    INFO_Modo.setIconXY(12, 2);
-    add(INFO_Modo);
-
-    INFO_LoRa.setXY(415, 0);
-    INFO_LoRa.setBitmaps(touchgfx::Bitmap(BITMAP_LORA_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_LORA_TAB_ON_ID), touchgfx::Bitmap(BITMAP_LORA_ON_ID), touchgfx::Bitmap(BITMAP_LORA_ON_ID));
-    INFO_LoRa.setIconXY(18, 1);
-    INFO_LoRa.setAction(buttonCallback);
-    add(INFO_LoRa);
-
-    brake_bias.setXY(439, 130);
+    brake_bias.setPosition(429, 134, 39, 15);
     brake_bias.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     brake_bias.setLinespacing(0);
+    Unicode::snprintf(brake_biasBuffer, BRAKE_BIAS_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_9RBT).getText());
+    brake_bias.setWildcard(brake_biasBuffer);
     brake_bias.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MUJP));
     add(brake_bias);
 
-    tensao_min.setXY(429, 168);
+    tensao_min.setPosition(423, 174, 54, 15);
     tensao_min.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     tensao_min.setLinespacing(0);
+    Unicode::snprintf(tensao_minBuffer, TENSAO_MIN_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_NBZU).getText());
+    tensao_min.setWildcard(tensao_minBuffer);
     tensao_min.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Y52B));
     add(tensao_min);
 
-    temp_max.setXY(430, 206);
+    temp_max.setPosition(429, 213, 47, 15);
     temp_max.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     temp_max.setLinespacing(0);
+    Unicode::snprintf(temp_maxBuffer, TEMP_MAX_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_VBXZ).getText());
+    temp_max.setWildcard(temp_maxBuffer);
     temp_max.setTypedText(touchgfx::TypedText(T___SINGLEUSE_P6H6));
     add(temp_max);
 
-    VELOCIMETRO_digital.setPosition(178, 86, 84, 76);
+    VELOCIMETRO_digital.setPosition(161, 95, 84, 76);
     VELOCIMETRO_digital.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     VELOCIMETRO_digital.setLinespacing(0);
     Unicode::snprintf(VELOCIMETRO_digitalBuffer, VELOCIMETRO_DIGITAL_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_CFOO).getText());
@@ -152,33 +113,58 @@ DRIVERViewBase::DRIVERViewBase() :
     VELOCIMETRO_digital.setTypedText(touchgfx::TypedText(T___SINGLEUSE_G2QD));
     add(VELOCIMETRO_digital);
 
-    torque.setXY(429, 92);
+    torque.setPosition(419, 95, 60, 15);
     torque.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     torque.setLinespacing(0);
+    Unicode::snprintf(torqueBuffer, TORQUE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_SGXO).getText());
+    torque.setWildcard(torqueBuffer);
     torque.setTypedText(touchgfx::TypedText(T___SINGLEUSE_82UY));
     add(torque);
 
-    hodometro.setPosition(265, 154, 78, 19);
+    charge_percent.setPosition(300, 6, 58, 18);
+    charge_percent.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    charge_percent.setLinespacing(0);
+    Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_PEFS).getText());
+    charge_percent.setWildcard(charge_percentBuffer);
+    charge_percent.setTypedText(touchgfx::TypedText(T___SINGLEUSE_W9BV));
+    add(charge_percent);
+
+    hodometro.setPosition(269, 165, 78, 19);
     hodometro.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     hodometro.setLinespacing(0);
+    Unicode::snprintf(hodometroBuffer, HODOMETRO_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_LLL4).getText());
+    hodometro.setWildcard(hodometroBuffer);
     hodometro.setTypedText(touchgfx::TypedText(T___SINGLEUSE_JCHU));
     add(hodometro);
 
-    FRONTGROUND.setPosition(80, 0, 400, 272);
+    ICON_Modo.setXY(443, 55);
+    ICON_Modo.setBitmap(touchgfx::Bitmap(BITMAP_MODO_ERRO_ID));
+    add(ICON_Modo);
+
+    BOTTOM_Info_LoRa.setXY(420, 0);
+    BOTTOM_Info_LoRa.setBitmaps(touchgfx::Bitmap(BITMAP_INFO_LORA_ID), touchgfx::Bitmap(BITMAP_INFO_LORA_SELECT_ID));
+    BOTTOM_Info_LoRa.setAction(buttonCallback);
+    add(BOTTOM_Info_LoRa);
+
+    ICON_LoRa.setXY(441, 15);
+    ICON_LoRa.setBitmap(touchgfx::Bitmap(BITMAP_LORA_OFF_ID));
+    add(ICON_LoRa);
+
+    FRONTGROUND.setPosition(66, 1, 414, 272);
     FRONTGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     FRONTGROUND.setAlpha(0);
     add(FRONTGROUND);
 
-    BOTTON_lora.setBoxWithBorderPosition(0, 0, 409, 272);
+    BOTTON_lora.setBoxWithBorderPosition(0, 0, 67, 272);
     BOTTON_lora.setBorderSize(5);
     BOTTON_lora.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
     BOTTON_lora.setAlpha(0);
     BOTTON_lora.setVisible(false);
     BOTTON_lora.setAction(flexButtonCallback);
-    BOTTON_lora.setPosition(72, 1, 409, 272);
+    BOTTON_lora.setPosition(414, 1, 67, 272);
     add(BOTTON_lora);
 
-    LORA_PopUp.setXY(230, 0);
+    LORA_PopUp.setXY(480, 0);
     LORA_PopUp.setVisible(false);
     add(LORA_PopUp);
 }
@@ -194,41 +180,12 @@ void DRIVERViewBase::setupScreen()
     transitionBegins();
 }
 
-void DRIVERViewBase::gaugeValueSetCallbackHandler(const touchgfx::AbstractProgressIndicator& src)
-{
-    if (&src == &VELOCIMETRO_gauge)
-    {
-        //Interaction7
-        //When VELOCIMETRO_gauge gauge value set execute C++ code
-        //Execute C++ code
-        int value = VELOCIMETRO_gauge.getValue();
-        POTENCIMETRO_gauge.setArc(178.8 + 2.0*value , 178.8);
-        Unicode::snprintf(VELOCIMETRO_digitalBuffer, VELOCIMETRO_DIGITAL_SIZE, "%u", value);
-        VELOCIMETRO_digital.invalidate();
-    }
-}
-
-void DRIVERViewBase::gaugeValueUpdatedCallbackHandler(const touchgfx::AbstractProgressIndicator& src)
-{
-    if (&src == &VELOCIMETRO_gauge)
-    {
-        //Interaction8
-        //When VELOCIMETRO_gauge gauge value updated execute C++ code
-        //Execute C++ code
-        CHARGE_Percent.setValue(70);
-        //Interaction9
-        //When VELOCIMETRO_gauge gauge value updated update value VELOCIMETRO_gauge
-        //Update value VELOCIMETRO_gauge over 750ms time
-        VELOCIMETRO_gauge.updateValue(0, 45);
-    }
-}
-
 void DRIVERViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &CONTROL_page)
+    if (&src == &PAGE_Control)
     {
         //Interaction_CONTROL_page_press
-        //When CONTROL_page clicked call virtual function
+        //When PAGE_Control clicked call virtual function
         //Call TransitionEnd_Driver
         TransitionEnd_Driver();
     
@@ -237,10 +194,10 @@ void DRIVERViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Delay for 251 ms (15 Ticks)
         interaction_Delay_CONTROL_pageCounter = INTERACTION_DELAY_CONTROL_PAGE_DURATION;
     }
-    if (&src == &SAFETY_page)
+    if (&src == &PAGE_Safety)
     {
         //Interaction_SAFETY_page_press
-        //When SAFETY_page clicked call virtual function
+        //When PAGE_Safety clicked call virtual function
         //Call TransitionEnd_Driver
         TransitionEnd_Driver();
     
@@ -249,10 +206,10 @@ void DRIVERViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Delay for 251 ms (15 Ticks)
         interaction_Delay_SAFETY_pageCounter = INTERACTION_DELAY_SAFETY_PAGE_DURATION;
     }
-    if (&src == &DEBUG_page)
+    if (&src == &PAGE_Debug)
     {
         //Interaction_DEBUG_page_press
-        //When DEBUG_page clicked call virtual function
+        //When PAGE_Debug clicked call virtual function
         //Call TransitionEnd_Driver
         TransitionEnd_Driver();
     
@@ -261,10 +218,10 @@ void DRIVERViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Delay for 251 ms (15 Ticks)
         interaction_Delay_DEBUG_pageCounter = INTERACTION_DELAY_DEBUG_PAGE_DURATION;
     }
-    if (&src == &INFO_LoRa)
+    if (&src == &BOTTOM_Info_LoRa)
     {
         //Interaction_LORA_Begin
-        //When INFO_LoRa clicked call virtual function
+        //When BOTTOM_Info_LoRa clicked call virtual function
         //Call LORA_Begin
         LORA_Begin();
     }

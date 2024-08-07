@@ -8,15 +8,14 @@
 #include <mvp/View.hpp>
 #include <gui/debug_screen/DEBUGPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/FadeAnimator.hpp>
-#include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 #include <gui/containers/LoRA_PopUp.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
 
 class DEBUGViewBase : public touchgfx::View<DEBUGPresenter>
 {
@@ -56,36 +55,44 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Box BACKGROUND;
-    touchgfx::Button POP_Up;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_LoRa;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_Frenagem;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_Frenagem_1;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_Frenagem_2;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_Frenagem_3;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > INFO_Frenagem_4;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > DEBUG_page;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > SAFETY_page;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > CONTROL_page;
-    touchgfx::FadeAnimator< touchgfx::ButtonWithIcon > DRIVE_page;
-    touchgfx::Image image1;
-    touchgfx::Image image1_1;
-    touchgfx::Image image1_2;
-    touchgfx::TextArea tensao_max;
-    touchgfx::TextArea tensao_max_5;
-    touchgfx::TextArea tensao_max_5_1;
-    touchgfx::TextArea tensao_max_5_2;
-    touchgfx::TextArea tensao_max_1;
-    touchgfx::TextArea tensao_max_2;
-    touchgfx::TextArea tensao_max_2_1;
-    touchgfx::TextArea tensao_max_1_1;
-    touchgfx::TextArea tensao_max_3;
-    touchgfx::TextArea tensao_max_2_2;
-    touchgfx::TextArea tensao_max_1_2;
-    touchgfx::TextArea tensao_max_4;
+    touchgfx::Image BACKGROUND;
+    touchgfx::Button DEBUG_Telemetria;
+    touchgfx::Button DEBUG_Datalogger;
+    touchgfx::Button DEBUG_BMS;
+    touchgfx::Button DEBUG_ECU;
+    touchgfx::Button PAGE_Drive;
+    touchgfx::Button PAGE_Control;
+    touchgfx::Button PAGE_Safety;
+    touchgfx::Button PAGE_Debug;
+    touchgfx::TextAreaWithOneWildcard DataRate_Telemetria;
+    touchgfx::TextAreaWithOneWildcard DataRate_Datalogger;
+    touchgfx::TextAreaWithOneWildcard DataRate_BMS;
+    touchgfx::TextAreaWithOneWildcard DataRate_ECU;
+    touchgfx::TextAreaWithOneWildcard Beacon_Leap;
+    touchgfx::FadeAnimator< touchgfx::Button > POP_Up;
+    touchgfx::Button BOTTOM_Info_LoRa;
+    touchgfx::Image ICON_ECU;
+    touchgfx::Image ICON_BMS;
+    touchgfx::Image ICON_Telemetria;
+    touchgfx::Image ICON_Datalogger;
+    touchgfx::Image ICON_LoRa;
     touchgfx::FadeAnimator< touchgfx::Box > FRONTGROUND;
-    touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_lora;
+    touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t DATARATE_TELEMETRIA_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar DataRate_TelemetriaBuffer[DATARATE_TELEMETRIA_SIZE];
+    static const uint16_t DATARATE_DATALOGGER_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar DataRate_DataloggerBuffer[DATARATE_DATALOGGER_SIZE];
+    static const uint16_t DATARATE_BMS_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar DataRate_BMSBuffer[DATARATE_BMS_SIZE];
+    static const uint16_t DATARATE_ECU_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar DataRate_ECUBuffer[DATARATE_ECU_SIZE];
+    static const uint16_t BEACON_LEAP_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar Beacon_LeapBuffer[BEACON_LEAP_SIZE];
 
 private:
 

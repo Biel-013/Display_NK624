@@ -1,10 +1,11 @@
 #include <gui/debug_screen/DEBUGView.hpp>
 
+extern bool bottom_state;
 #define TIME_TRANSITION 15U
+bool DEBUG_page_Interlock = false;
 
 DEBUGView::DEBUGView()
 {
-
 }
 
 void DEBUGView::setupScreen()
@@ -19,9 +20,11 @@ void DEBUGView::tearDownScreen()
 
 void DEBUGView::TransitionBegin_Debug()
 {
-FRONTGROUND.setAlpha(255);
+    FRONTGROUND.setAlpha(255);
     FRONTGROUND.clearFadeAnimationEndedAction();
     FRONTGROUND.startFadeAnimation(0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn);
+
+    DEBUG_page_Interlock = true;
 }
 
 void DEBUGView::TransitionEnd_Debug()
@@ -39,7 +42,7 @@ void DEBUGView::LORA_Begin()
     BOTTON_lora.invalidate();
 
     LORA_PopUp.clearMoveAnimationEndedAction();
-    LORA_PopUp.startMoveAnimation(0, 0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+    LORA_PopUp.startMoveAnimation(85, 0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
     FRONTGROUND.clearFadeAnimationEndedAction();
     FRONTGROUND.startFadeAnimation(200, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn);
 }
@@ -50,7 +53,17 @@ void DEBUGView::LORA_End()
     BOTTON_lora.invalidate();
 
     LORA_PopUp.clearMoveAnimationEndedAction();
-    LORA_PopUp.startMoveAnimation(230, 0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+    LORA_PopUp.startMoveAnimation(480, 0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
     FRONTGROUND.clearFadeAnimationEndedAction();
     FRONTGROUND.startFadeAnimation(0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn);
+}
+
+void DEBUGView::updateTick(void)
+{
+#ifndef SIMULATOR
+	if (bottom_state && !DEBUG_page_Interlock)
+			application().gotoDRIVERScreenNoTransition();
+		else if (!bottom_state)
+			DEBUG_page_Interlock = false;
+#endif
 }

@@ -17,12 +17,13 @@
 #define fopen_s(pFile, filename, mode) (((*(pFile)) = fopen((filename), (mode))) == NULL)
 #endif
 touchgfx::LCD16bpp lcd;
+const uint8_t* video_AnimacaoNK624_bin_start;
 const uint8_t* video_CURRENT_left_bin_start;
 const uint8_t* video_CURRENT_right_bin_start;
 
 uint32_t lineBuffer[10000];
-SoftwareMJPEGDecoder *mjpegDecoders[4];
-DirectFrameBufferVideoController<4, Bitmap::RGB565> controller;
+SoftwareMJPEGDecoder *mjpegDecoders[1];
+DirectFrameBufferVideoController<1, Bitmap::RGB565> controller;
 
 VideoController& VideoController::getInstance()
 {
@@ -31,13 +32,14 @@ VideoController& VideoController::getInstance()
 
 void setupVideoDecoder(touchgfx::HAL& hal)
 {
-    for(int i = 0; i < 4; i++)
+    for(int i = 0; i < 1; i++)
     {
         mjpegDecoders[i] = new SoftwareMJPEGDecoder((uint8_t*)lineBuffer);
         controller.addDecoder(*mjpegDecoders[i], i);
     }
 
     char videoFileName[400];
+    setupVideo(static_cast<touchgfx::HALSDL2&>(hal).localFileName(videoFileName, 400, "AnimacaoNK624.bin"), &video_AnimacaoNK624_bin_start, video_AnimacaoNK624_bin_length);
     setupVideo(static_cast<touchgfx::HALSDL2&>(hal).localFileName(videoFileName, 400, "CURRENT_left.bin"), &video_CURRENT_left_bin_start, video_CURRENT_left_bin_length);
     setupVideo(static_cast<touchgfx::HALSDL2&>(hal).localFileName(videoFileName, 400, "CURRENT_right.bin"), &video_CURRENT_right_bin_start, video_CURRENT_right_bin_length);
 }

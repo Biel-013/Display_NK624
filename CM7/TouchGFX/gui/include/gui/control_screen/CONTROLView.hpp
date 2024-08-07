@@ -12,9 +12,11 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void TransitionBegin_Control();
-     virtual void TransitionEnd_Control();
-     virtual void LORA_Begin();
+    virtual void TransitionEnd_Control();
+    virtual void LORA_Begin();
     virtual void LORA_End();
+    virtual void updateTick(void);
+
 protected:
 };
 

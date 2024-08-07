@@ -16,3 +16,7 @@ void DRIVERPresenter::deactivate()
 {
 
 }
+
+void DRIVERPresenter::updateTick(void) {
+	view.updateTick();
+}

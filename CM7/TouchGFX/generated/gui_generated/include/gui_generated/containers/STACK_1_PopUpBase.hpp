@@ -7,7 +7,7 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class STACK_1_PopUpBase : public touchgfx::Container
 {
@@ -25,12 +25,28 @@ protected:
      * Member Declarations
      */
     touchgfx::Image CELL_background;
-    touchgfx::TextArea Tensao_pack_1;
-    touchgfx::TextArea Tensao_pack_2;
-    touchgfx::TextArea Tensao_pack_3;
-    touchgfx::TextArea Tensao_pack_4;
-    touchgfx::TextArea Tensao_pack_5;
-    touchgfx::TextArea Tensao_pack_6;
+    touchgfx::TextAreaWithOneWildcard Tensao_pack_1;
+    touchgfx::TextAreaWithOneWildcard Tensao_pack_2;
+    touchgfx::TextAreaWithOneWildcard Tensao_pack_3;
+    touchgfx::TextAreaWithOneWildcard Tensao_pack_4;
+    touchgfx::TextAreaWithOneWildcard Tensao_pack_5;
+    touchgfx::TextAreaWithOneWildcard Tensao_pack_6;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TENSAO_PACK_1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar Tensao_pack_1Buffer[TENSAO_PACK_1_SIZE];
+    static const uint16_t TENSAO_PACK_2_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar Tensao_pack_2Buffer[TENSAO_PACK_2_SIZE];
+    static const uint16_t TENSAO_PACK_3_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar Tensao_pack_3Buffer[TENSAO_PACK_3_SIZE];
+    static const uint16_t TENSAO_PACK_4_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar Tensao_pack_4Buffer[TENSAO_PACK_4_SIZE];
+    static const uint16_t TENSAO_PACK_5_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar Tensao_pack_5Buffer[TENSAO_PACK_5_SIZE];
+    static const uint16_t TENSAO_PACK_6_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar Tensao_pack_6Buffer[TENSAO_PACK_6_SIZE];
 
 private:
 

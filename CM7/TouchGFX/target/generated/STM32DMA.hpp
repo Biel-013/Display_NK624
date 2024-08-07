@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2024 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -53,7 +53,7 @@ extern volatile uint32_t DMA2D_CopyBufferEnd;
 typedef struct
 {
     uint8_t State;
-    uint8_t* DataBuffer;
+    uint8_t *DataBuffer;
     uint32_t DataBufferSize;
     uint32_t MCU_index;
 } JPEG_Data_BufferTypeDef;
@@ -148,7 +148,7 @@ public:
      */
     virtual void signalDMAInterrupt()
     {
-        if (!started_by_external_job)
+        if(!started_by_external_job)
         {
             executeCompleted();
 

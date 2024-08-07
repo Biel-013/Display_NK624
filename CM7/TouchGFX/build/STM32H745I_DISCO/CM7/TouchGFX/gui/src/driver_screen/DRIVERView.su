@@ -1,0 +1,14 @@
+Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+DRIVERView.cpp:16:6:virtual void DRIVERView::tearDownScreen()	0	static
+DRIVERView.hpp:11:13:DRIVERView::~DRIVERView()	8	static
+DRIVERView.hpp:11:13:virtual DRIVERView::~DRIVERView()	8	static
+Box.hpp:97:18:virtual void touchgfx::Box::invalidateContent() const	0	static
+DRIVERView.cpp:5:1:DRIVERView::DRIVERView()	8	static
+FadeAnimator.hpp:122:10:void touchgfx::FadeAnimator<T>::startFadeAnimation(uint8_t, uint16_t, touchgfx::EasingEquation) [with T = touchgfx::Box]	24	static
+DRIVERView.cpp:21:6:virtual void DRIVERView::TransitionEnd_Driver()	8	static
+MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = LoRA_PopUp]	24	static
+DRIVERView.cpp:10:6:virtual void DRIVERView::setupScreen()	0	static
+DRIVERView.cpp:38:6:virtual void DRIVERView::LORA_Begin()	16	static
+DRIVERView.cpp:52:6:virtual void DRIVERView::LORA_End()	16	static
+DRIVERView.cpp:27:6:virtual void DRIVERView::TransitionBegin_Driver()	8	static

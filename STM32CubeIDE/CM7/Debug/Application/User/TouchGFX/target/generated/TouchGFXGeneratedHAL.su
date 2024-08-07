@@ -47,6 +47,10 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	24	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::~Widget()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:virtual touchgfx::Widget::~Widget()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VideoController.hpp:100:13:touchgfx::VideoController::~VideoController()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VideoController.hpp:100:13:virtual touchgfx::VideoController::~VideoController()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/VideoWidget.hpp:159:10:void touchgfx::VideoWidget::setVideoBuffer(uint8_t*)	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/VideoWidget.hpp:172:10:void touchgfx::VideoWidget::setVideoBufferFormat(touchgfx::Bitmap::BitmapFormat, int16_t, int16_t)	24	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:44:5:touchgfx::AbstractPainter::AbstractPainter()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:50:13:touchgfx::AbstractPainter::~AbstractPainter()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:50:13:virtual touchgfx::AbstractPainter::~AbstractPainter()	16	static
@@ -57,18 +61,14 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:72:21:virtual uint8_t touchgfx::CanvasWidget::getAlpha() const	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:118:18:virtual touchgfx::Rect touchgfx::CanvasWidget::getMinimalRect() const	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:134:18:virtual touchgfx::Rect touchgfx::CanvasWidget::getSolidRect() const	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	24	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:34:7:touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:34:7:virtual touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:43:5:touchgfx::AbstractPainterColor::AbstractPainterColor(touchgfx::colortype)	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:49:13:touchgfx::AbstractPainterColor::~AbstractPainterColor()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:49:13:virtual touchgfx::AbstractPainterColor::~AbstractPainterColor()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:58:18:virtual void touchgfx::AbstractPainterColor::setColor(touchgfx::colortype)	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	24	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:34:7:touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:34:7:virtual touchgfx::AbstractPainterRGB565::~AbstractPainterRGB565()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:42:5:touchgfx::PainterRGB565::PainterRGB565(touchgfx::colortype)	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VideoController.hpp:100:13:touchgfx::VideoController::~VideoController()	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VideoController.hpp:100:13:virtual touchgfx::VideoController::~VideoController()	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/VideoWidget.hpp:159:10:void touchgfx::VideoWidget::setVideoBuffer(uint8_t*)	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/VideoWidget.hpp:172:10:void touchgfx::VideoWidget::setVideoBufferFormat(touchgfx::Bitmap::BitmapFormat, int16_t, int16_t)	24	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:42:13:touchgfx::VectorRenderer::~VectorRenderer()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:42:13:virtual touchgfx::VectorRenderer::~VectorRenderer()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp:37:5:touchgfx::AbstractPainterLinearGradient::AbstractPainterLinearGradient()	16	static
@@ -87,7 +87,7 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:312:30:virtual touchgfx::AbstractPainter& touchgfx::CWRVectorRendererRGB565::getColorPainter()	16	static
 ../../../CM7/TouchGFX/target/generated/MJPEGDecoder.hpp:27:13:MJPEGDecoder::~MJPEGDecoder()	16	static
 ../../../CM7/TouchGFX/target/generated/MJPEGDecoder.hpp:27:13:virtual MJPEGDecoder::~MJPEGDecoder()	16	static
-../../../CM7/TouchGFX/target/generated/HardwareMJPEGDecoder.hpp:79:10:void HardwareMJPEGDecoder::addDMA(touchgfx::DMA_Interface&)	16	static
+../../../CM7/TouchGFX/target/generated/HardwareMJPEGDecoder.hpp:70:10:void HardwareMJPEGDecoder::addDMA(touchgfx::DMA_Interface&)	16	static
 ../../../Drivers/CMSIS/Include/core_cm7.h:1902:22:void __NVIC_EnableIRQ(IRQn_Type)	16	static,ignoring_inline_asm
 ../../../Drivers/CMSIS/Include/core_cm7.h:1940:22:void __NVIC_DisableIRQ(IRQn_Type)	16	static,ignoring_inline_asm
 ../../../Drivers/CMSIS/Include/core_cm7.h:2032:22:void __NVIC_SetPriority(IRQn_Type, uint32_t)	16	static
@@ -124,7 +124,7 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/target/generated/TouchGFXGenerate
 ../../../CM7/TouchGFX/target/generated/DedicatedBufferVideoController.hpp:263:10:void DedicatedBufferController<no_streams, width, height, stride, output_format>::endFrame() [with long unsigned int no_streams = 1; long unsigned int width = 480; long unsigned int height = 288; long unsigned int stride = 960; touchgfx::Bitmap::BitmapFormat output_format = touchgfx::Bitmap::RGB565]	24	static
 ../../../CM7/TouchGFX/target/generated/DedicatedBufferVideoController.hpp:293:10:void DedicatedBufferController<no_streams, width, height, stride, output_format>::decoderTaskEntry() [with long unsigned int no_streams = 1; long unsigned int width = 480; long unsigned int height = 288; long unsigned int stride = 960; touchgfx::Bitmap::BitmapFormat output_format = touchgfx::Bitmap::RGB565]	56	static
 ../../../CM7/TouchGFX/target/generated/DedicatedBufferVideoController.hpp:382:9:DedicatedBufferController<no_streams, width, height, stride, output_format>::Stream::Stream() [with long unsigned int no_streams = 1; long unsigned int width = 480; long unsigned int height = 288; long unsigned int stride = 960; touchgfx::Bitmap::BitmapFormat output_format = touchgfx::Bitmap::RGB565]	16	static
-../../../CM7/TouchGFX/target/generated/DedicatedBufferVideoController.hpp:418:10:bool DedicatedBufferController<no_streams, width, height, stride, output_format>::decodeForNextTick(DedicatedBufferController<no_streams, width, height, stride, output_format>::Stream&) [with long unsigned int no_streams = 1; long unsigned int width = 480; long unsigned int height = 288; long unsigned int stride = 960; touchgfx::Bitmap::BitmapFormat output_format = touchgfx::Bitmap::RGB565]	16	static
+../../../CM7/TouchGFX/target/generated/DedicatedBufferVideoController.hpp:418:10:bool DedicatedBufferController<no_streams, width, height, stride, output_format>::decodeForNextTick(Stream&) [with long unsigned int no_streams = 1; long unsigned int width = 480; long unsigned int height = 288; long unsigned int stride = 960; touchgfx::Bitmap::BitmapFormat output_format = touchgfx::Bitmap::RGB565]	16	static
 ../../../CM7/TouchGFX/target/generated/DedicatedBufferVideoController.hpp:49:7:DedicatedBufferController<1, 480, 288, 960, touchgfx::Bitmap::RGB565>::~DedicatedBufferController()	16	static
 ../../../CM7/TouchGFX/target/generated/DedicatedBufferVideoController.hpp:49:7:virtual DedicatedBufferController<1, 480, 288, 960, touchgfx::Bitmap::RGB565>::~DedicatedBufferController()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:300:7:touchgfx::CWRVectorRendererRGB565::~CWRVectorRendererRGB565()	16	static

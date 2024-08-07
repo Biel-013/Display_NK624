@@ -9,6 +9,8 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD16bpp.hpp>
+#include <gui/animation_screen/ANIMATIONView.hpp>
+#include <gui/animation_screen/ANIMATIONPresenter.hpp>
 #include <gui/driver_screen/DRIVERView.hpp>
 #include <gui/driver_screen/DRIVERPresenter.hpp>
 #include <gui/control_screen/CONTROLView.hpp>
@@ -35,6 +37,19 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
 /*
  * Screen Transition Declarations
  */
+
+// ANIMATION
+
+void FrontendApplicationBase::gotoANIMATIONScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoANIMATIONScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoANIMATIONScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<ANIMATIONView, ANIMATIONPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
 
 // DRIVER
 

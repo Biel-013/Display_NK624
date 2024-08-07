@@ -1,6 +1,8 @@
 #include <gui/safety_screen/SAFETYView.hpp>
 
+extern bool bottom_state;
 #define TIME_TRANSITION 15U
+bool SAFETY_page_Interlock = false;
 
 SAFETYView::SAFETYView()
 {
@@ -21,6 +23,10 @@ void SAFETYView::TransitionBegin_Safety()
     FRONTGROUND.setAlpha(255);
     FRONTGROUND.clearFadeAnimationEndedAction();
     FRONTGROUND.startFadeAnimation(0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn);
+
+    CHARGE_Progress.updateValue(100, 45);
+
+    SAFETY_page_Interlock = true;
 }
 
 void SAFETYView::TransitionEnd_Safety()
@@ -31,7 +37,7 @@ void SAFETYView::TransitionEnd_Safety()
 
 void SAFETYView::STACK_1_Begin()
 {
-    
+
     STACK_1.setVisible(true);
     STACK_1.invalidate();
 
@@ -164,7 +170,7 @@ void SAFETYView::LORA_Begin()
     BOTTON_lora.invalidate();
 
     LORA_PopUp.clearMoveAnimationEndedAction();
-    LORA_PopUp.startMoveAnimation(0, 0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+    LORA_PopUp.startMoveAnimation(85, 0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
     FRONTGROUND.clearFadeAnimationEndedAction();
     FRONTGROUND.startFadeAnimation(200, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn);
 }
@@ -175,7 +181,17 @@ void SAFETYView::LORA_End()
     BOTTON_lora.invalidate();
 
     LORA_PopUp.clearMoveAnimationEndedAction();
-    LORA_PopUp.startMoveAnimation(230, 0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
+    LORA_PopUp.startMoveAnimation(480, 0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn, touchgfx::EasingEquations::linearEaseIn);
     FRONTGROUND.clearFadeAnimationEndedAction();
     FRONTGROUND.startFadeAnimation(0, TIME_TRANSITION, touchgfx::EasingEquations::linearEaseIn);
+}
+
+void SAFETYView::updateTick(void)
+{
+#ifndef SIMULATOR
+	if (bottom_state && !SAFETY_page_Interlock)
+			application().gotoDEBUGScreenNoTransition();
+		else if (!bottom_state)
+			SAFETY_page_Interlock = false;
+#endif
 }

@@ -232,6 +232,18 @@
     <Filter Include="Header Files\generated\gui_generated\containers">
       <UniqueIdentifier>819F3CC2-4083-83C6-3AA7-1E99BAFBBB52</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\animation_screen">
+      <UniqueIdentifier>B177E97E-B676-911D-4612-F8A13F72EF96</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\animation_screen">
+      <UniqueIdentifier>85ACDC3E-1BFC-7374-9CEE-B5154FCADEF2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\animation_screen">
+      <UniqueIdentifier>7A52B14F-41F9-A9E0-ECDD-B5C2088957AE</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\animation_screen">
+      <UniqueIdentifier>D0575FB5-0411-0C07-0114-D9BFC8CF28F3</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -335,6 +347,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\LoRA_PopUpBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\animation_screen\ANIMATIONPresenter.cpp">
+      <Filter>Source Files\gui\animation_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\animation_screen\ANIMATIONView.cpp">
+      <Filter>Source Files\gui\animation_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\animation_screen\ANIMATIONViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\animation_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -849,6 +870,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\LoRA_PopUpBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\animation_screen\ANIMATIONPresenter.hpp">
+      <Filter>Header Files\gui\animation_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\animation_screen\ANIMATIONView.hpp">
+      <Filter>Header Files\gui\animation_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\animation_screen\ANIMATIONViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\animation_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

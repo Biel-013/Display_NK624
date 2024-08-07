@@ -1,21 +1,21 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
+ * All rights reserved.</center></h2>
+ *
+ * This software component is licensed by ST under Ultimate Liberty license
+ * SLA0044, the "License"; You may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at:
+ *                             www.st.com/SLA0044
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -25,6 +25,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "main_user.h"
+#include "FDCAN.h"
+#include "PopUp_Error.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -42,7 +44,17 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
+typedef enum {
+	BANDWICH_125 = 0, BANDWICH_250, BANDWICH_500
+} LoRa_Bandwich_t;
 
+typedef enum {
+	SF_6 = 6, SF_7, SF_8, SF_9, SF_10, SF_11, SF_12
+} LoRa_SpreadFactor_t;
+
+typedef enum {
+	CR1_5 = 1, CR1_6, CR1_7, CR1_8
+} LoRa_CodingRate_t;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -50,6 +62,8 @@
 CRC_HandleTypeDef hcrc;
 
 DMA2D_HandleTypeDef hdma2d;
+
+FDCAN_HandleTypeDef hfdcan2;
 
 JPEG_HandleTypeDef hjpeg;
 MDMA_HandleTypeDef hmdma_jpeg_infifo_th;
@@ -66,7 +80,7 @@ osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
   .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .priority = (osPriority_t) osPriorityLow1,
 };
 /* Definitions for TouchGFXTask */
 osThreadId_t TouchGFXTaskHandle;
@@ -80,15 +94,68 @@ osThreadId_t videoTaskHandle;
 const osThreadAttr_t videoTask_attributes = {
   .name = "videoTask",
   .stack_size = 1000 * 4,
+  .priority = (osPriority_t) osPriorityLow1,
+};
+/* Definitions for sendCAN_Task */
+osThreadId_t sendCAN_TaskHandle;
+const osThreadAttr_t sendCAN_Task_attributes = {
+  .name = "sendCAN_Task",
+  .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for PopUpError_Task */
+osThreadId_t PopUpError_TaskHandle;
+const osThreadAttr_t PopUpError_Task_attributes = {
+  .name = "PopUpError_Task",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for DisplayTx_Task */
+osThreadId_t DisplayTx_TaskHandle;
+const osThreadAttr_t DisplayTx_Task_attributes = {
+  .name = "DisplayTx_Task",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for FDCAN_Queue */
+osMessageQueueId_t FDCAN_QueueHandle;
+const osMessageQueueAttr_t FDCAN_Queue_attributes = {
+  .name = "FDCAN_Queue"
+};
+/* Definitions for CanBusOFF_Timer */
+osTimerId_t CanBusOFF_TimerHandle;
+const osTimerAttr_t CanBusOFF_Timer_attributes = {
+  .name = "CanBusOFF_Timer"
+};
+/* Definitions for BoardDataRATE_Timer */
+osTimerId_t BoardDataRATE_TimerHandle;
+const osTimerAttr_t BoardDataRATE_Timer_attributes = {
+  .name = "BoardDataRATE_Timer"
 };
 /* USER CODE BEGIN PV */
 
+uint8_t DataRATE_Telemetry = 0;
+uint8_t DataRATE_Datalogger = 0;
+uint8_t DataRATE_BMS = 0;
+uint8_t DataRATE_ECU = 0;
+
+extern FDCAN_StatusTypedef FDCAN_Status;
+extern TypeError_t Actual_ERROR;
+
+extern uint8_t CONT_Telemetry;
+extern uint8_t CONT_Datalogger;
+extern uint8_t CONT_BMS;
+extern uint8_t CONT_ECU;
+
+extern uint8_t LoRa_FlagConfig;
+extern LoRa_Bandwich_t Bandwich_Value;
+extern LoRa_SpreadFactor_t SpreadFactor_Value;
+extern LoRa_CodingRate_t CodingRate_Value;
+extern uint16_t Frequencia_Value;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-static void MPU_Initialize(void);
 static void MPU_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_MDMA_Init(void);
@@ -98,9 +165,15 @@ static void MX_CRC_Init(void);
 static void MX_DMA2D_Init(void);
 static void MX_JPEG_Init(void);
 static void MX_QUADSPI_Init(void);
+static void MX_FDCAN2_Init(void);
 void StartDefaultTask(void *argument);
 void TouchGFX_Task(void *argument);
 extern void videoTaskFunc(void *argument);
+void osTask_sendCAN(void *argument);
+extern void osTask_PopUpError(void *argument);
+void osTask_DisplayTx(void *argument);
+void osTimer_CanBusOFF(void *argument);
+void osTimer_BoardDataRATE(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -121,8 +194,12 @@ int main(void)
 
   /* USER CODE END 1 */
 /* USER CODE BEGIN Boot_Mode_Sequence_0 */
-  int32_t timeout;
+	int32_t timeout;
 /* USER CODE END Boot_Mode_Sequence_0 */
+
+  /* MPU Configuration--------------------------------------------------------*/
+  MPU_Config();
+/* Enable the CPU Cache */
 
   /* Enable I-Cache---------------------------------------------------------*/
   SCB_EnableICache();
@@ -131,21 +208,18 @@ int main(void)
   SCB_EnableDCache();
 
 /* USER CODE BEGIN Boot_Mode_Sequence_1 */
-  /* Wait until CPU2 boots and enters in stop mode or timeout*/
-  timeout = 0xFFFF;
-  while((__HAL_RCC_GET_FLAG(RCC_FLAG_D2CKRDY) != RESET) && (timeout-- > 0));
-  if ( timeout < 0 )
-  {
-  Error_Handler();
-  }
+	/* Wait until CPU2 boots and enters in stop mode or timeout*/
+	timeout = 0xFFFF;
+	while ((__HAL_RCC_GET_FLAG(RCC_FLAG_D2CKRDY) != RESET) && (timeout-- > 0))
+		;
+	if (timeout < 0) {
+		Error_Handler();
+	}
 /* USER CODE END Boot_Mode_Sequence_1 */
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-
-  /* MPU Configuration--------------------------------------------------------*/
-  MPU_Config();
 
   /* USER CODE BEGIN Init */
 
@@ -154,21 +228,21 @@ int main(void)
   /* Configure the system clock */
   SystemClock_Config();
 /* USER CODE BEGIN Boot_Mode_Sequence_2 */
-/* When system initialization is finished, Cortex-M7 will release Cortex-M4 by means of
-HSEM notification */
-/*HW semaphore Clock enable*/
-__HAL_RCC_HSEM_CLK_ENABLE();
-/*Take HSEM */
-HAL_HSEM_FastTake(HSEM_ID_0);
-/*Release HSEM in order to notify the CPU2(CM4)*/
-HAL_HSEM_Release(HSEM_ID_0,0);
-/* wait until CPU2 wakes up from stop mode */
-timeout = 0xFFFF;
-while((__HAL_RCC_GET_FLAG(RCC_FLAG_D2CKRDY) == RESET) && (timeout-- > 0));
-if ( timeout < 0 )
-{
-Error_Handler();
-}
+	/* When system initialization is finished, Cortex-M7 will release Cortex-M4 by means of
+	 HSEM notification */
+	/*HW semaphore Clock enable*/
+	__HAL_RCC_HSEM_CLK_ENABLE();
+	/*Take HSEM */
+	HAL_HSEM_FastTake(HSEM_ID_0);
+	/*Release HSEM in order to notify the CPU2(CM4)*/
+	HAL_HSEM_Release(HSEM_ID_0, 0);
+	/* wait until CPU2 wakes up from stop mode */
+	timeout = 0xFFFF;
+	while ((__HAL_RCC_GET_FLAG(RCC_FLAG_D2CKRDY) == RESET) && (timeout-- > 0))
+		;
+	if (timeout < 0) {
+		Error_Handler();
+	}
 /* USER CODE END Boot_Mode_Sequence_2 */
 
   /* USER CODE BEGIN SysInit */
@@ -184,6 +258,7 @@ Error_Handler();
   MX_DMA2D_Init();
   MX_JPEG_Init();
   MX_QUADSPI_Init();
+  MX_FDCAN2_Init();
   MX_TouchGFX_Init();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
@@ -195,19 +270,30 @@ Error_Handler();
   osKernelInitialize();
 
   /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
+	/* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
+	/* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
 
+  /* Create the timer(s) */
+  /* creation of CanBusOFF_Timer */
+  CanBusOFF_TimerHandle = osTimerNew(osTimer_CanBusOFF, osTimerPeriodic, NULL, &CanBusOFF_Timer_attributes);
+
+  /* creation of BoardDataRATE_Timer */
+  BoardDataRATE_TimerHandle = osTimerNew(osTimer_BoardDataRATE, osTimerPeriodic, NULL, &BoardDataRATE_Timer_attributes);
+
   /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
+	/* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
+  /* Create the queue(s) */
+  /* creation of FDCAN_Queue */
+  FDCAN_QueueHandle = osMessageQueueNew (4, sizeof(uint8_t), &FDCAN_Queue_attributes);
+
   /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
+	/* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -220,12 +306,21 @@ Error_Handler();
   /* creation of videoTask */
   videoTaskHandle = osThreadNew(videoTaskFunc, NULL, &videoTask_attributes);
 
+  /* creation of sendCAN_Task */
+  sendCAN_TaskHandle = osThreadNew(osTask_sendCAN, NULL, &sendCAN_Task_attributes);
+
+  /* creation of PopUpError_Task */
+  PopUpError_TaskHandle = osThreadNew(osTask_PopUpError, NULL, &PopUpError_Task_attributes);
+
+  /* creation of DisplayTx_Task */
+  DisplayTx_TaskHandle = osThreadNew(osTask_DisplayTx, NULL, &DisplayTx_Task_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
+	/* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
-  /* add events, ... */
+	/* add events, ... */
   /* USER CODE END RTOS_EVENTS */
 
   /* Start scheduler */
@@ -234,12 +329,11 @@ Error_Handler();
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+	while (1) {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+	}
   /* USER CODE END 3 */
 }
 
@@ -274,7 +368,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLM = 5;
   RCC_OscInitStruct.PLL.PLLN = 160;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 4;
+  RCC_OscInitStruct.PLL.PLLQ = 8;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;
@@ -351,16 +445,80 @@ static void MX_DMA2D_Init(void)
 
   /* USER CODE END DMA2D_Init 1 */
   hdma2d.Instance = DMA2D;
-  hdma2d.Init.Mode = DMA2D_R2M;
+  hdma2d.Init.Mode = DMA2D_M2M;
   hdma2d.Init.ColorMode = DMA2D_OUTPUT_RGB565;
   hdma2d.Init.OutputOffset = 0;
+  hdma2d.LayerCfg[1].InputOffset = 0;
+  hdma2d.LayerCfg[1].InputColorMode = DMA2D_INPUT_RGB565;
+  hdma2d.LayerCfg[1].AlphaMode = DMA2D_NO_MODIF_ALPHA;
+  hdma2d.LayerCfg[1].InputAlpha = 0;
+  hdma2d.LayerCfg[1].AlphaInverted = DMA2D_REGULAR_ALPHA;
+  hdma2d.LayerCfg[1].RedBlueSwap = DMA2D_RB_REGULAR;
+  hdma2d.LayerCfg[1].ChromaSubSampling = DMA2D_NO_CSS;
   if (HAL_DMA2D_Init(&hdma2d) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_DMA2D_ConfigLayer(&hdma2d, 1) != HAL_OK)
   {
     Error_Handler();
   }
   /* USER CODE BEGIN DMA2D_Init 2 */
 
   /* USER CODE END DMA2D_Init 2 */
+
+}
+
+/**
+  * @brief FDCAN2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_FDCAN2_Init(void)
+{
+
+  /* USER CODE BEGIN FDCAN2_Init 0 */
+
+  /* USER CODE END FDCAN2_Init 0 */
+
+  /* USER CODE BEGIN FDCAN2_Init 1 */
+
+  /* USER CODE END FDCAN2_Init 1 */
+  hfdcan2.Instance = FDCAN2;
+  hfdcan2.Init.FrameFormat = FDCAN_FRAME_CLASSIC;
+  hfdcan2.Init.Mode = FDCAN_MODE_NORMAL;
+  hfdcan2.Init.AutoRetransmission = DISABLE;
+  hfdcan2.Init.TransmitPause = DISABLE;
+  hfdcan2.Init.ProtocolException = DISABLE;
+  hfdcan2.Init.NominalPrescaler = 5;
+  hfdcan2.Init.NominalSyncJumpWidth = 4;
+  hfdcan2.Init.NominalTimeSeg1 = 32;
+  hfdcan2.Init.NominalTimeSeg2 = 7;
+  hfdcan2.Init.DataPrescaler = 1;
+  hfdcan2.Init.DataSyncJumpWidth = 1;
+  hfdcan2.Init.DataTimeSeg1 = 1;
+  hfdcan2.Init.DataTimeSeg2 = 1;
+  hfdcan2.Init.MessageRAMOffset = 0;
+  hfdcan2.Init.StdFiltersNbr = 0;
+  hfdcan2.Init.ExtFiltersNbr = 0;
+  hfdcan2.Init.RxFifo0ElmtsNbr = 0;
+  hfdcan2.Init.RxFifo0ElmtSize = FDCAN_DATA_BYTES_8;
+  hfdcan2.Init.RxFifo1ElmtsNbr = 0;
+  hfdcan2.Init.RxFifo1ElmtSize = FDCAN_DATA_BYTES_8;
+  hfdcan2.Init.RxBuffersNbr = 0;
+  hfdcan2.Init.RxBufferSize = FDCAN_DATA_BYTES_8;
+  hfdcan2.Init.TxEventsNbr = 0;
+  hfdcan2.Init.TxBuffersNbr = 0;
+  hfdcan2.Init.TxFifoQueueElmtsNbr = 0;
+  hfdcan2.Init.TxFifoQueueMode = FDCAN_TX_FIFO_OPERATION;
+  hfdcan2.Init.TxElmtSize = FDCAN_DATA_BYTES_8;
+  if (HAL_FDCAN_Init(&hfdcan2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN FDCAN2_Init 2 */
+
+  /* USER CODE END FDCAN2_Init 2 */
 
 }
 
@@ -399,7 +557,7 @@ static void MX_LTDC_Init(void)
 {
 
   /* USER CODE BEGIN LTDC_Init 0 */
-  initLtdcClocks();
+	initLtdcClocks();
   /* USER CODE END LTDC_Init 0 */
 
   LTDC_LayerCfgTypeDef pLayerCfg = {0};
@@ -481,7 +639,7 @@ static void MX_QUADSPI_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN QUADSPI_Init 2 */
-  initBspQuadSpi(&Error_Handler);
+	initBspQuadSpi(&Error_Handler);
   /* USER CODE END QUADSPI_Init 2 */
 
 }
@@ -546,7 +704,7 @@ void MX_FMC_Init(void)
   }
 
   /* USER CODE BEGIN FMC_Init 2 */
-  initBspSdRam(&Error_Handler);
+	initBspSdRam(&Error_Handler);
   /* USER CODE END FMC_Init 2 */
 }
 
@@ -562,16 +720,17 @@ static void MX_GPIO_Init(void)
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOK_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
   __HAL_RCC_GPIOI_CLK_ENABLE();
   __HAL_RCC_GPIOE_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOJ_CLK_ENABLE();
-  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOF_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOF_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, VSYNC_FREQ_Pin|RENDER_TIME_Pin, GPIO_PIN_RESET);
@@ -588,6 +747,20 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PH13 */
+  GPIO_InitStruct.Pin = GPIO_PIN_13;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Alternate = GPIO_AF9_FDCAN1;
+  HAL_GPIO_Init(GPIOH, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : botao_Pin */
+  GPIO_InitStruct.Pin = botao_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(botao_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PA8 */
   GPIO_InitStruct.Pin = GPIO_PIN_8;
@@ -621,38 +794,117 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN Header_StartDefaultTask */
 /**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used
-  * @retval None
-  */
+ * @brief  Function implementing the defaultTask thread.
+ * @param  argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
+	CAN_Init();
+	osTimerStart(CanBusOFF_TimerHandle, 50);
+	osTimerStart(BoardDataRATE_TimerHandle, 100);
+	/* Infinite loop */
+	for (;;) {
+		osDelay(1);
+	}
   /* USER CODE END 5 */
 }
 
 /* USER CODE BEGIN Header_TouchGFX_Task */
 /**
-* @brief Function implementing the TouchGFXTask thread.
-* @param argument: Not used
-* @retval None
-*/
+ * @brief Function implementing the TouchGFXTask thread.
+ * @param argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_TouchGFX_Task */
 __weak void TouchGFX_Task(void *argument)
 {
   /* USER CODE BEGIN TouchGFX_Task */
+
+	/* Infinite loop */
+	for (;;) {
+		osDelay(1);
+	}
+  /* USER CODE END TouchGFX_Task */
+}
+
+/* USER CODE BEGIN Header_osTask_sendCAN */
+/**
+ * @brief Function implementing the sendCAN_Task thread.
+ * @param argument: Not used
+ * @retval None
+ */
+/* USER CODE END Header_osTask_sendCAN */
+void osTask_sendCAN(void *argument)
+{
+  /* USER CODE BEGIN osTask_sendCAN */
+	/* Infinite loop */
+	while (1) {
+		osDelay(2);
+	}
+  /* USER CODE END osTask_sendCAN */
+}
+
+/* USER CODE BEGIN Header_osTask_DisplayTx */
+/**
+* @brief Function implementing the DisplayTx_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_osTask_DisplayTx */
+void osTask_DisplayTx(void *argument)
+{
+  /* USER CODE BEGIN osTask_DisplayTx */
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	  CAN_Send(CanID_AQS_LORA_CONFIG_FLAG, LoRa_FlagConfig);
+	  if (LoRa_FlagConfig == 1){
+		  osDelay(5);
+		  CAN_Send(CanID_AQS_LORA_BANDWIDTH, Bandwich_Value);
+		  osDelay(5);
+		  CAN_Send(CanID_AQS_LORA_SPREAD_FACT, SpreadFactor_Value);
+		  osDelay(5);
+		  CAN_Send(CanID_AQS_LORA_CODING_RATE, CodingRate_Value);
+		  osDelay(5);
+		  CAN_Send(CanID_AQS_LORA_FREQUENCIA, Frequencia_Value);
+	  }
+
+    osDelay(20);
   }
-  /* USER CODE END TouchGFX_Task */
+  /* USER CODE END osTask_DisplayTx */
+}
+
+/* osTimer_CanBusOFF function */
+void osTimer_CanBusOFF(void *argument)
+{
+  /* USER CODE BEGIN osTimer_CanBusOFF */
+	if (FDCAN_Status != FDCAN_OK) {
+		CAN_Init();
+		Actual_ERROR = BusOFF_CAN;
+	} else if (Actual_ERROR == BusOFF_CAN)
+		Actual_ERROR = CONTROLE_Board;
+
+	FDCAN_Status = FDCAN_RESET;
+  /* USER CODE END osTimer_CanBusOFF */
+}
+
+/* osTimer_BoardDataRATE function */
+void osTimer_BoardDataRATE(void *argument)
+{
+  /* USER CODE BEGIN osTimer_BoardDataRATE */
+	DataRATE_Telemetry = (CONT_Telemetry * 79) / 100;
+	DataRATE_Datalogger = (CONT_Datalogger * 79) / 100;
+	DataRATE_BMS = (CONT_BMS * 79) / 100;
+	DataRATE_ECU = (CONT_ECU * 79) / 100;
+
+	CONT_Telemetry = 0;
+	CONT_Datalogger = 0;
+	CONT_ECU = 0;
+	CONT_BMS = 0;
+  /* USER CODE END osTimer_BoardDataRATE */
 }
 
 /* MPU Configuration */
@@ -720,11 +972,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+	/* User can add his own implementation to report the HAL error return state */
+	__disable_irq();
+	while (1) {
+	}
   /* USER CODE END Error_Handler_Debug */
 }
 

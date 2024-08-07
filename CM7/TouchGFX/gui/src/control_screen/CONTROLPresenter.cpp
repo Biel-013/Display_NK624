@@ -16,3 +16,7 @@ void CONTROLPresenter::deactivate()
 {
 
 }
+
+void CONTROLPresenter::updateTick(void) {
+	view.updateTick();
+}

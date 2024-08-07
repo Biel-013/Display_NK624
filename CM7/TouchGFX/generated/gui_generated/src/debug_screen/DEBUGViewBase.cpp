@@ -17,169 +17,132 @@ DEBUGViewBase::DEBUGViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    BACKGROUND.setPosition(0, 0, 480, 272);
-    BACKGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    BACKGROUND.setXY(0, 0);
+    BACKGROUND.setBitmap(touchgfx::Bitmap(BITMAP_PAGE_DEBUG_ID));
     add(BACKGROUND);
 
-    POP_Up.setXY(274, 232);
-    POP_Up.setBitmaps(touchgfx::Bitmap(BITMAP_POP_TESLA_ID), touchgfx::Bitmap(BITMAP_ALERTA_INV_9_ID));
+    DEBUG_Telemetria.setXY(317, 19);
+    DEBUG_Telemetria.setBitmaps(touchgfx::Bitmap(BITMAP_DEBUG_TELEMETRY_INFO_ID), touchgfx::Bitmap(BITMAP_DEBUG_TELEMETRY_INFO_SELECT_ID));
+    add(DEBUG_Telemetria);
+
+    DEBUG_Datalogger.setXY(175, 24);
+    DEBUG_Datalogger.setBitmaps(touchgfx::Bitmap(BITMAP_DEBUG_DATALOGGER_INFO_ID), touchgfx::Bitmap(BITMAP_DEBUG_DATALOGGER_INFO_SELECT_ID));
+    add(DEBUG_Datalogger);
+
+    DEBUG_BMS.setXY(179, 198);
+    DEBUG_BMS.setBitmaps(touchgfx::Bitmap(BITMAP_DEBUG_BMS_INFO_ID), touchgfx::Bitmap(BITMAP_DEBUG_BMS_INFO_SELECT_ID));
+    add(DEBUG_BMS);
+
+    DEBUG_ECU.setXY(71, 199);
+    DEBUG_ECU.setBitmaps(touchgfx::Bitmap(BITMAP_DEBUG_ECU_INFO_ID), touchgfx::Bitmap(BITMAP_DEBUG_ECU_INFO_SELECT_ID));
+    add(DEBUG_ECU);
+
+    PAGE_Drive.setXY(0, 0);
+    PAGE_Drive.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_UP_OFF_ID), touchgfx::Bitmap(BITMAP_BOTTOM_UP_ON_ID));
+    PAGE_Drive.setAction(buttonCallback);
+    add(PAGE_Drive);
+
+    PAGE_Control.setXY(0, 69);
+    PAGE_Control.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_MID_UP_OFF_ID), touchgfx::Bitmap(BITMAP_BOTTOM_MID_UP_ON_ID));
+    PAGE_Control.setAction(buttonCallback);
+    add(PAGE_Control);
+
+    PAGE_Safety.setXY(0, 137);
+    PAGE_Safety.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_MID_DOWN_OFF_ID), touchgfx::Bitmap(BITMAP_BOTTOM_MID_DOWN_ON_ID));
+    PAGE_Safety.setAction(buttonCallback);
+    add(PAGE_Safety);
+
+    PAGE_Debug.setXY(0, 204);
+    PAGE_Debug.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_DOWN_ON_SELECT_ID), touchgfx::Bitmap(BITMAP_BOTTOM_DOWN_OFF_SELECT_ID));
+    add(PAGE_Debug);
+
+    DataRate_Telemetria.setPosition(319, 36, 74, 19);
+    DataRate_Telemetria.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    DataRate_Telemetria.setLinespacing(-2);
+    Unicode::snprintf(DataRate_TelemetriaBuffer, DATARATE_TELEMETRIA_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_6DP2).getText());
+    DataRate_Telemetria.setWildcard(DataRate_TelemetriaBuffer);
+    DataRate_Telemetria.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T2YW));
+    add(DataRate_Telemetria);
+
+    DataRate_Datalogger.setPosition(179, 41, 74, 19);
+    DataRate_Datalogger.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    DataRate_Datalogger.setLinespacing(-2);
+    Unicode::snprintf(DataRate_DataloggerBuffer, DATARATE_DATALOGGER_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_LG9N).getText());
+    DataRate_Datalogger.setWildcard(DataRate_DataloggerBuffer);
+    DataRate_Datalogger.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8ZPX));
+    add(DataRate_Datalogger);
+
+    DataRate_BMS.setPosition(181, 214, 74, 19);
+    DataRate_BMS.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    DataRate_BMS.setLinespacing(-2);
+    Unicode::snprintf(DataRate_BMSBuffer, DATARATE_BMS_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_UZMT).getText());
+    DataRate_BMS.setWildcard(DataRate_BMSBuffer);
+    DataRate_BMS.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AMAG));
+    add(DataRate_BMS);
+
+    DataRate_ECU.setPosition(75, 216, 74, 17);
+    DataRate_ECU.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    DataRate_ECU.setLinespacing(-2);
+    Unicode::snprintf(DataRate_ECUBuffer, DATARATE_ECU_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_AKYW).getText());
+    DataRate_ECU.setWildcard(DataRate_ECUBuffer);
+    DataRate_ECU.setTypedText(touchgfx::TypedText(T___SINGLEUSE_VZZG));
+    add(DataRate_ECU);
+
+    Beacon_Leap.setPosition(426, 214, 54, 17);
+    Beacon_Leap.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Beacon_Leap.setLinespacing(-2);
+    Unicode::snprintf(Beacon_LeapBuffer, BEACON_LEAP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_T60R).getText());
+    Beacon_Leap.setWildcard(Beacon_LeapBuffer);
+    Beacon_Leap.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QUF4));
+    add(Beacon_Leap);
+
+    POP_Up.setXY(278, 236);
+    POP_Up.setBitmaps(touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID), touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID));
+    POP_Up.setVisible(false);
     add(POP_Up);
 
-    INFO_LoRa.setXY(415, 0);
-    INFO_LoRa.setBitmaps(touchgfx::Bitmap(BITMAP_LORA_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_LORA_TAB_ON_ID), touchgfx::Bitmap(BITMAP_LORA_ON_ID), touchgfx::Bitmap(BITMAP_LORA_ON_ID));
-    INFO_LoRa.setIconXY(14, 1);
-    INFO_LoRa.setAction(buttonCallback);
-    add(INFO_LoRa);
+    BOTTOM_Info_LoRa.setXY(420, 0);
+    BOTTOM_Info_LoRa.setBitmaps(touchgfx::Bitmap(BITMAP_INFO_LORA_ID), touchgfx::Bitmap(BITMAP_INFO_LORA_SELECT_ID));
+    BOTTOM_Info_LoRa.setAction(buttonCallback);
+    add(BOTTOM_Info_LoRa);
 
-    INFO_Frenagem.setXY(416, 75);
-    INFO_Frenagem.setBitmaps(touchgfx::Bitmap(BITMAP_TELEMETRY_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_TELEMETRY_TAB_ON_ID), touchgfx::Bitmap(BITMAP_FRENAGEM_ON_ID), touchgfx::Bitmap(BITMAP_FRENAGEM_OFF_ID));
-    INFO_Frenagem.setIconXY(11, 2);
-    add(INFO_Frenagem);
+    ICON_ECU.setXY(436, 174);
+    ICON_ECU.setBitmap(touchgfx::Bitmap(BITMAP_CONEXAO_OFF_ID));
+    add(ICON_ECU);
 
-    INFO_Frenagem_1.setXY(415, 37);
-    INFO_Frenagem_1.setBitmaps(touchgfx::Bitmap(BITMAP_DATALOG_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_DATALOG_TAB_ON_ID), touchgfx::Bitmap(BITMAP_FRENAGEM_ON_ID), touchgfx::Bitmap(BITMAP_FRENAGEM_OFF_ID));
-    INFO_Frenagem_1.setIconXY(11, 2);
-    add(INFO_Frenagem_1);
+    ICON_BMS.setXY(434, 134);
+    ICON_BMS.setBitmap(touchgfx::Bitmap(BITMAP_CONEXAO_OFF_ID));
+    add(ICON_BMS);
 
-    INFO_Frenagem_2.setXY(414, 114);
-    INFO_Frenagem_2.setBitmaps(touchgfx::Bitmap(BITMAP_ECU_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_ECU_TAB_ON_ID), touchgfx::Bitmap(BITMAP_FRENAGEM_ON_ID), touchgfx::Bitmap(BITMAP_FRENAGEM_OFF_ID));
-    INFO_Frenagem_2.setIconXY(11, 2);
-    add(INFO_Frenagem_2);
+    ICON_Telemetria.setXY(434, 94);
+    ICON_Telemetria.setBitmap(touchgfx::Bitmap(BITMAP_CONEXAO_OFF_ID));
+    add(ICON_Telemetria);
 
-    INFO_Frenagem_3.setXY(415, 153);
-    INFO_Frenagem_3.setBitmaps(touchgfx::Bitmap(BITMAP_BMS_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_BMS_TAB_ON_ID), touchgfx::Bitmap(BITMAP_FRENAGEM_ON_ID), touchgfx::Bitmap(BITMAP_FRENAGEM_OFF_ID));
-    INFO_Frenagem_3.setIconXY(11, 2);
-    add(INFO_Frenagem_3);
+    ICON_Datalogger.setXY(434, 54);
+    ICON_Datalogger.setBitmap(touchgfx::Bitmap(BITMAP_CONEXAO_OFF_ID));
+    add(ICON_Datalogger);
 
-    INFO_Frenagem_4.setXY(418, 189);
-    INFO_Frenagem_4.setBitmaps(touchgfx::Bitmap(BITMAP_BEACON_TAB_OFF_ID), touchgfx::Bitmap(BITMAP_BEACON_TAB_ON_ID), touchgfx::Bitmap(BITMAP_FRENAGEM_ON_ID), touchgfx::Bitmap(BITMAP_FRENAGEM_OFF_ID));
-    INFO_Frenagem_4.setIconXY(11, 2);
-    add(INFO_Frenagem_4);
+    ICON_LoRa.setXY(441, 15);
+    ICON_LoRa.setBitmap(touchgfx::Bitmap(BITMAP_LORA_OFF_ID));
+    add(ICON_LoRa);
 
-    DEBUG_page.setXY(0, 203);
-    DEBUG_page.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_ON_SELECT_ID), touchgfx::Bitmap(BITMAP_BOTTOM_OFF_SELECT_ID), touchgfx::Bitmap(BITMAP_DEBUG_ON_ID), touchgfx::Bitmap(BITMAP_DEBUG_OFF_ID));
-    DEBUG_page.setIconXY(0, 13);
-    add(DEBUG_page);
-
-    SAFETY_page.setXY(0, 134);
-    SAFETY_page.setBitmaps(touchgfx::Bitmap(BITMAP_MID_BOTTOM_OFF_UNSELECT_ID), touchgfx::Bitmap(BITMAP_MID_BOTTOM_ON_UNSELECT_ID), touchgfx::Bitmap(BITMAP_SAFETY_OFF_ID), touchgfx::Bitmap(BITMAP_SAFETY_ON_ID));
-    SAFETY_page.setIconXY(0, 13);
-    SAFETY_page.setAction(buttonCallback);
-    add(SAFETY_page);
-
-    CONTROL_page.setXY(0, 67);
-    CONTROL_page.setBitmaps(touchgfx::Bitmap(BITMAP_MID_TOP_OFF_UNSELECT_ID), touchgfx::Bitmap(BITMAP_MID_TOP_ON_UNSELECT_ID), touchgfx::Bitmap(BITMAP_CONTROL_OFF_ID), touchgfx::Bitmap(BITMAP_CONTROL_ON_ID));
-    CONTROL_page.setIconXY(0, 13);
-    CONTROL_page.setAction(buttonCallback);
-    add(CONTROL_page);
-
-    DRIVE_page.setXY(0, 0);
-    DRIVE_page.setBitmaps(touchgfx::Bitmap(BITMAP_TOP_OFF_UNSELECT_ID), touchgfx::Bitmap(BITMAP_TOP_ON_UNSELECT_ID), touchgfx::Bitmap(BITMAP_DRIVE_OFF_ID), touchgfx::Bitmap(BITMAP_DRIVE_ON_ID));
-    DRIVE_page.setIconXY(0, 13);
-    DRIVE_page.setAction(buttonCallback);
-    add(DRIVE_page);
-
-    image1.setXY(65, 28);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_DEBUG_SICATD_BACKGROUND_ID));
-    add(image1);
-
-    image1_1.setXY(65, 86);
-    image1_1.setBitmap(touchgfx::Bitmap(BITMAP_DEBUG_ECU_BACKGROUND_ID));
-    add(image1_1);
-
-    image1_2.setXY(65, 144);
-    image1_2.setBitmap(touchgfx::Bitmap(BITMAP_DEBUG_BMS_BACKGROUND_ID));
-    add(image1_2);
-
-    tensao_max.setPosition(205, 57, 47, 15);
-    tensao_max.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max.setLinespacing(0);
-    tensao_max.setTypedText(touchgfx::TypedText(T___SINGLEUSE_XQF6));
-    add(tensao_max);
-
-    tensao_max_5.setPosition(147, 49, 47, 32);
-    tensao_max_5.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max_5.setLinespacing(-2);
-    tensao_max_5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T2YW));
-    add(tensao_max_5);
-
-    tensao_max_5_1.setPosition(147, 107, 47, 32);
-    tensao_max_5_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max_5_1.setLinespacing(-2);
-    tensao_max_5_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AMAG));
-    add(tensao_max_5_1);
-
-    tensao_max_5_2.setPosition(147, 164, 47, 32);
-    tensao_max_5_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max_5_2.setLinespacing(-2);
-    tensao_max_5_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8ZPX));
-    add(tensao_max_5_2);
-
-    tensao_max_1.setPosition(262, 57, 47, 15);
-    tensao_max_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max_1.setLinespacing(0);
-    tensao_max_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CQEM));
-    add(tensao_max_1);
-
-    tensao_max_2.setPosition(317, 57, 47, 15);
-    tensao_max_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max_2.setLinespacing(0);
-    tensao_max_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PKT0));
-    add(tensao_max_2);
-
-    tensao_max_2_1.setPosition(317, 114, 47, 15);
-    tensao_max_2_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max_2_1.setLinespacing(0);
-    tensao_max_2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UAN7));
-    add(tensao_max_2_1);
-
-    tensao_max_1_1.setPosition(262, 114, 47, 15);
-    tensao_max_1_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max_1_1.setLinespacing(0);
-    tensao_max_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L63Y));
-    add(tensao_max_1_1);
-
-    tensao_max_3.setPosition(205, 114, 47, 15);
-    tensao_max_3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max_3.setLinespacing(0);
-    tensao_max_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ASDO));
-    add(tensao_max_3);
-
-    tensao_max_2_2.setPosition(317, 173, 47, 15);
-    tensao_max_2_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max_2_2.setLinespacing(0);
-    tensao_max_2_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_228G));
-    add(tensao_max_2_2);
-
-    tensao_max_1_2.setPosition(262, 173, 47, 15);
-    tensao_max_1_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max_1_2.setLinespacing(0);
-    tensao_max_1_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_KANZ));
-    add(tensao_max_1_2);
-
-    tensao_max_4.setPosition(205, 173, 47, 15);
-    tensao_max_4.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    tensao_max_4.setLinespacing(0);
-    tensao_max_4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YXOY));
-    add(tensao_max_4);
-
-    FRONTGROUND.setPosition(80, 0, 400, 272);
+    FRONTGROUND.setPosition(66, 0, 414, 272);
     FRONTGROUND.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     FRONTGROUND.setAlpha(0);
     add(FRONTGROUND);
 
-    LORA_PopUp.setXY(230, 0);
-    LORA_PopUp.setVisible(false);
-    add(LORA_PopUp);
-
-    BOTTON_lora.setBoxWithBorderPosition(0, 0, 409, 272);
+    BOTTON_lora.setBoxWithBorderPosition(0, 0, 68, 272);
     BOTTON_lora.setBorderSize(5);
     BOTTON_lora.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
     BOTTON_lora.setAlpha(0);
     BOTTON_lora.setVisible(false);
     BOTTON_lora.setAction(flexButtonCallback);
-    BOTTON_lora.setPosition(72, 1, 409, 272);
+    BOTTON_lora.setPosition(413, 1, 68, 272);
     add(BOTTON_lora);
+
+    LORA_PopUp.setXY(480, 0);
+    LORA_PopUp.setVisible(false);
+    add(LORA_PopUp);
 }
 
 DEBUGViewBase::~DEBUGViewBase()
@@ -195,10 +158,10 @@ void DEBUGViewBase::setupScreen()
 
 void DEBUGViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &DRIVE_page)
+    if (&src == &PAGE_Drive)
     {
         //Interaction_DRIVER_page_press
-        //When DRIVE_page clicked call virtual function
+        //When PAGE_Drive clicked call virtual function
         //Call TransitionEnd_Debug
         TransitionEnd_Debug();
     
@@ -207,10 +170,10 @@ void DEBUGViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Delay for 251 ms (15 Ticks)
         interaction_Delay_DRIVER_pageCounter = INTERACTION_DELAY_DRIVER_PAGE_DURATION;
     }
-    if (&src == &CONTROL_page)
+    if (&src == &PAGE_Control)
     {
         //Interaction_CONTROL_page_press
-        //When CONTROL_page clicked call virtual function
+        //When PAGE_Control clicked call virtual function
         //Call TransitionEnd_Debug
         TransitionEnd_Debug();
     
@@ -219,10 +182,10 @@ void DEBUGViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Delay for 251 ms (15 Ticks)
         interaction_Delay_CONTROL_pageCounter = INTERACTION_DELAY_CONTROL_PAGE_DURATION;
     }
-    if (&src == &SAFETY_page)
+    if (&src == &PAGE_Safety)
     {
         //Interaction_SAFETY_page_press
-        //When SAFETY_page clicked call virtual function
+        //When PAGE_Safety clicked call virtual function
         //Call TransitionEnd_Debug
         TransitionEnd_Debug();
     
@@ -231,10 +194,10 @@ void DEBUGViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Delay for 251 ms (15 Ticks)
         interaction_Delay_SAFETY_pageCounter = INTERACTION_DELAY_SAFETY_PAGE_DURATION;
     }
-    if (&src == &INFO_LoRa)
+    if (&src == &BOTTOM_Info_LoRa)
     {
         //Interaction_LORA_Begin
-        //When INFO_LoRa clicked call virtual function
+        //When BOTTOM_Info_LoRa clicked call virtual function
         //Call LORA_Begin
         LORA_Begin();
     }
@@ -292,7 +255,7 @@ void DEBUGViewBase::handleTickEvent()
 
 void DEBUGViewBase::transitionBegins()
 {
-    //Interaction1
+    //Interaction_TransitionBegin
     //When screen transition begins call virtual function
     //Call TransitionBegin_Debug
     TransitionBegin_Debug();
