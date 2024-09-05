@@ -54,14 +54,9 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:63:10:void touchgfx::AbstractButton::setAction(touchgfx::GenericCallback<const touchgfx::AbstractButton&>&)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:73:18:virtual void touchgfx::AbstractButton::executeAction()	4
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:86:18:virtual bool touchgfx::AbstractButton::getPressedState() const	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:touchgfx::AbstractButton::~AbstractButton()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:virtual touchgfx::AbstractButton::~AbstractButton()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:34:5:touchgfx::Button::Button()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:60:10:void touchgfx::Button::setAlpha(uint8_t)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:68:13:uint8_t touchgfx::Button::getAlpha() const	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:84:18:virtual void touchgfx::Button::invalidateContent() const	2
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:270:18:virtual void touchgfx::AbstractProgressIndicator::invalidateContent() const	2
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:44:5:touchgfx::AbstractPainter::AbstractPainter()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:50:13:touchgfx::AbstractPainter::~AbstractPainter()	1
@@ -139,13 +134,13 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<CONTROLPresenter>::~View()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<CONTROLPresenter>::~View()	1
 C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:10:1:CONTROLViewBase::CONTROLViewBase()	1
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:202:1:CONTROLViewBase::~CONTROLViewBase()	1
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:202:1:virtual CONTROLViewBase::~CONTROLViewBase()	1
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:207:6:virtual void CONTROLViewBase::setupScreen()	1
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:213:6:void CONTROLViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	5
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:260:6:void CONTROLViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	2
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:271:6:virtual void CONTROLViewBase::handleTickEvent()	7
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:310:6:virtual void CONTROLViewBase::transitionBegins()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:204:1:CONTROLViewBase::~CONTROLViewBase()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:204:1:virtual CONTROLViewBase::~CONTROLViewBase()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:209:6:virtual void CONTROLViewBase::setupScreen()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:215:6:void CONTROLViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	5
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:262:6:void CONTROLViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	2
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:273:6:virtual void CONTROLViewBase::handleTickEvent()	7
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/control_screen/CONTROLViewBase.cpp:312:6:virtual void CONTROLViewBase::transitionBegins()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = CONTROLPresenter]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:37:7:touchgfx::AbstractProgressIndicator::~AbstractProgressIndicator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:37:7:virtual touchgfx::AbstractProgressIndicator::~AbstractProgressIndicator()	1
@@ -161,9 +156,6 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/contr
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::TextAreaWithOneWildcard]	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::Button]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::Box]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::ClickButtonTrigger()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	1
@@ -200,8 +192,8 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/contr
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::TextAreaWithOneWildcard>::~FadeAnimator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::Gauge>::~FadeAnimator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::Gauge>::~FadeAnimator()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::Button>::~FadeAnimator()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::Button>::~FadeAnimator()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:34:7:touchgfx::PainterRGB565::~PainterRGB565()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:34:7:virtual touchgfx::PainterRGB565::~PainterRGB565()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = CONTROLViewBase; T1 = const touchgfx::AbstractButtonContainer&]	2
@@ -221,11 +213,7 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/contr
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::Gauge]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::Gauge]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::Gauge]	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::Button]	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::Button]	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::Button]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = LoRA_PopUp]	7
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Box]	9
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::TextAreaWithOneWildcard]	9
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Gauge]	9
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Button]	9

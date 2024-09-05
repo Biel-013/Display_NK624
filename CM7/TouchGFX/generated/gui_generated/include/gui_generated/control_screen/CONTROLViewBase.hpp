@@ -58,6 +58,7 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Image BACKGROUND;
+    touchgfx::Image PopUp;
     touchgfx::Button PAGE_Drive;
     touchgfx::Button PAGE_Control;
     touchgfx::Button PAGE_Safety;
@@ -76,7 +77,6 @@ protected:
     touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > motor_R_Torque;
     touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > motor_L_Temperature;
     touchgfx::FadeAnimator< touchgfx::TextAreaWithOneWildcard > motor_R_Temperature;
-    touchgfx::FadeAnimator< touchgfx::Button > POP_Up;
     touchgfx::Image ICON_Frenagem;
     touchgfx::Image ICON_Modo;
     touchgfx::Button BOTTOM_Info_LoRa;
@@ -98,10 +98,14 @@ protected:
     touchgfx::Unicode::UnicodeChar motor_L_GirosBuffer[MOTOR_L_GIROS_SIZE];
     static const uint16_t MOTOR_R_GIROS_SIZE = 5;
     touchgfx::Unicode::UnicodeChar motor_R_GirosBuffer[MOTOR_R_GIROS_SIZE];
+    static const uint16_t MOTOR_L_POTENCIA_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar motor_L_PotenciaBuffer[MOTOR_L_POTENCIA_SIZE];
     static const uint16_t MOTOR_R_POTENCIA_SIZE = 5;
     touchgfx::Unicode::UnicodeChar motor_R_PotenciaBuffer[MOTOR_R_POTENCIA_SIZE];
     static const uint16_t MOTOR_L_TORQUE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar motor_L_TorqueBuffer[MOTOR_L_TORQUE_SIZE];
+    static const uint16_t MOTOR_R_TORQUE_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar motor_R_TorqueBuffer[MOTOR_R_TORQUE_SIZE];
     static const uint16_t MOTOR_L_TEMPERATURE_SIZE = 5;
     touchgfx::Unicode::UnicodeChar motor_L_TemperatureBuffer[MOTOR_L_TEMPERATURE_SIZE];
     static const uint16_t MOTOR_R_TEMPERATURE_SIZE = 5;

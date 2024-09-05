@@ -595,6 +595,16 @@
             "RelativeFilename": "CONTROL_page\\BACKGROUND\\PAGE_CONTROL.png"
           },
           {
+            "Type": "Image",
+            "Name": "PopUp",
+            "X": 279,
+            "Y": 236,
+            "Width": 201,
+            "Height": 36,
+            "Visible": false,
+            "RelativeFilename": "POP_UP_widget\\POPuP_CAN_OFF_1.png"
+          },
+          {
             "Type": "Button",
             "Name": "PAGE_Drive",
             "Width": 66,
@@ -812,7 +822,9 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_3SYR"
+              "TextId": "__SingleUse_3SYR",
+              "UseBuffer": true,
+              "BufferSize": 5
             },
             "Fadeable": true
           },
@@ -873,7 +885,9 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_ZTD4"
+              "TextId": "__SingleUse_ZTD4",
+              "UseBuffer": true,
+              "BufferSize": 5
             },
             "Fadeable": true
           },
@@ -917,18 +931,6 @@
               "UseBuffer": true,
               "BufferSize": 5
             },
-            "Fadeable": true
-          },
-          {
-            "Type": "Button",
-            "Name": "POP_Up",
-            "X": 278,
-            "Y": 236,
-            "Width": 201,
-            "Height": 36,
-            "Visible": false,
-            "Pressed": "POP_UP_widget\\POPuP_CAN_OFF_1.png",
-            "Released": "POP_UP_widget\\POPuP_CAN_OFF_1.png",
             "Fadeable": true
           },
           {
@@ -1198,6 +1200,16 @@
             "Fadeable": true
           },
           {
+            "Type": "Image",
+            "Name": "PopUp",
+            "X": 279,
+            "Y": 236,
+            "Width": 201,
+            "Height": 36,
+            "Visible": false,
+            "RelativeFilename": "POP_UP_widget\\POPuP_CAN_OFF_1.png"
+          },
+          {
             "Type": "Button",
             "Name": "PAGE_Debug",
             "Y": 204,
@@ -1234,9 +1246,19 @@
           },
           {
             "Type": "Button",
+            "Name": "BOTTON_Stack_6",
+            "X": 162,
+            "Y": 183,
+            "Width": 69,
+            "Height": 49,
+            "Pressed": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_6_SELECT.png",
+            "Released": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_6.png"
+          },
+          {
+            "Type": "Button",
             "Name": "BOTTON_Stack_5",
             "X": 171,
-            "Y": 146,
+            "Y": 111,
             "Width": 69,
             "Height": 49,
             "Pressed": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_5_SELECT.png",
@@ -1245,8 +1267,8 @@
           {
             "Type": "Button",
             "Name": "BOTTON_Stack_4",
-            "X": 171,
-            "Y": 71,
+            "X": 159,
+            "Y": 37,
             "Width": 69,
             "Height": 49,
             "Pressed": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_4_SELECT.png",
@@ -1265,8 +1287,8 @@
           {
             "Type": "Button",
             "Name": "BOTTON_Stack_2",
-            "X": 86,
-            "Y": 109,
+            "X": 90,
+            "Y": 111,
             "Width": 69,
             "Height": 49,
             "Pressed": "SAFETY_page\\ACUMULATOR_widget\\ICONS\\STACK_2_SELECT.png",
@@ -1294,7 +1316,7 @@
           },
           {
             "Type": "Image",
-            "Name": "SENSOR_1_icon",
+            "Name": "SENSOR_3_icon",
             "X": 254,
             "Y": 142,
             "Width": 98,
@@ -1314,7 +1336,7 @@
           },
           {
             "Type": "Image",
-            "Name": "SENSOR_3_icon",
+            "Name": "SENSOR_1_icon",
             "X": 254,
             "Y": 46,
             "Width": 98,
@@ -1328,7 +1350,7 @@
             "X": 429,
             "Y": 214,
             "Width": 45,
-            "Height": 14,
+            "Height": 15,
             "TextId": "__SingleUse_EYDG",
             "TextRotation": "0",
             "Color": {
@@ -1401,7 +1423,30 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_W5DZ"
+              "TextId": "__SingleUse_W5DZ",
+              "UseBuffer": true,
+              "BufferSize": 5
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "STACK_6_text",
+            "X": 172,
+            "Y": 204,
+            "Width": 48,
+            "Height": 15,
+            "TextId": "__SingleUse_T21J",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_O9H5",
+              "UseBuffer": true,
+              "BufferSize": 5
             },
             "Fadeable": true
           },
@@ -1409,7 +1454,7 @@
             "Type": "TextArea",
             "Name": "STACK_5_text",
             "X": 183,
-            "Y": 168,
+            "Y": 133,
             "Width": 48,
             "Height": 15,
             "TextId": "__SingleUse_ZCMW",
@@ -1429,8 +1474,8 @@
           {
             "Type": "TextArea",
             "Name": "STACK_4_text",
-            "X": 183,
-            "Y": 92,
+            "X": 171,
+            "Y": 58,
             "Width": 48,
             "Height": 15,
             "TextId": "__SingleUse_BVMV",
@@ -1471,8 +1516,8 @@
           {
             "Type": "TextArea",
             "Name": "STACK_2_text",
-            "X": 96,
-            "Y": 130,
+            "X": 100,
+            "Y": 132,
             "Width": 48,
             "Height": 15,
             "TextId": "__SingleUse_6AAQ",
@@ -1595,18 +1640,6 @@
             "Fadeable": true
           },
           {
-            "Type": "Button",
-            "Name": "POP_Up",
-            "X": 278,
-            "Y": 236,
-            "Width": 201,
-            "Height": 36,
-            "Visible": false,
-            "Pressed": "POP_UP_widget\\POPuP_CAN_OFF_1.png",
-            "Released": "POP_UP_widget\\POPuP_CAN_OFF_1.png",
-            "Fadeable": true
-          },
-          {
             "Type": "Image",
             "Name": "ICON_Air",
             "X": 433,
@@ -1654,6 +1687,54 @@
           },
           {
             "Type": "FlexButton",
+            "Name": "BOTTON_stack_6",
+            "X": 72,
+            "Width": 408,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 408,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "STACK_6",
+            "X": 400,
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "CustomContainerDefinitionName": "STACK_6_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
             "Name": "BOTTON_stack_5",
             "X": 72,
             "Width": 408,
@@ -1693,7 +1774,7 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "STACK_5",
-            "X": 327,
+            "X": 400,
             "Width": 480,
             "Height": 272,
             "Visible": false,
@@ -1741,7 +1822,7 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "STACK_4",
-            "X": 327,
+            "X": 400,
             "Width": 480,
             "Height": 272,
             "Visible": false,
@@ -1789,7 +1870,7 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "STACK_3",
-            "X": 327,
+            "X": 400,
             "Width": 480,
             "Height": 272,
             "Visible": false,
@@ -1837,7 +1918,7 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "STACK_2",
-            "X": 327,
+            "X": 400,
             "Width": 480,
             "Height": 272,
             "Visible": false,
@@ -1885,7 +1966,7 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "STACK_1",
-            "X": 327,
+            "X": 400,
             "Width": 480,
             "Height": 272,
             "Visible": false,
@@ -2192,6 +2273,28 @@
               "Type": "ActionCustom",
               "FunctionName": "LORA_End"
             }
+          },
+          {
+            "InteractionName": "Interaction_STACK_6_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_Stack_6"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_6_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_STACK_6_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_stack_6"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "STACK_6_End"
+            }
           }
         ]
       },
@@ -2244,6 +2347,16 @@
             "Height": 39,
             "Pressed": "DEBUG_page\\DEBUG_widget\\DEBUG_ECU_INFO_SELECT.png",
             "Released": "DEBUG_page\\DEBUG_widget\\DEBUG_ECU_INFO.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "PopUp",
+            "X": 279,
+            "Y": 236,
+            "Width": 201,
+            "Height": 36,
+            "Visible": false,
+            "RelativeFilename": "POP_UP_widget\\POPuP_CAN_OFF_1.png"
           },
           {
             "Type": "Button",
@@ -2387,18 +2500,6 @@
           },
           {
             "Type": "Button",
-            "Name": "POP_Up",
-            "X": 278,
-            "Y": 236,
-            "Width": 201,
-            "Height": 36,
-            "Visible": false,
-            "Pressed": "POP_UP_widget\\POPuP_CAN_OFF_1.png",
-            "Released": "POP_UP_widget\\POPuP_CAN_OFF_1.png",
-            "Fadeable": true
-          },
-          {
-            "Type": "Button",
             "Name": "BOTTOM_Info_LoRa",
             "X": 420,
             "Width": 62,
@@ -2508,6 +2609,202 @@
             "Visible": false,
             "CustomContainerDefinitionName": "LoRA_PopUp",
             "Moveable": true
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "PopUp_ECU",
+            "X": 71,
+            "Y": 272,
+            "Width": 331,
+            "Height": 103,
+            "CustomContainerDefinitionName": "ECU_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_PopUp_ECU",
+            "X": 66,
+            "Y": 1,
+            "Width": 415,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 415,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "PopUp_BMS",
+            "X": 71,
+            "Y": 272,
+            "Width": 331,
+            "Height": 103,
+            "CustomContainerDefinitionName": "BMS_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_PopUp_BMS",
+            "X": 66,
+            "Y": 1,
+            "Width": 415,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 415,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "PopUp_Datalogger",
+            "X": 71,
+            "Y": -103,
+            "Width": 331,
+            "Height": 103,
+            "CustomContainerDefinitionName": "Datalogger_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_PopUp_Datalogger",
+            "X": 66,
+            "Y": 1,
+            "Width": 415,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 415,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "PopUp_Telemetry",
+            "X": 71,
+            "Y": -103,
+            "Width": 331,
+            "Height": 103,
+            "CustomContainerDefinitionName": "Telemetry_PopUp",
+            "Moveable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "BOTTON_PopUp_Telemetry",
+            "X": 66,
+            "Y": 1,
+            "Width": 415,
+            "Height": 272,
+            "Visible": false,
+            "Alpha": 0,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 415,
+                "Height": 272,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -2650,64 +2947,420 @@
               "Type": "ActionCustom",
               "FunctionName": "LORA_End"
             }
+          },
+          {
+            "InteractionName": "Interaction_Telemetry_PopUp_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "DEBUG_Telemetria"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Telemetry_PopUp_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Telemetry_PopUp_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_PopUp_Telemetry"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Telemetry_PopUp_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Datalogger_PopUp_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "DEBUG_Datalogger"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Datalogger_PopUp_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_Datalogger_PopUp_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_PopUp_Datalogger"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Datalogger_PopUp_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_BMS_PopUp_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "DEBUG_BMS"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BMS_PopUp_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_BMS_PopUp_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_PopUp_BMS"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BMS_PopUp_End"
+            }
+          },
+          {
+            "InteractionName": "Interaction_ECU_PopUp_Begin",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "DEBUG_ECU"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ECU_PopUp_Begin"
+            }
+          },
+          {
+            "InteractionName": "Interaction_ECU_PopUp_End",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "BOTTON_PopUp_ECU"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ECU_PopUp_End"
+            }
           }
         ]
       }
     ],
     "CustomContainerDefinitions": [
       {
-        "Name": "STACK_5_PopUp",
+        "Name": "STACK_1_PopUp",
         "Width": 480,
         "Height": 272,
         "Components": [
           {
             "Type": "Image",
-            "Name": "CELL_background",
-            "X": 154,
-            "Y": 33,
-            "Width": 168,
-            "Height": 206,
-            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_5_background.png"
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 322,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_1_PopUp.png"
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_1",
-            "X": 174,
-            "Y": 86,
-            "Width": 40,
-            "Height": 14,
-            "TextId": "__SingleUse_6WXP",
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_H51W",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "Wildcard1": {
+              "TextId": "__SingleUse_0XLC",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_2",
-            "X": 262,
-            "Y": 85,
-            "Width": 40,
-            "Height": 14,
-            "TextId": "__SingleUse_6M8U",
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_H6F4",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "Wildcard1": {
+              "TextId": "__SingleUse_5UFO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_3",
-            "X": 174,
-            "Y": 138,
-            "Width": 40,
-            "Height": 14,
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_6QX6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_CIRB",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_YI61",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_LM31",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_2N5T",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_0OV2",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_L1JY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_XF3S",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_TS3C",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_Y5H8",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_T4WC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_7M6H",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_7ERG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_NLH3",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_SGGO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_PFUM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_8XOE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_SB67",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_9K4C",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_RAWD",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_YJIF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_QKR5",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_RXIN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_0NP7",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_UAAA",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_XS11",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
             "TextId": "__SingleUse_7KCM",
             "TextRotation": "0",
             "Color": {
@@ -2715,281 +3368,11 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_4",
-            "X": 262,
-            "Y": 137,
-            "Width": 40,
-            "Height": 14,
-            "TextId": "__SingleUse_VZEE",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_5",
-            "X": 174,
-            "Y": 185,
-            "Width": 40,
-            "Height": 14,
-            "TextId": "__SingleUse_SSGG",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_6",
-            "X": 262,
-            "Y": 184,
-            "Width": 40,
-            "Height": 14,
-            "TextId": "__SingleUse_0Q1P",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "STACK_4_PopUp",
-        "Width": 480,
-        "Height": 272,
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "CELL_background",
-            "X": 154,
-            "Y": 33,
-            "Width": 168,
-            "Height": 206,
-            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_4_background.png"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_1",
-            "X": 174,
-            "Y": 86,
-            "Width": 40,
-            "Height": 15,
-            "TextId": "__SingleUse_GBJ5",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_2",
-            "X": 262,
-            "Y": 85,
-            "Width": 40,
-            "Height": 15,
-            "TextId": "__SingleUse_J7BQ",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_3",
-            "X": 174,
-            "Y": 138,
-            "Width": 40,
-            "Height": 15,
-            "TextId": "__SingleUse_WXO2",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_4",
-            "X": 262,
-            "Y": 137,
-            "Width": 40,
-            "Height": 15,
-            "TextId": "__SingleUse_PS94",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_5",
-            "X": 174,
-            "Y": 185,
-            "Width": 40,
-            "Height": 15,
-            "TextId": "__SingleUse_51T7",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_6",
-            "X": 262,
-            "Y": 184,
-            "Width": 40,
-            "Height": 15,
-            "TextId": "__SingleUse_1DGI",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          }
-        ],
-        "Interactions": []
-      },
-      {
-        "Name": "STACK_3_PopUp",
-        "Width": 480,
-        "Height": 272,
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "CELL_background",
-            "X": 154,
-            "Y": 33,
-            "Width": 168,
-            "Height": 206,
-            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_3_background.png"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_1",
-            "X": 174,
-            "Y": 86,
-            "Width": 40,
-            "Height": 14,
-            "TextId": "__SingleUse_E2A4",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_2",
-            "X": 262,
-            "Y": 85,
-            "Width": 40,
-            "Height": 14,
-            "TextId": "__SingleUse_CB71",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_3",
-            "X": 174,
-            "Y": 138,
-            "Width": 40,
-            "Height": 14,
-            "TextId": "__SingleUse_506P",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_4",
-            "X": 262,
-            "Y": 137,
-            "Width": 40,
-            "Height": 14,
-            "TextId": "__SingleUse_D47R",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_5",
-            "X": 174,
-            "Y": 185,
-            "Width": 40,
-            "Height": 14,
-            "TextId": "__SingleUse_1PMW",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "Tensao_pack_6",
-            "X": 262,
-            "Y": 184,
-            "Width": 40,
-            "Height": 14,
-            "TextId": "__SingleUse_U3SN",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
+            "Wildcard1": {
+              "TextId": "__SingleUse_NAW3",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
         "Interactions": []
@@ -3001,134 +3384,358 @@
         "Components": [
           {
             "Type": "Image",
-            "Name": "CELL_background",
-            "X": 154,
-            "Y": 33,
-            "Width": 168,
-            "Height": 206,
-            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_2_background.png"
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 322,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_2_PopUp.png"
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_1",
-            "X": 174,
-            "Y": 86,
-            "Width": 40,
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_HB1E",
+            "TextId": "__SingleUse_755G",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "Wildcard1": {
+              "TextId": "__SingleUse_YL32",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_2",
-            "X": 262,
-            "Y": 85,
-            "Width": 40,
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_BC1Q",
+            "TextId": "__SingleUse_SMTD",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "Wildcard1": {
+              "TextId": "__SingleUse_4A7U",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_3",
-            "X": 174,
-            "Y": 138,
-            "Width": 40,
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_4GM4",
+            "TextId": "__SingleUse_QEFU",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "Wildcard1": {
+              "TextId": "__SingleUse_EKO8",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_4",
-            "X": 262,
-            "Y": 137,
-            "Width": 40,
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_VYSC",
+            "TextId": "__SingleUse_UG3R",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "Wildcard1": {
+              "TextId": "__SingleUse_8DNM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_5",
-            "X": 174,
-            "Y": 185,
-            "Width": 40,
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_OTFQ",
+            "TextId": "__SingleUse_MUR4",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "Wildcard1": {
+              "TextId": "__SingleUse_FTJ3",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_6",
-            "X": 262,
-            "Y": 184,
-            "Width": 40,
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_6YQ8",
+            "TextId": "__SingleUse_5USH",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "Wildcard1": {
+              "TextId": "__SingleUse_BT6V",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_XYEK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_HIOH",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_EUEM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_NIYK",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_JF0D",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_XGQR",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_GH8L",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_MML7",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_KATC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_WCMI",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_LBIG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_8JYM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_BLA4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_PNHE",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_I63B",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_GU0W",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_DCOT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_GZHX",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_X8SV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_K4Q5",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
         "Interactions": []
       },
       {
-        "Name": "STACK_1_PopUp",
+        "Name": "STACK_3_PopUp",
         "Width": 480,
         "Height": 272,
         "Components": [
           {
             "Type": "Image",
-            "Name": "CELL_background",
-            "X": 154,
-            "Y": 33,
-            "Width": 168,
-            "Height": 206,
-            "RelativeFilename": "SAFETY_page\\CELL_widget\\Stack_1_background.png"
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 322,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_3_PopUp.png"
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_1",
-            "X": 168,
-            "Y": 86,
-            "Width": 46,
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_CXEM",
+            "TextId": "__SingleUse_0UKW",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
@@ -3136,19 +3743,19 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_5HQT",
+              "TextId": "__SingleUse_CXR6",
               "UseBuffer": true,
               "BufferSize": 10
             }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_2",
-            "X": 257,
-            "Y": 86,
-            "Width": 46,
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_Y9SF",
+            "TextId": "__SingleUse_IFTH",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
@@ -3156,19 +3763,19 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_Q58Q",
+              "TextId": "__SingleUse_E4RD",
               "UseBuffer": true,
               "BufferSize": 10
             }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_3",
-            "X": 168,
-            "Y": 137,
-            "Width": 46,
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_IJL5",
+            "TextId": "__SingleUse_2C4P",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
@@ -3176,19 +3783,19 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_W6KE",
+              "TextId": "__SingleUse_MA07",
               "UseBuffer": true,
               "BufferSize": 10
             }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_4",
-            "X": 257,
-            "Y": 137,
-            "Width": 46,
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_ECJY",
+            "TextId": "__SingleUse_3GAG",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
@@ -3196,19 +3803,19 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_F4PV",
+              "TextId": "__SingleUse_RX8C",
               "UseBuffer": true,
               "BufferSize": 10
             }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_5",
-            "X": 168,
-            "Y": 185,
-            "Width": 46,
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_MOHI",
+            "TextId": "__SingleUse_DOWB",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
@@ -3216,19 +3823,19 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_3H50",
+              "TextId": "__SingleUse_WR4M",
               "UseBuffer": true,
               "BufferSize": 10
             }
           },
           {
             "Type": "TextArea",
-            "Name": "Tensao_pack_6",
-            "X": 257,
-            "Y": 185,
-            "Width": 46,
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
             "Height": 15,
-            "TextId": "__SingleUse_3SXH",
+            "TextId": "__SingleUse_0YMN",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
@@ -3236,9 +3843,1220 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_HPHN",
+              "TextId": "__SingleUse_UXZV",
               "UseBuffer": true,
-              "BufferSize": 5
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_WR1F",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_JI7V",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_WFUH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_0S0Z",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_2KEO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_WBUA",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_VPPV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_3VC7",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_UPXV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_7HZK",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_HL16",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_MP9H",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_1MAM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_WEO0",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_95QK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_L9CL",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_EY8G",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_K0OV",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_G4QW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_Q2TO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "STACK_4_PopUp",
+        "Width": 480,
+        "Height": 272,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 321,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_4_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_ENYI",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_EHAU",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_58ZP",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_O2I9",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_GNRC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_32CO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_BHRE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_9MIY",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_MP2L",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_9UKW",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_UIM5",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_56HR",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_FIHD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_1CP1",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_BDCM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_LM85",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_G7RU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZENA",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_W5LZ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_T5ZD",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_K027",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_RADX",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_HCEU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_4JBF",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_73RB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_63EK",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_561W",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZSKF",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_3CU6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_VT55",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_5B1A",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_2TV2",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "STACK_5_PopUp",
+        "Width": 480,
+        "Height": 272,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 321,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_5_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_JL2C",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_607H",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_H56P",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_I7A7",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_MEW6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_6QRP",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_27QW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_RJRK",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_GVW0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_4B3V",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_0HTI",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_5TRZ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_K2CF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_0JNP",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_8SER",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_1341",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_33XT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_HVQR",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_3XA7",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_I0IL",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_2NNH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_H5X6",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_A38N",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_7CT5",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_42JY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_YEGV",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_IH3A",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZCD4",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_TFWV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_O2HI",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_QU9Y",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_PTQO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "STACK_6_PopUp",
+        "Width": 480,
+        "Height": 272,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "STACK_background",
+            "X": 81,
+            "Y": 30,
+            "Width": 321,
+            "Height": 213,
+            "RelativeFilename": "SAFETY_page\\CELL_widget\\STACK_6_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_16",
+            "X": 329,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_5YTB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_J4N1",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_15",
+            "X": 329,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_BDLC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_AZEB",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_14",
+            "X": 329,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_M63E",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ADME",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_13",
+            "X": 329,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_AB35",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_16KT",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_12",
+            "X": 255,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_JN0V",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_CVLB",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_11",
+            "X": 255,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_8J5W",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_52QH",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_10",
+            "X": 255,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_B1EK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_6B22",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_9",
+            "X": 255,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_OL81",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_PTLP",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_8",
+            "X": 182,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_4NNJ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_WAQX",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_7",
+            "X": 182,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_AAJM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_7BPO",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_6",
+            "X": 182,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_RFQY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_AZXZ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_5",
+            "X": 182,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_IONR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_5888",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_4",
+            "X": 108,
+            "Y": 195,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_3YTN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ER06",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_3",
+            "X": 108,
+            "Y": 157,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_AMN9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_KZIH",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_2",
+            "X": 108,
+            "Y": 118,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_TNLI",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_9SA9",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Tensao_CELL_1",
+            "X": 108,
+            "Y": 80,
+            "Width": 45,
+            "Height": 15,
+            "TextId": "__SingleUse_9NBE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_GVWM",
+              "UseBuffer": true,
+              "BufferSize": 10
             }
           }
         ],
@@ -3671,6 +5489,246 @@
             }
           }
         ]
+      },
+      {
+        "Name": "ECU_PopUp",
+        "Width": 331,
+        "Height": 103,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "DEBUG_BACKGROUND",
+            "Width": 331,
+            "Height": 103,
+            "RelativeFilename": "DEBUG_page\\DEBUG_PopUp\\DEBUG_ECU_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_2",
+            "X": 225,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_V6O7",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_WWMN",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_1",
+            "X": 126,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_TJHD",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_OOJN",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_0",
+            "X": 30,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_9GQ9",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_MVVT",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "BMS_PopUp",
+        "Width": 331,
+        "Height": 103,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "DEBUG_BACKGROUND",
+            "Width": 331,
+            "Height": 104,
+            "RelativeFilename": "DEBUG_page\\DEBUG_PopUp\\DEBUG_BMS_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_2",
+            "X": 225,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_A2HW",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_JH1I",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_1",
+            "X": 126,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_86NG",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_GJWN",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_0",
+            "X": 30,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_BDY4",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_8WWK",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Datalogger_PopUp",
+        "Width": 331,
+        "Height": 103,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "DEBUG_BACKGROUND",
+            "Width": 331,
+            "Height": 103,
+            "RelativeFilename": "DEBUG_page\\DEBUG_PopUp\\DEBUG_Datalogger_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_2",
+            "X": 225,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_RG39",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_N7IM",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_1",
+            "X": 126,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_8XA9",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_75DQ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_0",
+            "X": 30,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_9EPY",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_Y87T",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Telemetry_PopUp",
+        "Width": 331,
+        "Height": 103,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "DEBUG_BACKGROUND",
+            "Width": 331,
+            "Height": 103,
+            "RelativeFilename": "DEBUG_page\\DEBUG_PopUp\\DEBUG_Telemetria_PopUp.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_2",
+            "X": 225,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_F6Q8",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_40QN",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_1",
+            "X": 126,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_L9AR",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_BRLB",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEBUG_0",
+            "X": 30,
+            "Y": 61,
+            "Width": 79,
+            "Height": 27,
+            "TextId": "__SingleUse_PZNR",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_KY1C",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          }
+        ],
+        "Interactions": []
       }
     ],
     "Name": "Display_NK624",

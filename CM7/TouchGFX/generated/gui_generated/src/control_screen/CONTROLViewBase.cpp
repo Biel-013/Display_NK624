@@ -24,6 +24,11 @@ CONTROLViewBase::CONTROLViewBase() :
     BACKGROUND.setBitmap(touchgfx::Bitmap(BITMAP_PAGE_CONTROL_ID));
     add(BACKGROUND);
 
+    PopUp.setXY(279, 236);
+    PopUp.setBitmap(touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID));
+    PopUp.setVisible(false);
+    add(PopUp);
+
     PAGE_Drive.setXY(0, 0);
     PAGE_Drive.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_UP_OFF_ID), touchgfx::Bitmap(BITMAP_BOTTOM_UP_ON_ID));
     PAGE_Drive.setAction(buttonCallback);
@@ -115,7 +120,8 @@ CONTROLViewBase::CONTROLViewBase() :
     motor_L_Potencia.setPosition(179, 132, 57, 19);
     motor_L_Potencia.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     motor_L_Potencia.setLinespacing(0);
-    motor_L_Potencia.setWildcard(touchgfx::TypedText(T___SINGLEUSE_3SYR).getText());
+    Unicode::snprintf(motor_L_PotenciaBuffer, MOTOR_L_POTENCIA_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_3SYR).getText());
+    motor_L_Potencia.setWildcard(motor_L_PotenciaBuffer);
     motor_L_Potencia.setTypedText(touchgfx::TypedText(T___SINGLEUSE_73T9));
     add(motor_L_Potencia);
 
@@ -138,7 +144,8 @@ CONTROLViewBase::CONTROLViewBase() :
     motor_R_Torque.setPosition(94, 88, 57, 19);
     motor_R_Torque.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     motor_R_Torque.setLinespacing(0);
-    motor_R_Torque.setWildcard(touchgfx::TypedText(T___SINGLEUSE_ZTD4).getText());
+    Unicode::snprintf(motor_R_TorqueBuffer, MOTOR_R_TORQUE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_ZTD4).getText());
+    motor_R_Torque.setWildcard(motor_R_TorqueBuffer);
     motor_R_Torque.setTypedText(touchgfx::TypedText(T___SINGLEUSE_VOXZ));
     add(motor_R_Torque);
 
@@ -157,11 +164,6 @@ CONTROLViewBase::CONTROLViewBase() :
     motor_R_Temperature.setWildcard(motor_R_TemperatureBuffer);
     motor_R_Temperature.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2G9Q));
     add(motor_R_Temperature);
-
-    POP_Up.setXY(278, 236);
-    POP_Up.setBitmaps(touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID), touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID));
-    POP_Up.setVisible(false);
-    add(POP_Up);
 
     ICON_Frenagem.setXY(425, 96);
     ICON_Frenagem.setBitmap(touchgfx::Bitmap(BITMAP_FRENAGEM_OFF_ID));

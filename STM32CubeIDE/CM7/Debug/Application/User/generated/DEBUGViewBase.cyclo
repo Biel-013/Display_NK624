@@ -50,14 +50,9 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:63:10:void touchgfx::AbstractButton::setAction(touchgfx::GenericCallback<const touchgfx::AbstractButton&>&)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:73:18:virtual void touchgfx::AbstractButton::executeAction()	4
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:86:18:virtual bool touchgfx::AbstractButton::getPressedState() const	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:touchgfx::AbstractButton::~AbstractButton()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:virtual touchgfx::AbstractButton::~AbstractButton()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:34:5:touchgfx::Button::Button()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:60:10:void touchgfx::Button::setAlpha(uint8_t)	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:68:13:uint8_t touchgfx::Button::getAlpha() const	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:84:18:virtual void touchgfx::Button::invalidateContent() const	2
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:59:5:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
@@ -105,25 +100,38 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:virtual touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp:20:13:LoRA_PopUp::~LoRA_PopUp()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp:20:13:virtual LoRA_PopUp::~LoRA_PopUp()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:32:18:virtual void DEBUGViewBase::TransitionEnd_Debug()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:36:18:virtual void DEBUGViewBase::TransitionBegin_Debug()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:40:18:virtual void DEBUGViewBase::LORA_Begin()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:44:18:virtual void DEBUGViewBase::LORA_End()	1
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:50:26:FrontendApplication& DEBUGViewBase::application()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/ECU_PopUp.hpp:10:13:ECU_PopUp::~ECU_PopUp()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/ECU_PopUp.hpp:10:13:virtual ECU_PopUp::~ECU_PopUp()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/BMS_PopUp.hpp:10:13:BMS_PopUp::~BMS_PopUp()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/BMS_PopUp.hpp:10:13:virtual BMS_PopUp::~BMS_PopUp()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/Datalogger_PopUp.hpp:10:13:Datalogger_PopUp::~Datalogger_PopUp()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/Datalogger_PopUp.hpp:10:13:virtual Datalogger_PopUp::~Datalogger_PopUp()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/Telemetry_PopUp.hpp:10:13:Telemetry_PopUp::~Telemetry_PopUp()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/Telemetry_PopUp.hpp:10:13:virtual Telemetry_PopUp::~Telemetry_PopUp()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:36:18:virtual void DEBUGViewBase::TransitionEnd_Debug()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:40:18:virtual void DEBUGViewBase::TransitionBegin_Debug()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:44:18:virtual void DEBUGViewBase::LORA_Begin()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:48:18:virtual void DEBUGViewBase::LORA_End()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:52:18:virtual void DEBUGViewBase::Telemetry_PopUp_Begin()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:56:18:virtual void DEBUGViewBase::Telemetry_PopUp_End()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:60:18:virtual void DEBUGViewBase::Datalogger_PopUp_Begin()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:64:18:virtual void DEBUGViewBase::Datalogger_PopUp_End()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:68:18:virtual void DEBUGViewBase::BMS_PopUp_Begin()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:72:18:virtual void DEBUGViewBase::BMS_PopUp_End()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:76:18:virtual void DEBUGViewBase::ECU_PopUp_Begin()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:80:18:virtual void DEBUGViewBase::ECU_PopUp_End()	1
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:86:26:FrontendApplication& DEBUGViewBase::application()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<DEBUGPresenter>::~View()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<DEBUGPresenter>::~View()	1
 C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:9:1:DEBUGViewBase::DEBUGViewBase()	1
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:148:1:DEBUGViewBase::~DEBUGViewBase()	1
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:148:1:virtual DEBUGViewBase::~DEBUGViewBase()	1
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:153:6:virtual void DEBUGViewBase::setupScreen()	1
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:159:6:void DEBUGViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	5
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:206:6:void DEBUGViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	2
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:217:6:virtual void DEBUGViewBase::handleTickEvent()	7
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:256:6:virtual void DEBUGViewBase::transitionBegins()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:200:1:DEBUGViewBase::~DEBUGViewBase()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:200:1:virtual DEBUGViewBase::~DEBUGViewBase()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:205:6:virtual void DEBUGViewBase::setupScreen()	1
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:215:6:void DEBUGViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	9
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:290:6:void DEBUGViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	6
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:329:6:virtual void DEBUGViewBase::handleTickEvent()	7
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug_screen/DEBUGViewBase.cpp:368:6:virtual void DEBUGViewBase::transitionBegins()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = DEBUGPresenter]	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::Button]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::Box]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::ClickButtonTrigger()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	1
@@ -132,6 +140,10 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:virtual touchgfx::BoxWithBorder::~BoxWithBorder()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:40:5:touchgfx::MoveAnimator<T>::MoveAnimator() [with T = LoRA_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:40:5:touchgfx::MoveAnimator<T>::MoveAnimator() [with T = ECU_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:40:5:touchgfx::MoveAnimator<T>::MoveAnimator() [with T = BMS_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:40:5:touchgfx::MoveAnimator<T>::MoveAnimator() [with T = Datalogger_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:40:5:touchgfx::MoveAnimator<T>::MoveAnimator() [with T = Telemetry_PopUp]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<const touchgfx::AbstractButton&>::GenericCallback()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = DEBUGViewBase; T1 = const touchgfx::AbstractButton&]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<const touchgfx::AbstractButtonContainer&>::GenericCallback()	1
@@ -148,20 +160,40 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<DEBUGViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<DEBUGViewBase, const touchgfx::AbstractButton&>::~Callback()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<DEBUGViewBase, const touchgfx::AbstractButton&>::~Callback()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<Telemetry_PopUp>::~MoveAnimator()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<Telemetry_PopUp>::~MoveAnimator()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<Datalogger_PopUp>::~MoveAnimator()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<Datalogger_PopUp>::~MoveAnimator()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<BMS_PopUp>::~MoveAnimator()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<BMS_PopUp>::~MoveAnimator()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<ECU_PopUp>::~MoveAnimator()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<ECU_PopUp>::~MoveAnimator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<LoRA_PopUp>::~MoveAnimator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<LoRA_PopUp>::~MoveAnimator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::Box>::~FadeAnimator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::Box>::~FadeAnimator()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::Button>::~FadeAnimator()	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::Button>::~FadeAnimator()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = DEBUGViewBase; T1 = const touchgfx::AbstractButtonContainer&]	2
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = DEBUGViewBase; T1 = const touchgfx::AbstractButtonContainer&]	5
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = DEBUGViewBase; T1 = const touchgfx::AbstractButton&]	2
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = DEBUGViewBase; T1 = const touchgfx::AbstractButton&]	5
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = Telemetry_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = Telemetry_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = Telemetry_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = Datalogger_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = Datalogger_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = Datalogger_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = BMS_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = BMS_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = BMS_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = ECU_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = ECU_PopUp]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = ECU_PopUp]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = LoRA_PopUp]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = LoRA_PopUp]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = LoRA_PopUp]	1
@@ -169,9 +201,9 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/debug
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::Box]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::Box]	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::Box]	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::Button]	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::Button]	1
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::Button]	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = Telemetry_PopUp]	7
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = Datalogger_PopUp]	7
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = BMS_PopUp]	7
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = ECU_PopUp]	7
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = LoRA_PopUp]	7
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Box]	9
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Button]	9

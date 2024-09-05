@@ -85,9 +85,11 @@ build/MINGW32_NT-6.2/gui/src/safety_screen/SAFETYView.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ gui/include/gui/containers/STACK_6_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/STACK_6_PopUpBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  gui/include/gui/containers/STACK_5_PopUp.hpp \
  generated/gui_generated/include/gui_generated/containers/STACK_5_PopUpBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  gui/include/gui/containers/STACK_4_PopUp.hpp \
  generated/gui_generated/include/gui_generated/containers/STACK_4_PopUpBase.hpp \
  gui/include/gui/containers/STACK_3_PopUp.hpp \
@@ -98,7 +100,8 @@ build/MINGW32_NT-6.2/gui/src/safety_screen/SAFETYView.o: \
  generated/gui_generated/include/gui_generated/containers/STACK_1_PopUpBase.hpp \
  gui/include/gui/containers/LoRA_PopUp.hpp \
  generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
+ generated/images/include/images/BitmapDatabase.hpp
 
 gui/include/gui/safety_screen/SAFETYView.hpp:
 
@@ -270,11 +273,15 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 
+gui/include/gui/containers/STACK_6_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/STACK_6_PopUpBase.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
+
 gui/include/gui/containers/STACK_5_PopUp.hpp:
 
 generated/gui_generated/include/gui_generated/containers/STACK_5_PopUpBase.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
 gui/include/gui/containers/STACK_4_PopUp.hpp:
 
@@ -297,3 +304,5 @@ gui/include/gui/containers/LoRA_PopUp.hpp:
 generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
+
+generated/images/include/images/BitmapDatabase.hpp:

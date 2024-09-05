@@ -73,14 +73,9 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:47:18:virtual void touchgfx::PainterRGB565::setColor(touchgfx::colortype)	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:63:10:void touchgfx::AbstractButton::setAction(touchgfx::GenericCallback<const touchgfx::AbstractButton&>&)	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:73:18:virtual void touchgfx::AbstractButton::executeAction()	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:86:18:virtual bool touchgfx::AbstractButton::getPressedState() const	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:touchgfx::AbstractButton::~AbstractButton()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:32:7:virtual touchgfx::AbstractButton::~AbstractButton()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:34:5:touchgfx::Button::Button()	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:60:10:void touchgfx::Button::setAlpha(uint8_t)	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:68:13:uint8_t touchgfx::Button::getAlpha() const	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:84:18:virtual void touchgfx::Button::invalidateContent() const	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:59:5:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
@@ -127,6 +122,8 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	24	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:virtual touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	16	static
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/STACK_6_PopUp.hpp:10:13:STACK_6_PopUp::~STACK_6_PopUp()	16	static
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/STACK_6_PopUp.hpp:10:13:virtual STACK_6_PopUp::~STACK_6_PopUp()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/STACK_5_PopUp.hpp:10:13:STACK_5_PopUp::~STACK_5_PopUp()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/STACK_5_PopUp.hpp:10:13:virtual STACK_5_PopUp::~STACK_5_PopUp()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/STACK_4_PopUp.hpp:10:13:STACK_4_PopUp::~STACK_4_PopUp()	16	static
@@ -139,31 +136,33 @@
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/STACK_1_PopUp.hpp:10:13:virtual STACK_1_PopUp::~STACK_1_PopUp()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp:20:13:LoRA_PopUp::~LoRA_PopUp()	16	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp:20:13:virtual LoRA_PopUp::~LoRA_PopUp()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:39:18:virtual void SAFETYViewBase::TransitionEnd_Safety()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:43:18:virtual void SAFETYViewBase::TransitionBegin_Safety()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:47:18:virtual void SAFETYViewBase::STACK_1_Begin()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:51:18:virtual void SAFETYViewBase::STACK_1_End()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:55:18:virtual void SAFETYViewBase::STACK_2_Begin()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:59:18:virtual void SAFETYViewBase::STACK_2_End()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:63:18:virtual void SAFETYViewBase::STACK_3_Begin()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:67:18:virtual void SAFETYViewBase::STACK_3_End()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:71:18:virtual void SAFETYViewBase::STACK_4_Begin()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:75:18:virtual void SAFETYViewBase::STACK_4_End()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:79:18:virtual void SAFETYViewBase::STACK_5_Begin()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:83:18:virtual void SAFETYViewBase::STACK_5_End()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:87:18:virtual void SAFETYViewBase::LORA_Begin()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:91:18:virtual void SAFETYViewBase::LORA_End()	16	static
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:97:26:FrontendApplication& SAFETYViewBase::application()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:40:18:virtual void SAFETYViewBase::TransitionEnd_Safety()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:44:18:virtual void SAFETYViewBase::TransitionBegin_Safety()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:48:18:virtual void SAFETYViewBase::STACK_1_Begin()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:52:18:virtual void SAFETYViewBase::STACK_1_End()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:56:18:virtual void SAFETYViewBase::STACK_2_Begin()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:60:18:virtual void SAFETYViewBase::STACK_2_End()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:64:18:virtual void SAFETYViewBase::STACK_3_Begin()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:68:18:virtual void SAFETYViewBase::STACK_3_End()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:72:18:virtual void SAFETYViewBase::STACK_4_Begin()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:76:18:virtual void SAFETYViewBase::STACK_4_End()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:80:18:virtual void SAFETYViewBase::STACK_5_Begin()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:84:18:virtual void SAFETYViewBase::STACK_5_End()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:88:18:virtual void SAFETYViewBase::LORA_Begin()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:92:18:virtual void SAFETYViewBase::LORA_End()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:96:18:virtual void SAFETYViewBase::STACK_6_Begin()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:100:18:virtual void SAFETYViewBase::STACK_6_End()	16	static
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:106:26:FrontendApplication& SAFETYViewBase::application()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<SAFETYPresenter>::~View()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<SAFETYPresenter>::~View()	16	static
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:10:1:SAFETYViewBase::SAFETYViewBase()	984	static
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:310:1:SAFETYViewBase::~SAFETYViewBase()	16	static
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:310:1:virtual SAFETYViewBase::~SAFETYViewBase()	16	static
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:315:6:virtual void SAFETYViewBase::setupScreen()	16	static
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:326:6:void SAFETYViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:408:6:void SAFETYViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:454:6:virtual void SAFETYViewBase::handleTickEvent()	16	static
-C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:493:6:virtual void SAFETYViewBase::transitionBegins()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:10:1:SAFETYViewBase::SAFETYViewBase()	1064	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:337:1:SAFETYViewBase::~SAFETYViewBase()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:337:1:virtual SAFETYViewBase::~SAFETYViewBase()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:342:6:virtual void SAFETYViewBase::setupScreen()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:354:6:void SAFETYViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:443:6:void SAFETYViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:496:6:virtual void SAFETYViewBase::handleTickEvent()	16	static
+C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safety_screen/SAFETYViewBase.cpp:535:6:virtual void SAFETYViewBase::transitionBegins()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = SAFETYPresenter]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:37:7:touchgfx::AbstractProgressIndicator::~AbstractProgressIndicator()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:37:7:virtual touchgfx::AbstractProgressIndicator::~AbstractProgressIndicator()	16	static
@@ -178,9 +177,6 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safet
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::TextAreaWithOneWildcard]	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::Button]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:44:5:touchgfx::FadeAnimator<T>::FadeAnimator() [with T = touchgfx::Box]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::ClickButtonTrigger()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	16	static
@@ -188,6 +184,7 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safet
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:virtual touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:40:5:touchgfx::MoveAnimator<T>::MoveAnimator() [with T = STACK_6_PopUp]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:40:5:touchgfx::MoveAnimator<T>::MoveAnimator() [with T = STACK_5_PopUp]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:40:5:touchgfx::MoveAnimator<T>::MoveAnimator() [with T = STACK_4_PopUp]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:40:5:touchgfx::MoveAnimator<T>::MoveAnimator() [with T = STACK_3_PopUp]	16	static
@@ -222,6 +219,8 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safet
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<STACK_4_PopUp>::~MoveAnimator()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<STACK_5_PopUp>::~MoveAnimator()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<STACK_5_PopUp>::~MoveAnimator()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:touchgfx::MoveAnimator<STACK_6_PopUp>::~MoveAnimator()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:37:7:virtual touchgfx::MoveAnimator<STACK_6_PopUp>::~MoveAnimator()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::Box>::~FadeAnimator()	16	static
@@ -232,10 +231,10 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safet
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::Image>::~FadeAnimator()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::LineProgress>::~FadeAnimator()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::LineProgress>::~FadeAnimator()	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:touchgfx::FadeAnimator<touchgfx::Button>::~FadeAnimator()	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:41:7:virtual touchgfx::FadeAnimator<touchgfx::Button>::~FadeAnimator()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:34:7:touchgfx::PainterRGB565::~PainterRGB565()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:34:7:virtual touchgfx::PainterRGB565::~PainterRGB565()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:virtual touchgfx::Button::~Button()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = SAFETYViewBase; T1 = const touchgfx::AbstractButtonContainer&]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = SAFETYViewBase; T1 = const touchgfx::AbstractButtonContainer&]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = SAFETYViewBase; T1 = const touchgfx::AbstractButton&]	16	static
@@ -258,6 +257,9 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safet
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = STACK_5_PopUp]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = STACK_5_PopUp]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = STACK_5_PopUp]	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:169:18:void touchgfx::MoveAnimator<T>::handleTickEvent() [with T = STACK_6_PopUp]	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:88:18:void touchgfx::MoveAnimator<T>::setMoveAnimationDelay(uint16_t) [with T = STACK_6_PopUp]	16	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:100:22:uint16_t touchgfx::MoveAnimator<T>::getMoveAnimationDelay() const [with T = STACK_6_PopUp]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:131:18:void touchgfx::BoxWithBorderButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::ClickButtonTrigger]	24	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::Box]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::Box]	16	static
@@ -271,17 +273,14 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/generated/gui_generated/src/safet
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::LineProgress]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::LineProgress]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::LineProgress]	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:157:18:void touchgfx::FadeAnimator<T>::handleTickEvent() [with T = touchgfx::Button]	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:84:18:void touchgfx::FadeAnimator<T>::setFadeAnimationDelay(uint16_t) [with T = touchgfx::Button]	16	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:96:22:uint16_t touchgfx::FadeAnimator<T>::getFadeAnimationDelay() const [with T = touchgfx::Button]	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = LoRA_PopUp]	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_1_PopUp]	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_2_PopUp]	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_3_PopUp]	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_4_PopUp]	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_5_PopUp]	32	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = STACK_6_PopUp]	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Box]	40	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::TextAreaWithOneWildcard]	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Image]	32	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::LineProgress]	32	static
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:165:10:void touchgfx::FadeAnimator<T>::nextFadeAnimationStep() [with T = touchgfx::Button]	32	static

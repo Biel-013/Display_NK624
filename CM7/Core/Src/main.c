@@ -134,18 +134,18 @@ const osTimerAttr_t BoardDataRATE_Timer_attributes = {
 };
 /* USER CODE BEGIN PV */
 
-uint8_t DataRATE_Telemetry = 0;
-uint8_t DataRATE_Datalogger = 0;
-uint8_t DataRATE_BMS = 0;
-uint8_t DataRATE_ECU = 0;
+uint16_t DataRATE_Telemetry = 0;
+uint16_t DataRATE_Datalogger = 0;
+uint16_t DataRATE_BMS = 0;
+uint16_t DataRATE_ECU = 0;
 
 extern FDCAN_StatusTypedef FDCAN_Status;
 extern TypeError_t Actual_ERROR;
 
-extern uint8_t CONT_Telemetry;
-extern uint8_t CONT_Datalogger;
-extern uint8_t CONT_BMS;
-extern uint8_t CONT_ECU;
+extern uint16_t CONT_Telemetry;
+extern uint16_t CONT_Datalogger;
+extern uint16_t CONT_BMS;
+extern uint16_t CONT_ECU;
 
 extern uint8_t LoRa_FlagConfig;
 extern LoRa_Bandwich_t Bandwich_Value;
@@ -804,7 +804,7 @@ void StartDefaultTask(void *argument)
   /* USER CODE BEGIN 5 */
 	CAN_Init();
 	osTimerStart(CanBusOFF_TimerHandle, 50);
-	osTimerStart(BoardDataRATE_TimerHandle, 100);
+	osTimerStart(BoardDataRATE_TimerHandle, 1000);
 	/* Infinite loop */
 	for (;;) {
 		osDelay(1);
@@ -895,10 +895,10 @@ void osTimer_CanBusOFF(void *argument)
 void osTimer_BoardDataRATE(void *argument)
 {
   /* USER CODE BEGIN osTimer_BoardDataRATE */
-	DataRATE_Telemetry = (CONT_Telemetry * 79) / 100;
-	DataRATE_Datalogger = (CONT_Datalogger * 79) / 100;
-	DataRATE_BMS = (CONT_BMS * 79) / 100;
-	DataRATE_ECU = (CONT_ECU * 79) / 100;
+	DataRATE_Telemetry = (CONT_Telemetry * 79) / 1000;
+	DataRATE_Datalogger = (CONT_Datalogger * 79) / 1000;
+	DataRATE_BMS = (CONT_BMS * 79) / 1000;
+	DataRATE_ECU = (CONT_ECU * 79) / 1000;
 
 	CONT_Telemetry = 0;
 	CONT_Datalogger = 0;

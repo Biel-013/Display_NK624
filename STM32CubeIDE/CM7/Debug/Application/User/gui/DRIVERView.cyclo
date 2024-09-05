@@ -13,8 +13,8 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:82:10:void touchgfx::Box::setAlpha(uint8_t)	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:97:18:virtual void touchgfx::Box::invalidateContent() const	2
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/driver_screen/DRIVERViewBase.hpp:54:26:FrontendApplication& DRIVERViewBase::application()	1
-../../CM7/../../CM7/TouchGFX/gui/include/gui/driver_screen/DRIVERView.hpp:30:13:DRIVERView::~DRIVERView()	1
-../../CM7/../../CM7/TouchGFX/gui/include/gui/driver_screen/DRIVERView.hpp:30:13:virtual DRIVERView::~DRIVERView()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/driver_screen/DRIVERView.hpp:27:10:DRIVERView::~DRIVERView()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/driver_screen/DRIVERView.hpp:27:10:virtual DRIVERView::~DRIVERView()	1
 C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:12:1:DRIVERView::DRIVERView()	1
 C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:15:6:virtual void DRIVERView::setupScreen()	1
 C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/gui/src/driver_screen/DRIVERView.cpp:19:6:virtual void DRIVERView::tearDownScreen()	1

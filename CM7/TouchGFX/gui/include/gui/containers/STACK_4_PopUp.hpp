@@ -8,6 +8,7 @@ class STACK_4_PopUp : public STACK_4_PopUpBase
 public:
     STACK_4_PopUp();
     virtual ~STACK_4_PopUp() {}
+    virtual void updateTick(void);
 
     virtual void initialize();
 protected:

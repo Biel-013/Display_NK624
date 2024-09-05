@@ -16,6 +16,10 @@
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <gui/containers/LoRA_PopUp.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
+#include <gui/containers/ECU_PopUp.hpp>
+#include <gui/containers/BMS_PopUp.hpp>
+#include <gui/containers/Datalogger_PopUp.hpp>
+#include <gui/containers/Telemetry_PopUp.hpp>
 
 class DEBUGViewBase : public touchgfx::View<DEBUGPresenter>
 {
@@ -45,6 +49,38 @@ public:
     {
         // Override and implement this function in DEBUG
     }
+    virtual void Telemetry_PopUp_Begin()
+    {
+        // Override and implement this function in DEBUG
+    }
+    virtual void Telemetry_PopUp_End()
+    {
+        // Override and implement this function in DEBUG
+    }
+    virtual void Datalogger_PopUp_Begin()
+    {
+        // Override and implement this function in DEBUG
+    }
+    virtual void Datalogger_PopUp_End()
+    {
+        // Override and implement this function in DEBUG
+    }
+    virtual void BMS_PopUp_Begin()
+    {
+        // Override and implement this function in DEBUG
+    }
+    virtual void BMS_PopUp_End()
+    {
+        // Override and implement this function in DEBUG
+    }
+    virtual void ECU_PopUp_Begin()
+    {
+        // Override and implement this function in DEBUG
+    }
+    virtual void ECU_PopUp_End()
+    {
+        // Override and implement this function in DEBUG
+    }
 
 protected:
     FrontendApplication& application() {
@@ -60,6 +96,7 @@ protected:
     touchgfx::Button DEBUG_Datalogger;
     touchgfx::Button DEBUG_BMS;
     touchgfx::Button DEBUG_ECU;
+    touchgfx::Image PopUp;
     touchgfx::Button PAGE_Drive;
     touchgfx::Button PAGE_Control;
     touchgfx::Button PAGE_Safety;
@@ -69,7 +106,6 @@ protected:
     touchgfx::TextAreaWithOneWildcard DataRate_BMS;
     touchgfx::TextAreaWithOneWildcard DataRate_ECU;
     touchgfx::TextAreaWithOneWildcard Beacon_Leap;
-    touchgfx::FadeAnimator< touchgfx::Button > POP_Up;
     touchgfx::Button BOTTOM_Info_LoRa;
     touchgfx::Image ICON_ECU;
     touchgfx::Image ICON_BMS;
@@ -79,6 +115,14 @@ protected:
     touchgfx::FadeAnimator< touchgfx::Box > FRONTGROUND;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_lora;
     touchgfx::MoveAnimator< LoRA_PopUp > LORA_PopUp;
+    touchgfx::MoveAnimator< ECU_PopUp > PopUp_ECU;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_PopUp_ECU;
+    touchgfx::MoveAnimator< BMS_PopUp > PopUp_BMS;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_PopUp_BMS;
+    touchgfx::MoveAnimator< Datalogger_PopUp > PopUp_Datalogger;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_PopUp_Datalogger;
+    touchgfx::MoveAnimator< Telemetry_PopUp > PopUp_Telemetry;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  BOTTON_PopUp_Telemetry;
 
     /*
      * Wildcard Buffers

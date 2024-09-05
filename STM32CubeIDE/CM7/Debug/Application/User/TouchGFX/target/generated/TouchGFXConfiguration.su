@@ -68,8 +68,8 @@ C:/TouchGFXProjects/Display_NK624/CM7/TouchGFX/target/generated/TouchGFXConfigur
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:42:7:virtual touchgfx::Partition<touchgfx::meta::TypeList<DEBUGPresenter, touchgfx::meta::TypeList<touchgfx::meta::Nil, touchgfx::meta::Nil> >, 1>::~Partition()	16	static
 ../../../CM7/TouchGFX/target/TouchGFXHAL.hpp:34:7:TouchGFXHAL::~TouchGFXHAL()	16	static
 ../../../CM7/TouchGFX/target/TouchGFXHAL.hpp:34:7:virtual TouchGFXHAL::~TouchGFXHAL()	16	static
-../../CM7/../../CM7/TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:39:7:ApplicationFontProvider::~ApplicationFontProvider()	16	static
-../../CM7/../../CM7/TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:39:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	16	static
+../../CM7/../../CM7/TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:41:7:ApplicationFontProvider::~ApplicationFontProvider()	16	static
+../../CM7/../../CM7/TouchGFX/generated/fonts/include/fonts/ApplicationFontProvider.hpp:41:7:virtual ApplicationFontProvider::~ApplicationFontProvider()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:39:7:touchgfx::LCD16bpp::~LCD16bpp()	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:39:7:virtual touchgfx::LCD16bpp::~LCD16bpp()	16	static
 ../../../CM7/TouchGFX/target/STM32TouchController.hpp:36:7:STM32TouchController::~STM32TouchController()	16	static

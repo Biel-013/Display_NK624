@@ -60,10 +60,10 @@ FDCAN_RxHeaderTypeDef RxHeader; /*Struct de armazenamento temporario de
 uint8_t RxData[8]; /*Vetor para armazenamento temporario de dados recebidos
  pela CAN*/
 
-uint8_t CONT_Telemetry;
-uint8_t CONT_Datalogger;
-uint8_t CONT_BMS;
-uint8_t CONT_ECU;
+uint16_t CONT_Telemetry;
+uint16_t CONT_Datalogger;
+uint16_t CONT_BMS;
+uint16_t CONT_ECU;
 
 uint8_t CONT_DEBUG = 0;
 

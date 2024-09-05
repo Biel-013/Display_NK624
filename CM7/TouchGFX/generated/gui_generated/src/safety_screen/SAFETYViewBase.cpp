@@ -37,6 +37,11 @@ SAFETYViewBase::SAFETYViewBase() :
     CHARGE_Progress.setValue(0);
     add(CHARGE_Progress);
 
+    PopUp.setXY(279, 236);
+    PopUp.setBitmap(touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID));
+    PopUp.setVisible(false);
+    add(PopUp);
+
     PAGE_Debug.setXY(0, 204);
     PAGE_Debug.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_DOWN_OFF_ID), touchgfx::Bitmap(BITMAP_BOTTOM_DOWN_ON_ID));
     PAGE_Debug.setAction(buttonCallback);
@@ -56,12 +61,17 @@ SAFETYViewBase::SAFETYViewBase() :
     PAGE_Drive.setAction(buttonCallback);
     add(PAGE_Drive);
 
-    BOTTON_Stack_5.setXY(171, 146);
+    BOTTON_Stack_6.setXY(162, 183);
+    BOTTON_Stack_6.setBitmaps(touchgfx::Bitmap(BITMAP_STACK_6_ID), touchgfx::Bitmap(BITMAP_STACK_6_SELECT_ID));
+    BOTTON_Stack_6.setAction(buttonCallback);
+    add(BOTTON_Stack_6);
+
+    BOTTON_Stack_5.setXY(171, 111);
     BOTTON_Stack_5.setBitmaps(touchgfx::Bitmap(BITMAP_STACK_5_ID), touchgfx::Bitmap(BITMAP_STACK_5_SELECT_ID));
     BOTTON_Stack_5.setAction(buttonCallback);
     add(BOTTON_Stack_5);
 
-    BOTTON_Stack_4.setXY(171, 71);
+    BOTTON_Stack_4.setXY(159, 37);
     BOTTON_Stack_4.setBitmaps(touchgfx::Bitmap(BITMAP_STACK_4_ID), touchgfx::Bitmap(BITMAP_STACK_4_SELECT_ID));
     BOTTON_Stack_4.setAction(buttonCallback);
     add(BOTTON_Stack_4);
@@ -71,7 +81,7 @@ SAFETYViewBase::SAFETYViewBase() :
     BOTTON_Stack_3.setAction(buttonCallback);
     add(BOTTON_Stack_3);
 
-    BOTTON_Stack_2.setXY(86, 109);
+    BOTTON_Stack_2.setXY(90, 111);
     BOTTON_Stack_2.setBitmaps(touchgfx::Bitmap(BITMAP_STACK_2_ID), touchgfx::Bitmap(BITMAP_STACK_2_SELECT_ID));
     BOTTON_Stack_2.setAction(buttonCallback);
     add(BOTTON_Stack_2);
@@ -85,17 +95,17 @@ SAFETYViewBase::SAFETYViewBase() :
     SENSOR_4_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_4_ID));
     add(SENSOR_4_icon);
 
-    SENSOR_1_icon.setXY(254, 142);
-    SENSOR_1_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_3_ID));
-    add(SENSOR_1_icon);
+    SENSOR_3_icon.setXY(254, 142);
+    SENSOR_3_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_3_ID));
+    add(SENSOR_3_icon);
 
     SENSOR_2_icon.setXY(254, 93);
     SENSOR_2_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_2_ID));
     add(SENSOR_2_icon);
 
-    SENSOR_3_icon.setXY(254, 46);
-    SENSOR_3_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_1_ID));
-    add(SENSOR_3_icon);
+    SENSOR_1_icon.setXY(254, 46);
+    SENSOR_1_icon.setBitmap(touchgfx::Bitmap(BITMAP_SENSOR_CURRENT_FOWARD_1_ID));
+    add(SENSOR_1_icon);
 
     temp_max.setXY(429, 214);
     temp_max.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -125,11 +135,20 @@ SAFETYViewBase::SAFETYViewBase() :
     charge_percent.setPosition(303, 6, 56, 18);
     charge_percent.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     charge_percent.setLinespacing(0);
-    charge_percent.setWildcard(touchgfx::TypedText(T___SINGLEUSE_W5DZ).getText());
+    Unicode::snprintf(charge_percentBuffer, CHARGE_PERCENT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_W5DZ).getText());
+    charge_percent.setWildcard(charge_percentBuffer);
     charge_percent.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PCOB));
     add(charge_percent);
 
-    STACK_5_text.setPosition(183, 168, 48, 15);
+    STACK_6_text.setPosition(172, 204, 48, 15);
+    STACK_6_text.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    STACK_6_text.setLinespacing(0);
+    Unicode::snprintf(STACK_6_textBuffer, STACK_6_TEXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_O9H5).getText());
+    STACK_6_text.setWildcard(STACK_6_textBuffer);
+    STACK_6_text.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T21J));
+    add(STACK_6_text);
+
+    STACK_5_text.setPosition(183, 133, 48, 15);
     STACK_5_text.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     STACK_5_text.setLinespacing(0);
     Unicode::snprintf(STACK_5_textBuffer, STACK_5_TEXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_5CES).getText());
@@ -137,7 +156,7 @@ SAFETYViewBase::SAFETYViewBase() :
     STACK_5_text.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZCMW));
     add(STACK_5_text);
 
-    STACK_4_text.setPosition(183, 92, 48, 15);
+    STACK_4_text.setPosition(171, 58, 48, 15);
     STACK_4_text.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     STACK_4_text.setLinespacing(0);
     Unicode::snprintf(STACK_4_textBuffer, STACK_4_TEXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_RUTU).getText());
@@ -153,7 +172,7 @@ SAFETYViewBase::SAFETYViewBase() :
     STACK_3_text.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CQUD));
     add(STACK_3_text);
 
-    STACK_2_text.setPosition(96, 130, 48, 15);
+    STACK_2_text.setPosition(100, 132, 48, 15);
     STACK_2_text.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     STACK_2_text.setLinespacing(0);
     Unicode::snprintf(STACK_2_textBuffer, STACK_2_TEXT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_RIPS).getText());
@@ -201,11 +220,6 @@ SAFETYViewBase::SAFETYViewBase() :
     SENSOR_1_text.setTypedText(touchgfx::TypedText(T___SINGLEUSE_IWRT));
     add(SENSOR_1_text);
 
-    POP_Up.setXY(278, 236);
-    POP_Up.setBitmaps(touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID), touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID));
-    POP_Up.setVisible(false);
-    add(POP_Up);
-
     ICON_Air.setXY(433, 97);
     ICON_Air.setBitmap(touchgfx::Bitmap(BITMAP_AIR_ABERTO_ID));
     add(ICON_Air);
@@ -228,6 +242,19 @@ SAFETYViewBase::SAFETYViewBase() :
     FRONTGROUND.setAlpha(0);
     add(FRONTGROUND);
 
+    BOTTON_stack_6.setBoxWithBorderPosition(0, 0, 408, 272);
+    BOTTON_stack_6.setBorderSize(5);
+    BOTTON_stack_6.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_stack_6.setAlpha(0);
+    BOTTON_stack_6.setVisible(false);
+    BOTTON_stack_6.setAction(flexButtonCallback);
+    BOTTON_stack_6.setPosition(72, 0, 408, 272);
+    add(BOTTON_stack_6);
+
+    STACK_6.setXY(400, 0);
+    STACK_6.setVisible(false);
+    add(STACK_6);
+
     BOTTON_stack_5.setBoxWithBorderPosition(0, 0, 408, 272);
     BOTTON_stack_5.setBorderSize(5);
     BOTTON_stack_5.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
@@ -237,7 +264,7 @@ SAFETYViewBase::SAFETYViewBase() :
     BOTTON_stack_5.setPosition(72, 0, 408, 272);
     add(BOTTON_stack_5);
 
-    STACK_5.setXY(327, 0);
+    STACK_5.setXY(400, 0);
     STACK_5.setVisible(false);
     add(STACK_5);
 
@@ -250,7 +277,7 @@ SAFETYViewBase::SAFETYViewBase() :
     BOTTON_stack_4.setPosition(72, 0, 408, 272);
     add(BOTTON_stack_4);
 
-    STACK_4.setXY(327, 0);
+    STACK_4.setXY(400, 0);
     STACK_4.setVisible(false);
     add(STACK_4);
 
@@ -263,7 +290,7 @@ SAFETYViewBase::SAFETYViewBase() :
     BOTTON_stack_3.setPosition(72, 0, 408, 272);
     add(BOTTON_stack_3);
 
-    STACK_3.setXY(327, 0);
+    STACK_3.setXY(400, 0);
     STACK_3.setVisible(false);
     add(STACK_3);
 
@@ -276,7 +303,7 @@ SAFETYViewBase::SAFETYViewBase() :
     BOTTON_stack_2.setPosition(72, 0, 408, 272);
     add(BOTTON_stack_2);
 
-    STACK_2.setXY(327, 0);
+    STACK_2.setXY(400, 0);
     STACK_2.setVisible(false);
     add(STACK_2);
 
@@ -289,7 +316,7 @@ SAFETYViewBase::SAFETYViewBase() :
     BOTTON_stack_1.setPosition(72, 0, 408, 272);
     add(BOTTON_stack_1);
 
-    STACK_1.setXY(327, 0);
+    STACK_1.setXY(400, 0);
     STACK_1.setVisible(false);
     add(STACK_1);
 
@@ -314,6 +341,7 @@ SAFETYViewBase::~SAFETYViewBase()
 
 void SAFETYViewBase::setupScreen()
 {
+    STACK_6.initialize();
     STACK_5.initialize();
     STACK_4.initialize();
     STACK_3.initialize();
@@ -403,6 +431,13 @@ void SAFETYViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Call LORA_Begin
         LORA_Begin();
     }
+    if (&src == &BOTTON_Stack_6)
+    {
+        //Interaction_STACK_6_Begin
+        //When BOTTON_Stack_6 clicked call virtual function
+        //Call STACK_6_Begin
+        STACK_6_Begin();
+    }
 }
 
 void SAFETYViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
@@ -448,6 +483,13 @@ void SAFETYViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonCon
         //When BOTTON_lora clicked call virtual function
         //Call LORA_End
         LORA_End();
+    }
+    if (&src == &BOTTON_stack_6)
+    {
+        //Interaction_STACK_6_End
+        //When BOTTON_stack_6 clicked call virtual function
+        //Call STACK_6_End
+        STACK_6_End();
     }
 }
 

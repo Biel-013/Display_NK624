@@ -15,6 +15,8 @@ public:
         model = m;
     }
     virtual void updateTick(void) {};
+
+    
 protected:
     Model* model;
 };

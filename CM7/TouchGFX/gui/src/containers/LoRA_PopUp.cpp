@@ -1,7 +1,7 @@
 #include <gui/containers/LoRA_PopUp.hpp>
+#include <images/BitmapDatabase.hpp>
 #ifndef SIMULATOR
 #include "FDCAN_map.h"
-#include <images/BitmapDatabase.hpp>
 #include <math.h>
 #endif
 
@@ -157,6 +157,7 @@ void LoRA_PopUp::BT_CR_DOWN_Callback() {
 }
 
 void LoRA_PopUp::updateTick(void) {
+#ifndef SIMULATOR
 	if (LoRa_Config.isVisible() == false) {
 		LoRa_FlagConfig = 0;
 		Bandwich_Value = (LoRa_Bandwich_t) PAGE_LORA_Bandwich;
@@ -169,7 +170,7 @@ void LoRA_PopUp::updateTick(void) {
 	Unicode::snprintf(RSSIBuffer, RSSI_SIZE, "%u", (uint8_t) PAGE_LORA_RSSI);
 	RSSI.invalidate();
 
-	setIcon_LoRa((LoRa_Status_t)PAGE_DRIVER_LoRa_State);
+	setIcon_LoRa((LoRa_Status_t) PAGE_DRIVER_LoRa_State);
 
 	Unicode::snprintf(VERSIONBuffer, VERSION_SIZE, "%u.%u.%u",
 			(uint8_t) (PAGE_LORA_Version / 10000),
@@ -200,6 +201,7 @@ void LoRA_PopUp::updateTick(void) {
 	Unicode::snprintf(FREQUENCIABuffer, FREQUENCIA_SIZE, "%u",
 			Frequencia_Value);
 	FREQUENCIA.invalidate();
+#endif
 }
 
 void LoRA_PopUp::setIcon_LoRa(LoRa_Status_t LoRa_Status) {

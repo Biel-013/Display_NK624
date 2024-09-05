@@ -72,7 +72,15 @@ build/MINGW32_NT-6.2/gui/src/debug_screen/DEBUGPresenter.o: \
  gui/include/gui/containers/LoRA_PopUp.hpp \
  generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
+ gui/include/gui/containers/ECU_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/ECU_PopUpBase.hpp \
+ gui/include/gui/containers/BMS_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/BMS_PopUpBase.hpp \
+ gui/include/gui/containers/Datalogger_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/Datalogger_PopUpBase.hpp \
+ gui/include/gui/containers/Telemetry_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/Telemetry_PopUpBase.hpp
 
 gui/include/gui/debug_screen/DEBUGView.hpp:
 
@@ -219,3 +227,19 @@ generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
+
+gui/include/gui/containers/ECU_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/ECU_PopUpBase.hpp:
+
+gui/include/gui/containers/BMS_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/BMS_PopUpBase.hpp:
+
+gui/include/gui/containers/Datalogger_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/Datalogger_PopUpBase.hpp:
+
+gui/include/gui/containers/Telemetry_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/Telemetry_PopUpBase.hpp:

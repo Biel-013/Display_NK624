@@ -14,30 +14,28 @@ typedef enum
 
 #endif
 
-typedef enum
-{
-	MODO_Error,
-	MODO_Enduro,
-	MODO_Aceleracao,
-	MODO_SkidPad,
-	MODO_Autocross
+#ifndef _LORA_MODO_T
+#define _LORA_MODO_T
+typedef enum {
+	MODO_Error, MODO_Enduro, MODO_Aceleracao, MODO_SkidPad, MODO_Autocross
 } Modo_t;
+#endif
 
-class DRIVERView : public DRIVERViewBase
-{
+class DRIVERView: public DRIVERViewBase {
 public:
-    DRIVERView();
-    virtual ~DRIVERView() {}
-    virtual void setupScreen();
-    virtual void tearDownScreen();
-    virtual void TransitionBegin_Driver();
-    virtual void TransitionEnd_Driver();
-    virtual void LORA_Begin();
-    virtual void LORA_End();
-    virtual void updateTick(void);
-    void setIcon_LoRa(LoRa_Status_t LoRa_Status);
-    void setIcon_Modo(Modo_t Flag_Modo);
-    void setIcon_PopUp(uint8_t Flag_Value);
+	DRIVERView();
+	virtual ~DRIVERView() {
+	}
+	virtual void setupScreen();
+	virtual void tearDownScreen();
+	virtual void TransitionBegin_Driver();
+	virtual void TransitionEnd_Driver();
+	virtual void LORA_Begin();
+	virtual void LORA_End();
+	virtual void updateTick(void);
+	void setIcon_LoRa(LoRa_Status_t LoRa_Status);
+	void setIcon_Modo(Modo_t Flag_Modo);
+	void setIcon_PopUp(uint8_t Flag_Value);
 protected:
 };
 

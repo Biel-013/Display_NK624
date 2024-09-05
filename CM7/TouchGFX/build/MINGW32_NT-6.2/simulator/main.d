@@ -133,6 +133,8 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  gui/include/gui/safety_screen/SAFETYView.hpp \
  generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp \
  gui/include/gui/safety_screen/SAFETYPresenter.hpp \
+ gui/include/gui/containers/STACK_6_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/STACK_6_PopUpBase.hpp \
  gui/include/gui/containers/STACK_5_PopUp.hpp \
  generated/gui_generated/include/gui_generated/containers/STACK_5_PopUpBase.hpp \
  gui/include/gui/containers/STACK_4_PopUp.hpp \
@@ -146,6 +148,14 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  gui/include/gui/debug_screen/DEBUGView.hpp \
  generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp \
  gui/include/gui/debug_screen/DEBUGPresenter.hpp \
+ gui/include/gui/containers/ECU_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/ECU_PopUpBase.hpp \
+ gui/include/gui/containers/BMS_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/BMS_PopUpBase.hpp \
+ gui/include/gui/containers/Datalogger_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/Datalogger_PopUpBase.hpp \
+ gui/include/gui/containers/Telemetry_PopUp.hpp \
+ generated/gui_generated/include/gui_generated/containers/Telemetry_PopUpBase.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/SDL2TouchController.hpp \
  generated/simulator/include/simulator/mainBase.hpp
@@ -418,6 +428,10 @@ generated/gui_generated/include/gui_generated/safety_screen/SAFETYViewBase.hpp:
 
 gui/include/gui/safety_screen/SAFETYPresenter.hpp:
 
+gui/include/gui/containers/STACK_6_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/STACK_6_PopUpBase.hpp:
+
 gui/include/gui/containers/STACK_5_PopUp.hpp:
 
 generated/gui_generated/include/gui_generated/containers/STACK_5_PopUpBase.hpp:
@@ -443,6 +457,22 @@ gui/include/gui/debug_screen/DEBUGView.hpp:
 generated/gui_generated/include/gui_generated/debug_screen/DEBUGViewBase.hpp:
 
 gui/include/gui/debug_screen/DEBUGPresenter.hpp:
+
+gui/include/gui/containers/ECU_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/ECU_PopUpBase.hpp:
+
+gui/include/gui/containers/BMS_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/BMS_PopUpBase.hpp:
+
+gui/include/gui/containers/Datalogger_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/Datalogger_PopUpBase.hpp:
+
+gui/include/gui/containers/Telemetry_PopUp.hpp:
+
+generated/gui_generated/include/gui_generated/containers/Telemetry_PopUpBase.hpp:
 
 generated/gui_generated/include/gui_generated/common/SimConstants.hpp:
 

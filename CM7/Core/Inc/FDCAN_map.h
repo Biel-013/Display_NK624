@@ -14,10 +14,10 @@
 
 extern "C" {
 extern CAN_Buffer_t CAN_stream;
-extern uint8_t DataRATE_Telemetry;
-extern uint8_t DataRATE_Datalogger;
-extern uint8_t DataRATE_BMS;
-extern uint8_t DataRATE_ECU;
+extern uint16_t DataRATE_Telemetry;
+extern uint16_t DataRATE_Datalogger;
+extern uint16_t DataRATE_BMS;
+extern uint16_t DataRATE_ECU;
 extern uint8_t Flag_PopUP;
 }
 
@@ -58,13 +58,13 @@ extern uint8_t Flag_PopUP;
 #define PAGE_CONTROL_Poten_Inst_MD *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_POTENCIA_MD])
 #define PAGE_CONTROL_Giros_MD *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_VELOCIDADE_MD])
 #define PAGE_CONTROL_Angulo_Vol *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_VOLANTE_ANG])
-#define PAGE_CONTROL_Angulo_Car *((uint64_t *) CAN_stream.Data_buf[CanID_])
+#define PAGE_CONTROL_Angulo_Car ((uint16_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])[0]
 #define PAGE_CONTROL_LoRa_State *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_LORA_STATUS])
 #define PAGE_CONTROL_Modo *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_MODO])
 #define PAGE_CONTROL_Frenagem *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_FRENAGEM_STATUS])
-#define PAGE_CONTROL_Acelerometro *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])
+#define PAGE_CONTROL_Acelerometro ((uint16_t *) CAN_stream.Data_buf[CanID_ECU_ACEL_IMU_Temp])[0]
 #define PAGE_CONTROL_Giroscopio *((uint64_t *) CAN_stream.Data_buf[CanID_ECU_GIR_IMU_Erro])
-#define PAGE_CONTROL_Torque (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_TORQUE_MD]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_TORQUE_ME]))/2
+#define PAGE_CONTROL_Torque (*((uint64_t *) CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_D]) + *((uint64_t *)CAN_stream.Data_buf[CanID_ECU_REF_TORQ_MOTOR_E]))/2
 #define PAGE_CONTROL_PopUp Flag_PopUP
 
 /*********************** SAFETY PAGE **********************/
@@ -72,7 +72,8 @@ extern uint8_t Flag_PopUP;
 #define PAGE_SAFETY_Stack_2 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENSAO_TOTAL])
 #define PAGE_SAFETY_Stack_3 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENSAO_TOTAL])
 #define PAGE_SAFETY_Stack_4 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENSAO_TOTAL])
-#define PAGE_SAFETY_Stack_5 0
+#define PAGE_SAFETY_Stack_5 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENSAO_TOTAL])
+#define PAGE_SAFETY_Stack_6 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENSAO_TOTAL])
 #define PAGE_SAFETY_Corrente_1 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_0])
 #define PAGE_SAFETY_Corrente_2 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_1])
 #define PAGE_SAFETY_Corrente_3 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_CORRENTE_2])
@@ -93,6 +94,16 @@ extern uint8_t Flag_PopUP;
 #define PAGE_STACK_1_CELL_4 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENS_CELL_4])
 #define PAGE_STACK_1_CELL_5 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENS_CELL_5])
 #define PAGE_STACK_1_CELL_6 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENS_CELL_6])
+#define PAGE_STACK_1_CELL_7 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENS_CELL_7])
+#define PAGE_STACK_1_CELL_8 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENS_CELL_8])
+#define PAGE_STACK_1_CELL_9 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENS_CELL_9])
+#define PAGE_STACK_1_CELL_10 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENS_CELL_10])
+#define PAGE_STACK_1_CELL_11 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENS_CELL_11])
+#define PAGE_STACK_1_CELL_12 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK1_TENS_CELL_12])
+#define PAGE_STACK_1_CELL_13 0
+#define PAGE_STACK_1_CELL_14 0
+#define PAGE_STACK_1_CELL_15 0
+#define PAGE_STACK_1_CELL_16 0
 
 #define PAGE_STACK_2_CELL_1 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENS_CELL_1])
 #define PAGE_STACK_2_CELL_2 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENS_CELL_2])
@@ -100,6 +111,16 @@ extern uint8_t Flag_PopUP;
 #define PAGE_STACK_2_CELL_4 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENS_CELL_4])
 #define PAGE_STACK_2_CELL_5 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENS_CELL_5])
 #define PAGE_STACK_2_CELL_6 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENS_CELL_6])
+#define PAGE_STACK_2_CELL_7 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENS_CELL_7])
+#define PAGE_STACK_2_CELL_8 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENS_CELL_8])
+#define PAGE_STACK_2_CELL_9 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENS_CELL_9])
+#define PAGE_STACK_2_CELL_10 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENS_CELL_10])
+#define PAGE_STACK_2_CELL_11 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENS_CELL_11])
+#define PAGE_STACK_2_CELL_12 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK2_TENS_CELL_12])
+#define PAGE_STACK_2_CELL_13 0
+#define PAGE_STACK_2_CELL_14 0
+#define PAGE_STACK_2_CELL_15 0
+#define PAGE_STACK_2_CELL_16 0
 
 #define PAGE_STACK_3_CELL_1 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENS_CELL_1])
 #define PAGE_STACK_3_CELL_2 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENS_CELL_2])
@@ -107,6 +128,16 @@ extern uint8_t Flag_PopUP;
 #define PAGE_STACK_3_CELL_4 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENS_CELL_4])
 #define PAGE_STACK_3_CELL_5 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENS_CELL_5])
 #define PAGE_STACK_3_CELL_6 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENS_CELL_6])
+#define PAGE_STACK_3_CELL_7 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENS_CELL_7])
+#define PAGE_STACK_3_CELL_8 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENS_CELL_8])
+#define PAGE_STACK_3_CELL_9 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENS_CELL_9])
+#define PAGE_STACK_3_CELL_10 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENS_CELL_10])
+#define PAGE_STACK_3_CELL_11 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENS_CELL_11])
+#define PAGE_STACK_3_CELL_12 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK3_TENS_CELL_12])
+#define PAGE_STACK_3_CELL_13 0
+#define PAGE_STACK_3_CELL_14 0
+#define PAGE_STACK_3_CELL_15 0
+#define PAGE_STACK_3_CELL_16 0
 
 #define PAGE_STACK_4_CELL_1 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENS_CELL_1])
 #define PAGE_STACK_4_CELL_2 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENS_CELL_2])
@@ -114,13 +145,50 @@ extern uint8_t Flag_PopUP;
 #define PAGE_STACK_4_CELL_4 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENS_CELL_4])
 #define PAGE_STACK_4_CELL_5 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENS_CELL_5])
 #define PAGE_STACK_4_CELL_6 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENS_CELL_6])
+#define PAGE_STACK_4_CELL_7 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENS_CELL_7])
+#define PAGE_STACK_4_CELL_8 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENS_CELL_8])
+#define PAGE_STACK_4_CELL_9 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENS_CELL_9])
+#define PAGE_STACK_4_CELL_10 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENS_CELL_10])
+#define PAGE_STACK_4_CELL_11 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENS_CELL_11])
+#define PAGE_STACK_4_CELL_12 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK4_TENS_CELL_12])
+#define PAGE_STACK_4_CELL_13 0
+#define PAGE_STACK_4_CELL_14 0
+#define PAGE_STACK_4_CELL_15 0
+#define PAGE_STACK_4_CELL_16 0
 
-#define PAGE_STACK_5_CELL_1 0
-#define PAGE_STACK_5_CELL_2 0
-#define PAGE_STACK_5_CELL_3 0
-#define PAGE_STACK_5_CELL_4 0
-#define PAGE_STACK_5_CELL_5 0
-#define PAGE_STACK_5_CELL_6 0
+#define PAGE_STACK_5_CELL_1 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_1])
+#define PAGE_STACK_5_CELL_2 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_2])
+#define PAGE_STACK_5_CELL_3 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_3])
+#define PAGE_STACK_5_CELL_4 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_4])
+#define PAGE_STACK_5_CELL_5 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_5])
+#define PAGE_STACK_5_CELL_6 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_6])
+#define PAGE_STACK_5_CELL_7 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_7])
+#define PAGE_STACK_5_CELL_8 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_8])
+#define PAGE_STACK_5_CELL_9 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_9])
+#define PAGE_STACK_5_CELL_10 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_10])
+#define PAGE_STACK_5_CELL_11 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_11])
+#define PAGE_STACK_5_CELL_12 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK5_TENS_CELL_12])
+#define PAGE_STACK_5_CELL_13 0
+#define PAGE_STACK_5_CELL_14 0
+#define PAGE_STACK_5_CELL_15 0
+#define PAGE_STACK_5_CELL_16 0
+
+#define PAGE_STACK_6_CELL_1 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_1])
+#define PAGE_STACK_6_CELL_2 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_2])
+#define PAGE_STACK_6_CELL_3 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_3])
+#define PAGE_STACK_6_CELL_4 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_4])
+#define PAGE_STACK_6_CELL_5 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_5])
+#define PAGE_STACK_6_CELL_6 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_6])
+#define PAGE_STACK_6_CELL_7 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_7])
+#define PAGE_STACK_6_CELL_8 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_8])
+#define PAGE_STACK_6_CELL_9 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_9])
+#define PAGE_STACK_6_CELL_10 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_10])
+#define PAGE_STACK_6_CELL_11 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_11])
+#define PAGE_STACK_6_CELL_12 *((uint64_t *) CAN_stream.Data_buf[CanID_SS_PCK6_TENS_CELL_12])
+#define PAGE_STACK_6_CELL_13 0
+#define PAGE_STACK_6_CELL_14 0
+#define PAGE_STACK_6_CELL_15 0
+#define PAGE_STACK_6_CELL_16 0
 
 /*********************** DEBUG PAGE ***********************/
 #define PAGE_DEBUG_ECU DataRATE_ECU
@@ -132,7 +200,7 @@ extern uint8_t Flag_PopUP;
 #define PAGE_DEBUG_State_Telemetry DataRATE_Telemetry != 0
 #define PAGE_DEBUG_State_BMS DataRATE_BMS != 0
 #define PAGE_DEBUG_State_ECU DataRATE_ECU != 0
-#define PAGE_DEBUG_Beacon *((uint64_t *) CAN_stream.Data_buf[CanID_])
+#define PAGE_DEBUG_Beacon *((uint64_t *) CAN_stream.Data_buf[CanID_AQS_BEACON_VIRTUAL])
 #define PAGE_DEBUG_PopUp Flag_PopUP
 
 /************************ BOARD PAGE ************************/

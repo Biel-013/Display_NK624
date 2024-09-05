@@ -90,7 +90,8 @@ build/MINGW32_NT-6.2/gui/src/control_screen/CONTROLView.o: \
  gui/include/gui/containers/LoRA_PopUp.hpp \
  generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
+ generated/images/include/images/BitmapDatabase.hpp
 
 gui/include/gui/control_screen/CONTROLView.hpp:
 
@@ -273,3 +274,5 @@ generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
+
+generated/images/include/images/BitmapDatabase.hpp:

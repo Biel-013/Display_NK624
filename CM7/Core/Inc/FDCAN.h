@@ -31,7 +31,7 @@
 #include "stm32g4xx_hal.h"
 #endif
 
-#define CAN_IDS_NUMBER 400
+#define CAN_IDS_NUMBER 500
 
 /* USADO PARA REGISTRAR UM BUFFER DA CAN */
 typedef enum

@@ -50,6 +50,7 @@ Application/User/gui/LoRA_PopUp.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../../../CM7/Core/Inc/FDCAN_map.h ../../../CM7/Core/Inc/ID.h \
  ../../../CM7/Core/Inc/FDCAN.h \
  ../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
@@ -92,8 +93,7 @@ Application/User/gui/LoRA_PopUp.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- ../../../CM7/Core/Inc/PopUp_Error.h \
- ../../CM7/../../CM7/TouchGFX/generated/images/include/images/BitmapDatabase.hpp
+ ../../../CM7/Core/Inc/PopUp_Error.h
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/LoRA_PopUp.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/LoRA_PopUpBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -144,6 +144,7 @@ Application/User/gui/LoRA_PopUp.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
+../../CM7/../../CM7/TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../../../CM7/Core/Inc/FDCAN_map.h:
 ../../../CM7/Core/Inc/ID.h:
 ../../../CM7/Core/Inc/FDCAN.h:
@@ -188,4 +189,3 @@ Application/User/gui/LoRA_PopUp.o: \
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
 ../../../CM7/Core/Inc/PopUp_Error.h:
-../../CM7/../../CM7/TouchGFX/generated/images/include/images/BitmapDatabase.hpp:

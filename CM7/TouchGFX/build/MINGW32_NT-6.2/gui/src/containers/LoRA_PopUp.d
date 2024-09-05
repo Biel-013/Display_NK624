@@ -49,7 +49,8 @@ build/MINGW32_NT-6.2/gui/src/containers/LoRA_PopUp.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp \
+ generated/images/include/images/BitmapDatabase.hpp
 
 gui/include/gui/containers/LoRA_PopUp.hpp:
 
@@ -150,3 +151,5 @@ gui/include/gui/model/Model.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/FadeAnimator.hpp:
+
+generated/images/include/images/BitmapDatabase.hpp:

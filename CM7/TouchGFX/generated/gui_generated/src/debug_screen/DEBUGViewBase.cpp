@@ -23,19 +23,28 @@ DEBUGViewBase::DEBUGViewBase() :
 
     DEBUG_Telemetria.setXY(317, 19);
     DEBUG_Telemetria.setBitmaps(touchgfx::Bitmap(BITMAP_DEBUG_TELEMETRY_INFO_ID), touchgfx::Bitmap(BITMAP_DEBUG_TELEMETRY_INFO_SELECT_ID));
+    DEBUG_Telemetria.setAction(buttonCallback);
     add(DEBUG_Telemetria);
 
     DEBUG_Datalogger.setXY(175, 24);
     DEBUG_Datalogger.setBitmaps(touchgfx::Bitmap(BITMAP_DEBUG_DATALOGGER_INFO_ID), touchgfx::Bitmap(BITMAP_DEBUG_DATALOGGER_INFO_SELECT_ID));
+    DEBUG_Datalogger.setAction(buttonCallback);
     add(DEBUG_Datalogger);
 
     DEBUG_BMS.setXY(179, 198);
     DEBUG_BMS.setBitmaps(touchgfx::Bitmap(BITMAP_DEBUG_BMS_INFO_ID), touchgfx::Bitmap(BITMAP_DEBUG_BMS_INFO_SELECT_ID));
+    DEBUG_BMS.setAction(buttonCallback);
     add(DEBUG_BMS);
 
     DEBUG_ECU.setXY(71, 199);
     DEBUG_ECU.setBitmaps(touchgfx::Bitmap(BITMAP_DEBUG_ECU_INFO_ID), touchgfx::Bitmap(BITMAP_DEBUG_ECU_INFO_SELECT_ID));
+    DEBUG_ECU.setAction(buttonCallback);
     add(DEBUG_ECU);
+
+    PopUp.setXY(279, 236);
+    PopUp.setBitmap(touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID));
+    PopUp.setVisible(false);
+    add(PopUp);
 
     PAGE_Drive.setXY(0, 0);
     PAGE_Drive.setBitmaps(touchgfx::Bitmap(BITMAP_BOTTOM_UP_OFF_ID), touchgfx::Bitmap(BITMAP_BOTTOM_UP_ON_ID));
@@ -96,11 +105,6 @@ DEBUGViewBase::DEBUGViewBase() :
     Beacon_Leap.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QUF4));
     add(Beacon_Leap);
 
-    POP_Up.setXY(278, 236);
-    POP_Up.setBitmaps(touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID), touchgfx::Bitmap(BITMAP_POPUP_CAN_OFF_1_ID));
-    POP_Up.setVisible(false);
-    add(POP_Up);
-
     BOTTOM_Info_LoRa.setXY(420, 0);
     BOTTOM_Info_LoRa.setBitmaps(touchgfx::Bitmap(BITMAP_INFO_LORA_ID), touchgfx::Bitmap(BITMAP_INFO_LORA_SELECT_ID));
     BOTTOM_Info_LoRa.setAction(buttonCallback);
@@ -143,6 +147,54 @@ DEBUGViewBase::DEBUGViewBase() :
     LORA_PopUp.setXY(480, 0);
     LORA_PopUp.setVisible(false);
     add(LORA_PopUp);
+
+    PopUp_ECU.setXY(71, 272);
+    add(PopUp_ECU);
+
+    BOTTON_PopUp_ECU.setBoxWithBorderPosition(0, 0, 415, 272);
+    BOTTON_PopUp_ECU.setBorderSize(5);
+    BOTTON_PopUp_ECU.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_PopUp_ECU.setAlpha(0);
+    BOTTON_PopUp_ECU.setVisible(false);
+    BOTTON_PopUp_ECU.setAction(flexButtonCallback);
+    BOTTON_PopUp_ECU.setPosition(66, 1, 415, 272);
+    add(BOTTON_PopUp_ECU);
+
+    PopUp_BMS.setXY(71, 272);
+    add(PopUp_BMS);
+
+    BOTTON_PopUp_BMS.setBoxWithBorderPosition(0, 0, 415, 272);
+    BOTTON_PopUp_BMS.setBorderSize(5);
+    BOTTON_PopUp_BMS.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_PopUp_BMS.setAlpha(0);
+    BOTTON_PopUp_BMS.setVisible(false);
+    BOTTON_PopUp_BMS.setAction(flexButtonCallback);
+    BOTTON_PopUp_BMS.setPosition(66, 1, 415, 272);
+    add(BOTTON_PopUp_BMS);
+
+    PopUp_Datalogger.setXY(71, -103);
+    add(PopUp_Datalogger);
+
+    BOTTON_PopUp_Datalogger.setBoxWithBorderPosition(0, 0, 415, 272);
+    BOTTON_PopUp_Datalogger.setBorderSize(5);
+    BOTTON_PopUp_Datalogger.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_PopUp_Datalogger.setAlpha(0);
+    BOTTON_PopUp_Datalogger.setVisible(false);
+    BOTTON_PopUp_Datalogger.setAction(flexButtonCallback);
+    BOTTON_PopUp_Datalogger.setPosition(66, 1, 415, 272);
+    add(BOTTON_PopUp_Datalogger);
+
+    PopUp_Telemetry.setXY(71, -103);
+    add(PopUp_Telemetry);
+
+    BOTTON_PopUp_Telemetry.setBoxWithBorderPosition(0, 0, 415, 272);
+    BOTTON_PopUp_Telemetry.setBorderSize(5);
+    BOTTON_PopUp_Telemetry.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    BOTTON_PopUp_Telemetry.setAlpha(0);
+    BOTTON_PopUp_Telemetry.setVisible(false);
+    BOTTON_PopUp_Telemetry.setAction(flexButtonCallback);
+    BOTTON_PopUp_Telemetry.setPosition(66, 1, 415, 272);
+    add(BOTTON_PopUp_Telemetry);
 }
 
 DEBUGViewBase::~DEBUGViewBase()
@@ -153,6 +205,10 @@ DEBUGViewBase::~DEBUGViewBase()
 void DEBUGViewBase::setupScreen()
 {
     LORA_PopUp.initialize();
+    PopUp_ECU.initialize();
+    PopUp_BMS.initialize();
+    PopUp_Datalogger.initialize();
+    PopUp_Telemetry.initialize();
     transitionBegins();
 }
 
@@ -201,6 +257,34 @@ void DEBUGViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Call LORA_Begin
         LORA_Begin();
     }
+    if (&src == &DEBUG_Telemetria)
+    {
+        //Interaction_Telemetry_PopUp_Begin
+        //When DEBUG_Telemetria clicked call virtual function
+        //Call Telemetry_PopUp_Begin
+        Telemetry_PopUp_Begin();
+    }
+    if (&src == &DEBUG_Datalogger)
+    {
+        //Interaction_Datalogger_PopUp_Begin
+        //When DEBUG_Datalogger clicked call virtual function
+        //Call Datalogger_PopUp_Begin
+        Datalogger_PopUp_Begin();
+    }
+    if (&src == &DEBUG_BMS)
+    {
+        //Interaction_BMS_PopUp_Begin
+        //When DEBUG_BMS clicked call virtual function
+        //Call BMS_PopUp_Begin
+        BMS_PopUp_Begin();
+    }
+    if (&src == &DEBUG_ECU)
+    {
+        //Interaction_ECU_PopUp_Begin
+        //When DEBUG_ECU clicked call virtual function
+        //Call ECU_PopUp_Begin
+        ECU_PopUp_Begin();
+    }
 }
 
 void DEBUGViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
@@ -211,6 +295,34 @@ void DEBUGViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonCont
         //When BOTTON_lora clicked call virtual function
         //Call LORA_End
         LORA_End();
+    }
+    if (&src == &BOTTON_PopUp_Telemetry)
+    {
+        //Interaction_Telemetry_PopUp_End
+        //When BOTTON_PopUp_Telemetry clicked call virtual function
+        //Call Telemetry_PopUp_End
+        Telemetry_PopUp_End();
+    }
+    if (&src == &BOTTON_PopUp_Datalogger)
+    {
+        //Interaction_Datalogger_PopUp_End
+        //When BOTTON_PopUp_Datalogger clicked call virtual function
+        //Call Datalogger_PopUp_End
+        Datalogger_PopUp_End();
+    }
+    if (&src == &BOTTON_PopUp_BMS)
+    {
+        //Interaction_BMS_PopUp_End
+        //When BOTTON_PopUp_BMS clicked call virtual function
+        //Call BMS_PopUp_End
+        BMS_PopUp_End();
+    }
+    if (&src == &BOTTON_PopUp_ECU)
+    {
+        //Interaction_ECU_PopUp_End
+        //When BOTTON_PopUp_ECU clicked call virtual function
+        //Call ECU_PopUp_End
+        ECU_PopUp_End();
     }
 }
 
